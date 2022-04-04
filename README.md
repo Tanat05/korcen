@@ -28,6 +28,10 @@ a = check.check(text)
 print(a)
 ```
 
+욕설 종류에 따라 1~9 출력
+
+욕설이 아니라면 0
+
 © 2022 GitHub, Inc.
 Terms
 Privacy
