@@ -9,6 +9,9 @@ korean(한국어) censorship(검열)의 줄임말로
 
 한국어와 일부 영어욕설를 지원합니다
 
+TNS봇의 욕설 검열에 들어가는 코드입니다
+
+https://discord.com/api/oauth2/authorize?client_id=848795383751639080&permissions=8&scope=bot%20applications.commands
 ## Licenses
 
 모든 프로그램 모듈의 출처 표기
