@@ -19,7 +19,7 @@ https://github.com/TANAT96564/korcen
 
 링크 또는 "디스코드 TNS 봇" 표기 
 
-# aker
+# Maker
 
 >Tanat
 
