@@ -17,7 +17,9 @@ async def on_ready():
 async def on_message(message):
     a = check.check(message.content)
     if a != 0:
+    #비속어 종류에 따라 1~9 없다면 0
         await message.delete()
+        #메세지 삭제
     await bot.process_commads(msg)
     
     
