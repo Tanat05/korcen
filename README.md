@@ -61,6 +61,11 @@ async def on_message(message):
     if a != 0:
         await message.delete()
 ```
+
+자세한 예시들은 example 파일 참고
+
+
+
 © 2022 GitHub, Inc.
 Terms
 Privacy
