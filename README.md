@@ -30,6 +30,8 @@ email:    shrbwjd05@gmail.com
 ## Installation
 
 ```sh
+pip install korcen
+
 # MacOs/Linux
 $ python3 -m pip install korcen
 # Windows
