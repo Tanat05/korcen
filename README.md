@@ -1,5 +1,3 @@
-https://pypi.org/project/korcen/
-
 # korcen(코르센)
 korean(한국어) censorship(검열)의 줄임말로 
 
