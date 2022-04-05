@@ -45,6 +45,14 @@ print(a)
 
 비속어 종류에 따라 1~9 출력
 
+### 디스코드 봇 응용
+```py
+@bot.event
+async def on_message(message):
+    a = check.check(message.content)
+    if a != 0:
+        await message.delete()
+```
 © 2022 GitHub, Inc.
 Terms
 Privacy
