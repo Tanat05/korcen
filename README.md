@@ -23,9 +23,9 @@ https://github.com/TANAT96564/korcen
 
 >Tanat
 
-discord:Tanat#0206
+discord:  Tanat#0206
 
-email:shrbwjd05@gmail.com
+email:    shrbwjd05@gmail.com
 
 ## Installation
 
