@@ -9,7 +9,7 @@ korean(한국어) censorship(검열)의 줄임말로
 
 한국어와 일부 영어욕설를 지원합니다
 
-## 라이선스
+## Licenses
 
 모든 프로그램 모듈의 출처 표기
 
@@ -19,7 +19,7 @@ https://github.com/TANAT96564/korcen
 
 링크 또는 "디스코드 TNS 봇" 표기 
 
-# 제작
+# aker
 
 >Tanat
 
