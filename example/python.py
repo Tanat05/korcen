@@ -1,3 +1,4 @@
+#0.0.1 ~0.0.2 버전
 from korcen import check
 
 while True:
