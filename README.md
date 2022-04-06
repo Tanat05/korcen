@@ -38,7 +38,7 @@ $ py -m pip install korcen
 ```
 
 # Example
-모든 예시는 가장 최신버전 사용합니다(버전: 0.0.4)
+모든 예시는 가장 최신버전 사용합니다(버전: 0.0.5)
 
 ```py
 from korcen import korcen
