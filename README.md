@@ -42,10 +42,20 @@ $ py -m pip install korcen
 ## Example
 
 ```py
+#0.0.1 ~ 0.0.2
 from korcen import check
 
 text = input()
 a = check.check(text)
+print(a)
+
+#0.0.3
+from korcen import korcen
+
+korcen = korcen.korcen()
+
+text = input()
+a = korcen.check(text)
 print(a)
 ```
 
@@ -57,7 +67,7 @@ print(a)
 ```py
 @bot.event
 async def on_message(message):
-    a = check.check(message.content)
+    a = korcen.check(message.content)
     if a != 0:
         await message.delete()
 ```
