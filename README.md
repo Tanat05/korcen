@@ -7,9 +7,7 @@ korean(한국어) censorship(검열)의 줄임말로
 
 
 
-TNS봇의 욕설 검열에 들어가는 코드입니다
-
-https://discord.com/api/oauth2/authorize?client_id=848795383751639080&permissions=8&scope=bot%20applications.commands
+[TNS봇](https://discord.com/api/oauth2/authorize?client_id=848795383751639080&permissions=8&scope=bot%20applications.command)의 욕설 검열에 들어가는 코드입니다
 ## Licenses
 
 모든 프로그램 모듈의 출처 표기
@@ -39,17 +37,10 @@ $ python3 -m pip install korcen
 $ py -m pip install korcen
 ```
 
-## Example
+# Example
+모든 예시는 가장 최신버전 사용합니다(버전: 0.0.4)
 
 ```py
-#0.0.1 ~ 0.0.2
-from korcen import check
-
-text = input()
-a = check.check(text)
-print(a)
-
-#0.0.3
 from korcen import korcen
 
 korcen = korcen.korcen()
@@ -59,9 +50,7 @@ a = korcen.check(text)
 print(a)
 ```
 
-비속어 아니라면 0
-
-비속어 종류에 따라 1~9 출력
+비속어가 있다면 True 없다면 False 출력
 
 ### 디스코드 봇 응용
 ```py
@@ -72,7 +61,7 @@ async def on_message(message):
         await message.delete()
 ```
 
-자세한 예시들은 example 파일 참고
+#### 자세한 예시들은 [example](https://github.com/Tanat05/korcen/tree/main/example) 파일 참고
 
 
 
