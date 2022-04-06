@@ -17,42 +17,42 @@ print(a)
 
 a = korcen.minor(text)
 print(a)
-#일반 욕설
+#사소한 욕설
 #True 또는 False 출력
 
 a = korcen.sexual(text)
 print(a)
-#일반 욕설
+#성적발언
 #True 또는 False 출력
 
 a = korcen.belittle(text)
 print(a)
-#일반 욕설
+#비하발언
 #True 또는 False 출력
 
 a = korcen.race(text)
 print(a)
-#일반 욕설
+#인종차별발언
 #True 또는 False 출력
 
 a = korcen.parent(text)
 print(a)
-#일반 욕설
+#패드립
 #True 또는 False 출력
 
 a = korcen.foreign(text)
 print(a)
-#일반 욕설
+#외국 욕설
 #True 또는 False 출력
 
 a = korcen.special(text)
 print(a)
-#일반 욕설
+#특수
 #True 또는 False 출력
 
 a = korcen.politics(text)
 print(a)
-#일반 욕설
+#정치발언
 #True 또는 False 출력
 
 
