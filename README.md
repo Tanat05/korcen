@@ -57,7 +57,7 @@ print(a)
 @bot.event
 async def on_message(message):
     a = korcen.check(message.content)
-    if a != 0:
+    if a == :
         await message.delete()
 ```
 
