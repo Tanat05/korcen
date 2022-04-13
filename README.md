@@ -61,7 +61,7 @@ print(korcen.check(text))
 
 >JS 0.0.1
 ```js
-준비중
+npm i korcen
 ```
 
 비속어가 있다면 True 없다면 False 출력하는 예제입니다.
