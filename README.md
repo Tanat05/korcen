@@ -51,7 +51,7 @@ $ py -m pip install korcen
 
 >PY  0.0.5
 ```py
-from korcen import korcen
+import korcen
 
 korcen = korcen.korcen()
 
