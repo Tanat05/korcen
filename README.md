@@ -64,10 +64,10 @@ email:    shrbwjd05@gmail.com
 타입스트립트 작업
 discord:  kisss#4755
 ```
-#### JS 버전 
+#### JS
 >이루
 ```
-노가다 작업
+코드 변환 작업
 discord:  이루#6410
 ```
 >희선
