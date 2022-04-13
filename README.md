@@ -45,7 +45,7 @@ $ py -m pip install korcen
 # Example
 모든 예시는 가장 최신버전의 모듈을 사용합니다.
 
->py  0.0.5
+>PY  0.0.5
 ```py
 from korcen import korcen
 
@@ -55,7 +55,7 @@ text = input()
 print(korcen.check(text))
 ```
 
->js 0.0.1
+>JS 0.0.1
 ```js
 준비중
 ```
