@@ -31,6 +31,10 @@ email:    shrbwjd05@gmail.com
 ```
 discord:  이루#6410
 ```
+>희선
+```
+discord:  희선#7777
+```
 ## Installation
 >PY
 ```sh
