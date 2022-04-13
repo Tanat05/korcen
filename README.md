@@ -44,7 +44,7 @@ $ py -m pip install korcen
 
 >JS
 ```sh
-준비중
+$ npm i korcen
 ```
 # Example
 모든 예시는 가장 최신버전의 모듈을 사용합니다.
@@ -61,7 +61,7 @@ print(korcen.check(text))
 
 >JS 0.0.1
 ```js
-npm i korcen
+준비중
 ```
 
 비속어가 있다면 True 없다면 False 출력하는 예제입니다.
