@@ -17,7 +17,7 @@ https://github.com/TANAT96564/korcen
 링크 또는 "디스코드 TNS 봇" 표기 
 
 ## Installation
->PYPI
+>PyPI
 ```sh
 $ pip install korcen
 ```
@@ -31,7 +31,7 @@ $ npm i korcen
 
 비속어가 있다면 True 없다면 False 출력하는 예시입니다.
 
->PYPI  0.0.5
+>PyPI  0.0.5
 ```py
 import korcen
 
