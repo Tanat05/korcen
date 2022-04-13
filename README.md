@@ -32,7 +32,7 @@ email:    shrbwjd05@gmail.com
 discord:  이루#6410
 ```
 ## Installation
-
+>PY
 ```sh
 $ pip install korcen
 
@@ -42,6 +42,10 @@ $ python3 -m pip install korcen
 $ py -m pip install korcen
 ```
 
+>JS
+```sh
+준비중
+```
 # Example
 모든 예시는 가장 최신버전의 모듈을 사용합니다.
 
