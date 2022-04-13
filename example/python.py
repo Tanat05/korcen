@@ -45,7 +45,7 @@ print(a)
 
 a = korcen.special(text)
 print(a)
-#특수
+#특수(이모지)
 #True 또는 False 출력
 
 a = korcen.politics(text)
