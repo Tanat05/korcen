@@ -58,6 +58,11 @@ console.log(content)
 discord:  Tanat#0206
 email:    shrbwjd05@gmail.com
 ```
+#### TS
+>kisss
+```
+타입스트립트 작업
+discord:  kisss#4755
 #### JS 버전 
 >이루
 ```
