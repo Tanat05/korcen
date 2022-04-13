@@ -29,10 +29,12 @@ email:    shrbwjd05@gmail.com
 #### JS 버전 
 >이루
 ```
+노가다 작업
 discord:  이루#6410
 ```
 >희선
 ```
+모듈 작업
 discord:  희선#7777
 ```
 ## Installation
