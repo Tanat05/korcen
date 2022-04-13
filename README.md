@@ -64,7 +64,7 @@ print(korcen.check(text))
 준비중
 ```
 
-비속어가 있다면 True 없다면 False 출력하는 예제입니다.
+비속어가 있다면 True 없다면 False 출력하는 예입니다.
 
 
 #### 자세한 예시들은 [example](https://github.com/Tanat05/korcen/tree/main/example) 파일 참고하세요.
