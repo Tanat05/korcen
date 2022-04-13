@@ -20,11 +20,6 @@ https://github.com/TANAT96564/korcen
 >PY
 ```sh
 $ pip install korcen
-
-# MacOs/Linux
-$ python3 -m pip install korcen
-# Windows
-$ py -m pip install korcen
 ```
 
 >JS
