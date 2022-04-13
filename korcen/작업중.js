@@ -152,7 +152,7 @@ function check(text) {
         }
     }
 
-    text = text.replace(/의새끼/gi, '')
+    text = newtext.replace(/의새끼/gi, '')
     text = text.replace(/애/gi, '')
     text = text.replace(/에/gi, '')
     text = text.replace(/루세끼/gi, '')
@@ -205,16 +205,16 @@ function check(text) {
         }
     }
 
-    text = re.sub("[^ㄱ-힣]", "", newtext)
+    text = newtext.replace(/[^ㄱ-힣]/gi, '')
     damnit = ["ㅁㅊ", "ㅁ친", "ㅁ쳤"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
         }
     }
-    text = re.sub("[^가-힣]", "", text)
-    text = re.sub('이미친', '', text)
-    text = re.sub('미친증', '', text)
+    text = newtext.replace(/[^가-힣]/gi, '')
+    text = text.replace(/이미친/gi, '')
+    text = text.replace(/미친증/gi, '')
     damnit = ["미친", "미쳤"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -222,7 +222,7 @@ function check(text) {
         }
     }
 
-    text = re.sub("[^가-힣]", "", text)
+    text = newtext.replace(/[^가-힣]/gi, '')
     picking = ["꼽냐", "꼽니", "꼽나"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -230,29 +230,29 @@ function check(text) {
         }
     }
 
-    text = re.sub("[^ㄱ-힣]", "", newtext)
-    text = re.sub('보지도못', '', text)
-    text = re.sub('보지도않', '', text)
-    text = re.sub('켜보지', '', text)
-    text = re.sub('보지맙', '', text)
-    text = re.sub('초보지', '', text)
-    text = re.sub('로보지', '', text)
-    text = re.sub('홍보지', '', text)
-    text = re.sub('서보지', '', text)
-    text = re.sub('보지금', '', text)
-    text = re.sub('정지금', '', text)
-    text = re.sub('걸보지', '', text)
-    text = re.sub('을보지', '', text)
-    text = re.sub('나보지', '', text)
-    text = re.sub('면접보지', '', text)
-    text = re.sub('보지는', '', text)
-    text = re.sub('보지지', '', text)
-    text = re.sub('못보지', '', text)
-    text = re.sub('보지않', '', text)
-    text = re.sub('보지마', '', text)
-    text = re.sub('보지말', '', text)
-    text = re.sub('안보지', '', text)
-    text = re.sub('오', '', text)
+    text = newtext.replace(/[^ㄱ-힣]/gi, '')
+    text = text.replace(/보지도못/gi, '')
+    text = text.replace(/보지도않/gi, '')
+    text = text.replace(/켜보지/gi, '')
+    text = text.replace(/보지맙/gi, '')
+    text = text.replace(/초보지/gi, '')
+    text = text.replace(/로보지/gi, '')
+    text = text.replace(/홍보지/gi, '')
+    text = text.replace(/서보지/gi, '')
+    text = text.replace(/보지금/gi, '')
+    text = text.replace(/정지금/gi, '')
+    text = text.replace(/걸보지/gi, '')
+    text = text.replace(/을보지/gi, '')
+    text = text.replace(/나보지/gi, '')
+    text = text.replace(/면접보지/gi, '')
+    text = text.replace(/보지는/gi, '')
+    text = text.replace(/보지지/gi, '')
+    text = text.replace(/못보지/gi, '')
+    text = text.replace(/보지않/gi, '')
+    text = text.replace(/보지마/gi, '')
+    text = text.replace(/보지말/gi, '')
+    text = text.replace(/안보지/gi, '')
+    text = text.replace(/오/gi, '')
     pussy = ["보지"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -261,31 +261,31 @@ function check(text) {
     }
 
 
-    text = re.sub("[^ㄱ-힣]", "", newtext)
+    text = newtext.replace(/[^ㄱ-힣]/gi, '')
     onahole = ["ㅈㅈ빨", "자ㅈ", "ㅈ지빨"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
         }
     }
-    text = re.sub("[^ㄱ-힣]", "", newtext)
-    text = re.sub('남자지', '', text)
-    text = re.sub('여자지', '', text)
-    text = re.sub('감자지', '', text)
-    text = re.sub('왁자지', '', text)
-    text = re.sub('자지금', '', text)
-    text = re.sub('자지러', '', text)
-    text = re.sub('개발자지', '', text)
-    text = re.sub('타자지', '', text)
-    text = re.sub('못자지', '', text)
-    text = re.sub('자지원', '', text)
-    text = re.sub('사용자', '', text)
-    text = re.sub('자지않', '', text)
-    text = re.sub('자지마', '', text)
-    text = re.sub('자지말', '', text)
-    text = re.sub('지원자', '', text)
-    text = re.sub('안자지', '', text)
-    text = re.sub('아', '', text)
+    text = newtext.replace(/[^ㄱ-힣]/gi, '')
+    text = text.replace(/남자지/gi, '')
+    text = text.replace(/여자지/gi, '')
+    text = text.replace(/감자지/gi, '')
+    text = text.replace(/왁자지/gi, '')
+    text = text.replace(/자지금/gi, '')
+    text = text.replace(/자지러/gi, '')
+    text = text.replace(/개발자지/gi, '')
+    text = text.replace(/타자지/gi, '')
+    text = text.replace(/못보지/gi, '')
+    text = text.replace(/자지원/gi, '')
+    text = text.replace(/사용자/gi, '')
+    text = text.replace(/자지않/gi, '')
+    text = text.replace(/자지마/gi, '')
+    text = text.replace(/자지말/gi, '')
+    text = text.replace(/지원지/gi, '')
+    text = text.replace(/안자지/gi, '')
+    text = text.replace(/아/gi, '')
     dicks = ["자지"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -294,20 +294,18 @@ function check(text) {
     }
 
 
-    text = re.sub(r,'\^', 'ㅅ', newtext)
-    text = re.sub('sex', '섹스', text)
-    text = re.sub('s', 'ㅅ', text)
-    text = re.sub('x', 'ㅅ', text)
-    text = re.sub('엑', '', text)
-    text = re.sub("[^ㄱ-힣]", "", text)
+    text = newtext.replace(/\^/gi, 'ㅅ')
+    text = text.replace(/sex/gi, '섹스')
+    text = text.replace(/엑/gi, '')
+    text = text.replace(/[^ㄱ-힣]/gi, '')
     sex = ["ㅅㅔㄱ스", "섹ㅅ", "ㅅ스", "세ㄱㅅ", "ㅅㅔㄱㅅ"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
         }
     }
-    text = re.sub("[^가-힣]", "", newtext)
-    text = re.sub("야스오", "", text)
+    text = newtext.replace(/[^가-힣]/gi, '')
+    text = text.replace(/야스오/gi, '')
     sex = ["섹스", "섻스", "쉑스", "섿스", "섹그", "야스", "색스", "셱스", "섁스", "세엑스", "썩스"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -315,7 +313,7 @@ function check(text) {
         }
     }
 
-    text = re.sub("[^가-힣]", "", newtext)
+    text = newtext.replace(/[^가-힣]/gi, '')
     fireegg = ["불알", "부랄", "뽕알", "뿅알", "뿌랄", "뿔알", "블알"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -323,7 +321,7 @@ function check(text) {
         }
     }
 
-    text = re.sub("[^ㄱ-힣]", "", newtext)
+    text = newtext.replace(/[^ㄱ-힣]/gi, '')
     onahole = ["오나홍", "오나홀", "ㅇㄴ홀"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -332,7 +330,7 @@ function check(text) {
     }
     
 
-    text = re.sub("[^가-힣]", "", newtext)
+    text = newtext.replace(/[^가-힣]/gi, '')
     onahole = ["매춘부"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -340,7 +338,7 @@ function check(text) {
         }
     }
 
-    text = re.sub("[^가-힣]", "", newtext)
+    text = newtext.replace(/[^가-힣]/gi, '')
     onahole = ["자궁문신"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -348,7 +346,7 @@ function check(text) {
         }
     }
 
-    text = re.sub("[^가-힣]", "", newtext)
+    text = newtext.replace(/[^가-힣]/gi, '')
     onahole = ["모유물","로리물"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -356,12 +354,12 @@ function check(text) {
         }
     }
 
-    text = re.sub('련', '년', newtext)
-    text = re.sub('뇬', '년', text)
-    text = re.sub('놈', '년', text)
-    text = re.sub('러운지', '', text)
-    text = re.sub('려운지', '', text)
-    text = re.sub("[^가-힣]", "", text)
+    text = newtext.replace(/련/gi, '년')
+    text = text.replace(/뇬/gi, '년')
+    text = text.replace(/놈/gi, '년')
+    text = text.replace(/러운지/gi, '')
+    text = text.replace(/려운지/gi, '년')
+    text = text.replace(/[^가-힣]/gi, '')
     belittling = ["따까리", "장애년", "찐따년", "싸가지", "창년", "썅년", "버러지", "고아년", "고아년", "개간년", "종간나", "도구년", "걸래년", "썅년", "씹년",
                 "창녀", "머저리", "씹쓰래기", "씹쓰레기", "씹장생", "씹자식", "운지", "급식충", "틀딱충", "조센징", "매국노", "똥꼬충", "진지충", "듣보잡",
                 "한남충","정신병자","중생아","돌팔이","김치녀","폰팔이","틀딱년"]
@@ -371,7 +369,7 @@ function check(text) {
         }
     }
 
-    text = re.sub("[^가-힣]", "", newtext)
+    text = newtext.replace(/[^가-힣]/gi, '')
     nigger = ["깜둥이", "흑형","조센진","짱개","짱깨","짱께","짱게","쪽바리","쪽파리","빨갱이",]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -379,14 +377,14 @@ function check(text) {
         }
     }
 
-    text = re.sub("[^ㄱ-힣]", "", newtext)
+    text = newtext.replace(/[^ㄱ-힣]/gi, '')
     your = ["ㄴㄱㅁ", "ㄴ금마", "느금ㅁ", "ㄴㄱ마", "ㄴㄱ빠", "ㄴ금빠"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
         }
     }
-    text = re.sub("[^가-힣]", "", newtext)
+    text = newtext.replace(/[^가-힣]/gi, '')
     your = ["느금마", "느그엄마", "늑엄마", "늑금마", "느그애미", "넉엄마", "느그부모", "느그애비", "느금빠", "느그메", "느그빠"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -394,8 +392,8 @@ function check(text) {
         }
     }
 
-    text = re.sub("[^가-힣]", "", newtext)
-    text = re.sub("도", "", text)
+    text = newtext.replace(/[^가-힣]/gi, '')
+    text = text.replace(/도/gi, '')
     motherfuck = ["니애미", "노애미", "노앰", "앰뒤련",
                 "아버지도없는게", "애미도없는게", "애비도없는게", "어머니도없는게", "니애비", "노애비","애미없","애비없","애미뒤","애비뒤"]
     for (const i of bullshit1) {
@@ -404,31 +402,32 @@ function check(text) {
         }
     }
 
-    text = re.sub('[^a-z]', '', newtext)
+    text = newtext.replace(/[^a-z]/gi, '')
     if (text.includes(("fuck"))) {
         return true;
     }
 
-    text = re.sub('[^a-z]', '', newtext)
+    text = newtext.replace(/[^a-z]/gi, '')
     if (text.includes("commin")) {
         return true;
     }
 
-    text = re.sub('[^a-z]', '', newtext)
+    text = newtext.replace(/[^a-z]/gi, '')
     if (text.includes("knod")) {
         return true;
     }
 
+    text = newtext.replace(/[^a-z]/gi, '')
     if (text.includes("cunt")) {
         return true;
     }
 
-    text = re.sub('[^a-z]', '', newtext)
+    text = newtext.replace(/[^a-z]/gi, '')
     if (text.includes("dotard")) {
         return true;
     }
 
-    text = re.sub('[^a-z]', '', newtext)
+    text = newtext.replace(/[^a-z]/gi, '')
     if (text.includes("dyke")) {
         return true;
     }
@@ -440,6 +439,7 @@ function check(text) {
         }
     }
 
+    text = newtext.replace(/[^가-힣]/gi, '')
     mh = ["노시개", "노알라", "뇌사모", "뇌물현"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -447,6 +447,7 @@ function check(text) {
         }
     }
 
+    text = newtext.replace(/[^가-힣]/gi, '')
     ji = ["귀걸이아빠", "달창", "대깨문", "문재앙", "문죄앙", "문죄인", "문크예거", "훠훠훠", "문빠"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -454,6 +455,7 @@ function check(text) {
         }
     }
 
+    text = newtext.replace(/[^가-힣]/gi, '')
     gh = ["근혜어", "길라임", "나대블츠", "닭근혜", "댓통령", "레이디가카", "바쁜벌꿀", "수첩공주", "유신공주", "유체이탈화법", "칠푼이", "쿼터갓"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -461,6 +463,7 @@ function check(text) {
         }
     }
 
+    text = newtext.replace(/[^가-힣]/gi, '')
     jh = ["반인반신", "데미갓", "박정희"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -468,6 +471,7 @@ function check(text) {
         }
     }
 
+    text = newtext.replace(/[^가-힣]/gi, '')
     cs = ["간철수"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -475,6 +479,7 @@ function check(text) {
         }
     }
 
+    text = newtext.replace(/[^가-힣]/gi, '')
     mb = ["가카", "이명박근혜", "다스는누구겁니까?"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
