@@ -152,32 +152,27 @@ function check(text) {
         }
     }
 
-    text = re.sub('의새끼', '', text)
-    text = re.sub('애', '', text)
-    text = re.sub('에', '', text)
-    text = re.sub('루세끼', '', text)
-    text = re.sub('시세끼', '', text)
-    text = re.sub('세끼먹', '', text)
+    text = text.replace(/의새끼/gi, '')
+    text = text.replace(/애/gi, '')
+    text = text.replace(/에/gi, '')
+    text = text.replace(/루세끼/gi, '')
+    text = text.replace(/시세끼/gi, '')
+    text = text.replace(/세끼먹/gi, '')
     sonofbitch = ["새끼", "쉐리", "쌔끼", "썌끼", "쎼끼", "쌬끼", "샠끼","애쌔끼","세끼","이시키"]
-    animal = ["고양이","사바나캣", "너구리", "붉은여우", "사막여우", "북극여우", "코요테", "딩고", "서벌", "오셀롯", "페럿", "스컹크", "라쿤", "수달", "몽구스",
-    "미어캣", "사향고양이", "햄스터", "양", "알파카", "라마", "사슴", "토끼", "다람쥐", "앵무새", "부엉이", "올빼미", "거북이", "개구리"]
-    for (i in animal)
-        if (i in text)
-            text = re.sub('새끼', '', text)
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
         }
     }
 
-    text = re.sub("[^ㄱ-힣]", "", newtext)
+    text = newtext.replace(/[^ㄱ-힣]/gi, '')
     dick = ["ㅈ같", "ㅈ망", "ㅈ까", "ㅈ경"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
         }
     }
-    text = re.sub("[^가-힣]", "", text)
+    text = newtext.replace(/[^가-힣]/gi, '')
     dick = ["좆", "촟", "조까", "좈", "쫒", "졷", "좃"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -185,7 +180,7 @@ function check(text) {
         }
     }
 
-    text = re.sub("[^가-힣]", "", text)
+    text = newtext.replace(/[^가-힣]/gi, '')
     damn = ["썅", "씨앙", "씨양"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -193,14 +188,7 @@ function check(text) {
         }
     }
 
-    swear = ["tq", "qt"]
-    for (const i of bullshit1) {
-        if (text.includes(i)) {
-            return true;
-        }
-    }
-
-    text = re.sub("[^ㄱ-힣]", "", newtext)
+    text = newtext.replace(/[^ㄱ-힣]/gi, '')
     whatthefuck = ["뻑유", "뻐킹", "뻐큐"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
@@ -208,7 +196,7 @@ function check(text) {
         }
     }
 
-    text = re.sub("[^가-힣]", "", newtext)
+    text = newtext.replace(/[^가-힣]/gi, '')
         sonofagun = ["개같", "개가튼", "개쉑", "개스키", "개세끼", "개색히", "개가뇬", "개새기", "개쌔기", "개쌔끼", "쌖", "쎆", "새긔", "개소리", "개년", "개소리",
                     "개드립"]
         for (const i of bullshit1) {
