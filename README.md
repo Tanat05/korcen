@@ -55,6 +55,8 @@ $ npm i korcen
 # Example
 모든 예시는 가장 최신버전의 모듈을 사용합니다.
 
+비속어가 있다면 True 없다면 False 출력하는 예시입니다.
+
 >PY  0.0.5
 ```py
 import korcen
@@ -71,9 +73,6 @@ const { check } = require('korcen')
 var content = check("문자열")
 console.log(content)
 ```
-
-비속어가 있다면 True 없다면 False 출력하는 예입니다.
-
 
 #### 자세한 예시들은 [example](https://github.com/Tanat05/korcen/tree/main/example) 파일 참고하세요.
 
