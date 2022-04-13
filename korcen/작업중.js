@@ -22,8 +22,6 @@ function check(text) {
     for (const i of fuckyou) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -49,128 +47,108 @@ function check(text) {
     for (const i of fuck) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
-    text = newtext.replace(/시발택시/gi, '')
-    text = newtext.replace(/시발자동차/gi, '')
-    text = newtext.replace(/정치발/gi, '')
-    text = newtext.replace(/시발점/gi, '')
-    text = newtext.replace(/시발유/gi, '')
-    text = newtext.replace(/시발역/gi, '')
-    text = newtext.replace(/시발수뢰/gi, '')
-    text = newtext.replace(/아저씨바/gi, '')
-    text = newtext.replace(/시바견/gi, '')
-    text = newtext.replace(/시바/gi, '')
-    text = newtext.replace(/이/gi, '')
-    text = newtext.replace(/ㅣ/gi, '')
+    text = text.replace(/시발택시/gi, '')
+    text = text.replace(/시발자동차/gi, '')
+    text = text.replace(/정치발/gi, '')
+    text = text.replace(/시발점/gi, '')
+    text = text.replace(/시발유/gi, '')
+    text = text.replace(/시발역/gi, '')
+    text = text.replace(/시발수뢰/gi, '')
+    text = text.replace(/아저씨바/gi, '')
+    text = text.replace(/시바견/gi, '')
+    text = text.replace(/시바/gi, '')
+    text = text.replace(/이/gi, '')
+    text = text.replace(/ㅣ/gi, '')
     fuck = ["시발", "씨발", "시봘", "씨봘", "씨바", "시바", "샤발", "씌발", "씹발", "시벌", "시팔", "싯팔", "씨빨", "씨랼", "씨파", "띠발", "띡발", "띸발","싸발", "십발", "슈발","야발", "씨불", "씨랄", "쉬발", "쓰발", "쓔발", "쌰발", "쉬발", "쒸발", "씨팔", "씨밝", "씨밯", "쑤발", "치발", "샤발", "발씨", "리발", "씨볼","찌발", "씨비바라랄", "시바랄", "씨바라"]
     for (const i of fuck) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
   
     text = newtext.replace(/[^ㄱ-힣]/gi, '')
-    text = newtext.replace(/근/gi, 'ㄹ')
+    text = text.replace(/근/gi, 'ㄹ')
     bullshit1 = ["ㅈㄹ", "지ㄹ", "ㅈ랄", "ㅈ라"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
     text = newtext.replace(/[^가-힣]/gi, 'ㄹ')
-    text = newtext.replace(/지랄탄/gi, '')
-    text = newtext.replace(/지랄버릇/gi, '')
-    text = newtext.replace(/이/gi, '')
+    text = text.replace(/지랄탄/gi, '')
+    text = text.replace(/지랄버릇/gi, '')
+    text = text.replace(/이/gi, '')
     bullshit2 = ["지랄", "찌랄", "지럴", "지롤", "랄지"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
     text = newtext.replace(/[^ㄱ-힣]/gi, '')
-    text = newtext.replace(/빙/gi, '병')
-    text = newtext.replace(/븅/gi, '병')
-    text = newtext.replace(/등/gi, '병')
-    text = newtext.replace(/붱/gi, '병')
-    text = newtext.replace(/뵈/gi, '병')
-    text = newtext.replace(/뼝/gi, '병')
-    text = newtext.replace(/싄/gi, '신')
-    text = newtext.replace(/씬/gi, '신')
+    text = text.replace(/빙/gi, '병')
+    text = text.replace(/븅/gi, '병')
+    text = text.replace(/등/gi, '병')
+    text = text.replace(/붱/gi, '병')
+    text = text.replace(/뵈/gi, '병')
+    text = text.replace(/뼝/gi, '병')
+    text = text.replace(/싄/gi, '신')
+    text = text.replace(/씬/gi, '신')
     asshole = ["ㅄ", "ㅂㅅ", "병ㅅ", "ㅂ신", "ㅕㅇ신"]
     for (const i of asshole) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
     text = newtext.replace(/[^가-힣]/gi, '')
-    text = newtext.replace(/영/gi, '')
-    text = newtext.replace(/엉/gi, '')
+    text = text.replace(/영/gi, '')
+    text = text.replace(/엉/gi, '')
     asshole = ["병신", "병딱", "벼신"]
     for (const i of asshole) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
     text = newtext.replace(/[^가-힣]/gi, '')
-    text = newtext.replace(/전염병/gi, '')
-    text = newtext.replace(/감염병/gi, '')
+    text = text.replace(/전염병/gi, '')
+    text = text.replace(/감염병/gi, '')
     motherfucker = ["염병", "엠병", "옘병", "염병", "얨병"]
     for (const i of motherfucker) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
     text = newtext.replace(/[^가-힣]/gi, '')
-    text = newtext.replace(/왜꺼져/gi, '')
-    text = newtext.replace(/꺼져요/gi, '')
-    text = newtext.replace(/이꺼져/gi, '')
-    text = newtext.replace(/꺼져서/gi, '')
-    text = newtext.replace(/내꺼져/gi, '')
-    text = newtext.replace(/제꺼져/gi, '')
-    text = newtext.replace(/꺼져있/gi, '')
+    text = text.replace(/왜꺼져/gi, '')
+    text = text.replace(/꺼져요/gi, '')
+    text = text.replace(/이꺼져/gi, '')
+    text = text.replace(/꺼져서/gi, '')
+    text = text.replace(/내꺼져/gi, '')
+    text = text.replace(/제꺼져/gi, '')
+    text = text.replace(/꺼져있/gi, '')
     if (text.includes("꺼져")){
         return true;
-    }else{
-        return false;
     }
 
-    text = re.sub("[^가-힣]", "", newtext)
+    text = newtext.replace(/[^가-힣]/gi, '')
     shit = ["엿같", "엿가튼", "엿먹어"]
     for (const i of shit) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
-    text = re.sub(r,'\^', 'ㅅ', newtext)
-    text = re.sub('H', 'ㅐ', text)
-    text = re.sub("[^가-힣]", "", text)
+    text = newtext.replace(/\^/gi, 'ㅅ')
+    text = text.replace(/H/gi, 'ㅐ')
+    text = text.replace(/[^가-힣]/gi, '')
     sonofbitch = ["ㅅㄲ", "ㅅ끼", "ㅆ끼", "쎆", "쌖","쌔꺄","새꺄"]
-    for (const i of bullshit1) {
+    for (const i of sonofbitch) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -189,8 +167,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -199,8 +175,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
     text = re.sub("[^가-힣]", "", text)
@@ -208,8 +182,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -218,8 +190,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -227,8 +197,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -237,8 +205,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -248,8 +214,6 @@ function check(text) {
         for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -258,8 +222,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
     text = re.sub("[^가-힣]", "", text)
@@ -269,8 +231,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -279,8 +239,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -311,8 +269,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -322,8 +278,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
     text = re.sub("[^ㄱ-힣]", "", newtext)
@@ -348,8 +302,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -364,8 +316,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
     text = re.sub("[^가-힣]", "", newtext)
@@ -374,8 +324,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -384,8 +332,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -394,8 +340,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
     
@@ -405,8 +349,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -415,8 +357,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -425,8 +365,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -442,8 +380,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -452,8 +388,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -462,8 +396,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
     text = re.sub("[^가-힣]", "", newtext)
@@ -471,8 +403,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -483,58 +413,42 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
     text = re.sub('[^a-z]', '', newtext)
-    if (text.includes(("fuck")) {
+    if (text.includes(("fuck"))) {
         return true;
-    }else{
-        return false;
     }
 
     text = re.sub('[^a-z]', '', newtext)
     if (text.includes("commin")) {
         return true;
-    }else{
-        return false;
     }
 
     text = re.sub('[^a-z]', '', newtext)
     if (text.includes("knod")) {
         return true;
-    }else{
-        return false;
     }
 
     if (text.includes("cunt")) {
         return true;
-    }else{
-        return false;
     }
 
     text = re.sub('[^a-z]', '', newtext)
     if (text.includes("dotard")) {
         return true;
-    }else{
-        return false;
     }
 
     text = re.sub('[^a-z]', '', newtext)
     if (text.includes("dyke")) {
         return true;
-    }else{
-        return false;
     }
 
     emoji = ["🖕🏻", "👌🏻👈🏻", "👉🏻👌🏻", "🤏🏻", "🖕", "🖕🏼", "🖕🏽", "🖕🏾", "🖕🏿"]
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -542,8 +456,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -551,8 +463,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -560,8 +470,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -569,8 +477,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -578,8 +484,6 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
 
@@ -587,8 +491,9 @@ function check(text) {
     for (const i of bullshit1) {
         if (text.includes(i)) {
             return true;
-        }else{
-            return false;
         }
     }
+
+
+    return false;
 }
