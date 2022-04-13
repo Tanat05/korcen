@@ -27,7 +27,7 @@ discord:  Tanat#0206
 
 email:    shrbwjd05@gmail.com
 
-### JS 도움
+#### JS 버전 
 
 discord:  이루#6410
 
