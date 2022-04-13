@@ -17,12 +17,12 @@ https://github.com/TANAT96564/korcen
 링크 또는 "디스코드 TNS 봇" 표기 
 
 ## Installation
->PY
+>PYPI
 ```sh
 $ pip install korcen
 ```
 
->JS
+>NPM
 ```sh
 $ npm i korcen
 ```
@@ -31,7 +31,7 @@ $ npm i korcen
 
 비속어가 있다면 True 없다면 False 출력하는 예시입니다.
 
->PY  0.0.5
+>PYPI  0.0.5
 ```py
 import korcen
 
@@ -41,7 +41,7 @@ text = input()
 print(korcen.check(text))
 ```
 
->JS 0.0.7
+>NPM 0.0.7
 ```js
 const { check } = require('korcen')
 var content = check("문자열")
