@@ -59,9 +59,11 @@ text = input()
 print(korcen.check(text))
 ```
 
->JS 0.0.1
+>JS 0.0.3
 ```js
-준비중
+const { check } = require('korcen')
+var content = check("문자열")
+console.log(content)
 ```
 
 비속어가 있다면 True 없다면 False 출력하는 예입니다.
