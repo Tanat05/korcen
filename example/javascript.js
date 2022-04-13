@@ -2,35 +2,35 @@ const { check, general, minor, sexual, belittle, race, parent, foreign, special,
 
 var content = "확인 할 문장"
 
-var content = check(content)//모든 비속어
-console.log(content) 
+var result = check(content)//모든 비속어
+console.log(result) 
 
-var content = general(content)//일반 욕설
-console.log(content)
+var result = general(content)//일반 욕설
+console.log(result)
 
-var content = minor(content)//사소한 욕설
-console.log(content)
+var result = minor(content)//사소한 욕설
+console.log(result)
 
-var content = sexual(content)//성적발언
-console.log(content)
+var result = sexual(content)//성적발언
+console.log(result)
 
-var content = belittle(content)//비하발언
-console.log(content)
+var result = belittle(content)//비하발언
+console.log(result)
 
-var content = race(content)//인종차별발언
-console.log(content)
+var result = race(content)//인종차별발언
+console.log(result)
 
-var content = parent(content)//패드립
-console.log(content)
+var result = parent(content)//패드립
+console.log(result)
 
-var content = foreign(content)//외국 욕설
-console.log(content)
+var result = foreign(content)//외국 욕설
+console.log(result)
 
-var content = special(content)//특수(이모지)
-console.log(content)
+var result = special(content)//특수(이모지)
+console.log(result)
 
-var content = politics(content)//정치발언
-console.log(content)
+var result = politics(content)//정치발언
+console.log(result)
 
 
 
