@@ -43,8 +43,9 @@ $ py -m pip install korcen
 ```
 
 # Example
-모든 예시는 가장 최신버전 사용합니다(버전: 0.0.5)
+모든 예시는 가장 최신버전 사용합니다(py버전: 0.0.5, js버전: 0.0.5)
 
+>py
 ```py
 from korcen import korcen
 
@@ -53,6 +54,11 @@ korcen = korcen.korcen()
 text = input()
 a = korcen.check(text)
 print(a)
+```
+
+>js
+```js
+준비중
 ```
 
 비속어가 있다면 True 없다면 False 출력
