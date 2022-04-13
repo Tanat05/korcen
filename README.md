@@ -12,8 +12,6 @@ korean(한국어) censorship(검열)의 줄임말로
 
 모든 프로그램 모듈의 출처 표기
 
-협의후 제거
-
 https://github.com/TANAT96564/korcen
 
 링크 또는 "디스코드 TNS 봇" 표기 
