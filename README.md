@@ -18,25 +18,6 @@ https://github.com/TANAT96564/korcen
 
 링크 또는 "디스코드 TNS 봇" 표기 
 
-# Maker
-
-#### 총 개발자
->Tanat
-```
-discord:  Tanat#0206
-email:    shrbwjd05@gmail.com
-```
-#### JS 버전 
->이루
-```
-노가다 작업
-discord:  이루#6410
-```
->희선
-```
-모듈 작업,예시 제공
-discord:  희선#7777
-```
 ## Installation
 >PY
 ```sh
@@ -76,7 +57,25 @@ console.log(content)
 
 #### 자세한 예시들은 [example](https://github.com/Tanat05/korcen/tree/main/example) 파일 참고하세요.
 
+# Maker
 
+#### 총 개발자
+>Tanat
+```
+discord:  Tanat#0206
+email:    shrbwjd05@gmail.com
+```
+#### JS 버전 
+>이루
+```
+노가다 작업
+discord:  이루#6410
+```
+>희선
+```
+모듈 작업,예시 제공
+discord:  희선#7777
+```
 
 © 2022 GitHub, Inc.
 Terms
