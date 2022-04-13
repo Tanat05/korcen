@@ -63,6 +63,7 @@ email:    shrbwjd05@gmail.com
 ```
 타입스트립트 작업
 discord:  kisss#4755
+```
 #### JS 버전 
 >이루
 ```
