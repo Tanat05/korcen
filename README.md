@@ -41,7 +41,7 @@ text = input()
 print(korcen.check(text))
 ```
 
->JS 0.0.3
+>JS 0.0.7
 ```js
 const { check } = require('korcen')
 var content = check("문자열")
