@@ -22,14 +22,13 @@ https://github.com/TANAT96564/korcen
 
 #### 총 개발자
 ```
->Tanat
-
+Tanat
 discord:  Tanat#0206
-
 email:    shrbwjd05@gmail.com
 ```
 #### JS 버전 
 ```
+이루
 discord:  이루#6410
 ```
 ## Installation
