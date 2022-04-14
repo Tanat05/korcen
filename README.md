@@ -64,7 +64,7 @@ email:    shrbwjd05@gmail.com
 타입스트립트 작업
 discord:  kisss#4755
 ```
-#### JS
+#### [JS](https://github.com/Tanat05/korcen/blob/main/korcen/korcen.js)
 >이루
 ```
 코드 변환 작업
