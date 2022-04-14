@@ -55,12 +55,14 @@ console.log(content)
 #### 총 개발자
 >Tanat
 ```
+github:   Tanat05
 discord:  Tanat#0206
 email:    shrbwjd05@gmail.com
 ```
 #### [TS](https://github.com/Tanat05/korcen.ts)
->kisss
+>kiss
 ```
+github:   kiss8981
 타입스트립트 작업
 discord:  kisss#4755
 ```
@@ -68,11 +70,13 @@ discord:  kisss#4755
 >이루
 ```
 코드 변환 작업
+github:   erukim
 discord:  이루#6410
 ```
 >희선
 ```
 모듈화 작업,예시 제공
+github:   kimhs8193
 discord:  희선#7777
 ```
 
