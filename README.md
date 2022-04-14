@@ -62,8 +62,8 @@ email:    shrbwjd05@gmail.com
 #### [TS](https://github.com/Tanat05/korcen.ts)
 >kiss
 ```
+https://github.com/Tanat05/korcen.ts
 github:   kiss8981
-타입스트립트 작업
 discord:  kisss#4755
 ```
 #### [JS](https://github.com/Tanat05/korcen/blob/main/korcen/korcen.js)
