@@ -1,6 +1,9 @@
 //TypeScript kiss8981 제작
 //https://github.com/Tanat05/korcen.ts
 
+
+
+// 0.0.1~0.0.4
 function check(text) {
     newtext = text.toLowerCase()
     text = newtext.replace(/ /gi, '')
