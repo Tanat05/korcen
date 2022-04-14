@@ -5,7 +5,7 @@ korean(한국어) censorship(검열)의 줄임말로
 
 여러 종류에 따라 확인도 가능합니다.
 
-[욕설 데이터 파일](https://github.com/2runo/Curse-detection-data/blob/master/dataset.txt)을 이용해 테스트한 결과 77.5%의 정확도를 보입니다.
+[욕설 데이터 파일](https://github.com/2runo/Curse-detection-data/blob/master/dataset.txt)을 이용해 테스트한 결과 83.3%의 정확도를 보입니다.
 
 [TNS봇](https://discord.com/api/oauth2/authorize?client_id=848795383751639080&permissions=8&scope=bot%20applications.commands)의 욕설 검열에 들어가는 코드입니다.
 ## Licenses
@@ -31,7 +31,7 @@ $ npm i korcen
 
 비속어가 있다면 True 없다면 False 출력하는 예시입니다.
 
->PyPI  0.0.5
+>PyPI  0.0.6
 ```py
 import korcen
 
