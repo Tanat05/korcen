@@ -58,7 +58,7 @@ console.log(content)
 discord:  Tanat#0206
 email:    shrbwjd05@gmail.com
 ```
-#### TS
+#### [TS](https://github.com/Tanat05/korcen.ts)
 >kisss
 ```
 타입스트립트 작업
