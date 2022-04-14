@@ -7,7 +7,7 @@ korean(한국어) censorship(검열)의 줄임말로
 
 [욕설 데이터 파일](https://github.com/2runo/Curse-detection-data/blob/master/dataset.txt)을 이용해 테스트한 결과 77.5%의 정확도를 보입니다.
 
-[TNS봇](https://discord.com/api/oauth2/authorize?client_id=848795383751639080&permissions=8&scope=bot%20applications.command)의 욕설 검열에 들어가는 코드입니다.
+[TNS봇](https://discord.com/api/oauth2/authorize?client_id=848795383751639080&permissions=8&scope=bot%20applications.commands)의 욕설 검열에 들어가는 코드입니다.
 ## Licenses
 
 모든 프로그램 모듈의 출처 표기
