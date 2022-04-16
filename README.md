@@ -31,7 +31,7 @@ $ npm i korcen
 
 비속어가 있다면 True 없다면 False 출력하는 예시입니다.
 
->PyPI  0.0.7
+>PyPI  0.0.8
 ```py
 from korcen import korcen
 
