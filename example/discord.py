@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commads
-import korcen
+from korcen import korcen
 
 TOKEN = "봇 토큰 넣기"
 bot = commands.Bot(command_prefix = "!")
