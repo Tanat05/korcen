@@ -33,7 +33,7 @@ $ npm i korcen
 
 >PyPI  0.0.6
 ```py
-import korcen
+from korcen import korcen
 
 korcen = korcen.korcen()
 
