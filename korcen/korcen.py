@@ -409,7 +409,7 @@ class korcen:
         
 
         text = re.sub("[^가-힣]", "", newtext)
-        onahole = ["매춘부","성노예",""]
+        onahole = ["매춘부","성노예"]
         for i in onahole:
             if i in text:
                 ce = 3
@@ -438,7 +438,7 @@ class korcen:
                 ce = 3
 
         text = re.sub("[^가-힣]", "", newtext)
-        onahole = ["크리토리스","클리토리스"],"페니스"
+        onahole = ["크리토리스","클리토리스","페니스"]
         for i in onahole:
             if i in text:
                 ce = 3
@@ -952,7 +952,7 @@ class korcen:
         
 
         text = re.sub("[^가-힣]", "", newtext)
-        onahole = ["매춘부","성노예",""]
+        onahole = ["매춘부","성노예"]
         for i in onahole:
             if i in text:
                 ce = 3
