@@ -16,10 +16,12 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
+    print(korcen.check(message.content))
     if korcen.check(message.content):
         await message.delete()
-        embed = discord.Embed(title = "메세지 삭제함", description = "")
+        embed = nextcord.Embed(title = "메세지 삭제함", description = "", color=0xFF2424)
         embed.set_footer(text = "디스코드 TNS 봇")
+        await message.channel.send(embed=embed)
     
         
         
