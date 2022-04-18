@@ -20,7 +20,7 @@ async def on_message(message):
         await message.delete()
         embed = discord.Embed(title = "메세지 삭제함", description = "")
         embed.set_footer(text = "디스코드 TNS 봇")
-    await bot.process_commads(msg)
+    await bot.process_commads(message)
     
         
         
