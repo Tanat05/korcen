@@ -1,4 +1,4 @@
-import { check,general,minor,sexual,belittle,race,parent,foreign,special,politics } from "korcen";
+import { check,general,minor,sexual,belittle,race,parents,foreign,special,politics } from "korcen";
 var content = "체크할 문자열"
 
 console.log(check(content))
@@ -19,7 +19,7 @@ console.log(belittle(content))
 console.log(race(content))
 //인종차별발언
 
-console.log(parent(content))
+console.log(parents(content))
 //패드립
 
 console.log(foreign(content))
