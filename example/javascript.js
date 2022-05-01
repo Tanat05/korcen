@@ -1,4 +1,4 @@
-const { general } = require('korcen')
+const { check,general,minor,sexual,belittle,race,parent,foreign,special,politics } = require('korcen')
 var content = "체크할 문자열"
 
 console.log(check(content))
