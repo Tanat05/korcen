@@ -118,7 +118,7 @@ class korcen:
         text = re.sub('씨ㅣ', '씨', text)
         text = re.sub("[^ㄱ-힣]", "", text)
         fuck = ["시ㅂ", "시ㅏㄹ", "씨ㅂ", "씨ㅏㄹ", "ㅣ발", "ㅆ발", "ㅅ발", "ㅅㅂ", "ㅆㅂ", "ㅆ바", "ㅅ바",
-                "시ㅂㅏ", "ㅅㅂㅏ", "시ㅏㄹ", "씨ㅏㄹ", "ㅅ불", "ㅆ불","ㅅ쁠", "ㅆ뿔"]
+                "시ㅂㅏ", "ㅅㅂㅏ", "시ㅏㄹ", "씨ㅏㄹ", "ㅅ불", "ㅆ불","ㅅ쁠", "ㅆ뿔","ㅆㅣ발","ㅅㅟ발","ㅅㅣㅂㅏ"]
         for i in fuck:
             if i in text:
                 ae = 1
@@ -140,7 +140,7 @@ class korcen:
         fuck = ["시발", "씨발", "시봘", "씨봘", "씨바", "시바", "샤발", "씌발", "씹발", "시벌", "시팔", "싯팔",
                 "씨빨", "씨랼", "씨파", "띠발", "띡발", "띸발","싸발", "십발", "슈발","야발", "씨불", "씨랄",
                 "쉬발", "쓰발", "쓔발", "쌰발", "쉬발", "쒸발", "씨팔", "씨밝", "씨밯", "쑤발", "치발", "샤발",
-                "발씨", "리발", "씨볼","찌발", "씨비바라랄", "시바랄", "씨바라"]
+                "발씨", "리발", "씨볼","찌발", "씨비바라랄", "시바랄", "씨바라","쒸팔","쉬팔","씨밮","쒸밮","시밮","씨삐라","ㅆ삐라"]
         for i in fuck:
             if i in text:
                 ae = 1
@@ -149,7 +149,7 @@ class korcen:
         text = re.sub('뇬', '놈', text)
         text = re.sub('놈', '놈', text)
         text = re.sub('넘', '놈', text)
-        fuck = ["10련아", "18것", "18넘", "18놈", "18럼", "18롬", "18새끼", "18세끼", "18세리", "18섹", "18쉑"]
+        fuck = ["18것", "18놈", "18럼", "18롬", "18새끼", "18세끼", "18세리", "18섹", "18쉑", "10쉑"]
         for i in fuck:
             if i in text:
                 ae = 1
@@ -166,7 +166,7 @@ class korcen:
         text = re.sub('지랄탄', '', text)
         text = re.sub('지랄버릇', '', text)
         text = re.sub('이', '', text)
-        bullshit2 = ["지랄", "찌랄", "지럴", "지롤", "랄지"]
+        bullshit2 = ["지랄", "찌랄", "지럴", "지롤", "랄지","쥐랄","쮜랄"]
         for i in bullshit2:
             if i in text:
                 ae = 1
@@ -180,14 +180,14 @@ class korcen:
         text = re.sub('뼝', '병', text)
         text = re.sub('싄', '신', text)
         text = re.sub('씬', '신', text)
-        asshole = ["ㅄ", "ㅂㅅ", "병ㅅ", "ㅂ신", "ㅕㅇ신"]
+        asshole = ["ㅄ", "ㅂㅅ", "병ㅅ", "ㅂ신", "ㅕㅇ신","ㅂㅇ신"]
         for i in asshole:
             if i in text:
                 ae = 1
         text = re.sub("[^가-힣]", "", text)
         text = re.sub('영', '', text)
         text = re.sub('엉', '', text)
-        asshole = ["병신", "병딱", "벼신"]
+        asshole = ["병신", "병딱", "벼신","붱신","뼝신","뿽신","삥신","병시니"]
         for i in asshole:
             if i in text:
                 ae = 1
@@ -196,7 +196,7 @@ class korcen:
         text = re.sub("[ㅂㅁㅋㅈㄴㅌㄷㅇㅊㄱㄹㅍㅅㅎㅃㅉㄸㄲㅆㅠㅛㅗㅜㅕㅓㅡㅑㅏㅐㅣㅔㄺㄼㄽㅃㅉㄸㄲㅆㅀㄿㄾㅘㅚㅟㅝㅞㅢㅙ]", "", text)
         text = re.sub("[\--z]", "", text)
         text = re.sub('전염병', '', text)
-        motherfucker = ["염병", "엠병", "옘병", "염병", "얨병"]
+        motherfucker = ["염병", "엠병", "옘병", "염병", "얨병","옘뼝"]
         for i in motherfucker:
             if i in text:
                 ae = 1
@@ -250,7 +250,7 @@ class korcen:
             if i in text:
                 ae = 1
         text = re.sub("[^가-힣]", "", text)
-        dick = ["좆", "촟", "조까", "좈", "쫒", "졷", "좃","좋같","좃같","좃물","좃밥"]
+        dick = ["좆", "촟", "조까", "좈", "쫒", "졷", "좃","좋같","좃같","좃물","좃밥","줫","좋밥","좋물"]
         for i in dick:
             if i in text:
                 ae = 1
@@ -267,8 +267,14 @@ class korcen:
                 ae = 1
 
         text = re.sub("[^ㄱ-힣]", "", newtext)
-        whatthefuck = ["뻑유", "뻐킹", "뻐큐"]
+        whatthefuck = ["뻑유", "뻐킹", "뻐큐","빡큐","뿩큐","뻑큐","빡유"]
         for i in whatthefuck:
+            if i in text:
+                ae = 1
+
+        text = re.sub("[^가-힣]", "", newtext)
+        shutup = ["닥쳐", "닭쳐","닥치라"]
+        for i in shutup:
             if i in text:
                 ae = 1
 
@@ -289,7 +295,7 @@ class korcen:
         text = re.sub("[^가-힣]", "", text)
         text = re.sub('이미친', '', text)
         text = re.sub('미친증', '', text)
-        damnit = ["미친", "미쳤"]
+        damnit = ["미친", "미쳤","무친놈"]
         for i in damnit:
             if i in text:
                 be = 2
@@ -306,7 +312,7 @@ class korcen:
             if i in text:
                 be = 2
         text = re.sub("[^가-힣]", "", text)
-        picking = ["존나","존내"]
+        picking = ["존나","존내","쫀나","존네"]
         for i in picking:
             if i in text:
                 be = 2
@@ -343,7 +349,7 @@ class korcen:
         text = re.sub('보지말', '', text)
         text = re.sub('안보지', '', text)
         text = re.sub('오', '', text)
-        pussy = ["보지","버지물","버짓물"]
+        pussy = ["보지","버지물","버짓물","보짓"]
         for i in pussy:
             if i in text:
                 ce = 3
@@ -372,7 +378,7 @@ class korcen:
         text = re.sub('지원자', '', text)
         text = re.sub('안자지', '', text)
         text = re.sub('아', '', text)
-        dicks = ["자지"]
+        dicks = ["자지","자짓"]
         for i in dicks:
             if i in text:
                 ce = 3
@@ -390,7 +396,7 @@ class korcen:
                 ce = 3
         text = re.sub("[^가-힣]", "", newtext)
         text = re.sub("야스오", "", text)
-        sex = ["섹스", "섻스", "쉑스", "섿스", "섹그", "야스", "색스", "셱스", "섁스", "세엑스", "썩스","섹수","섹파","섹하자"]
+        sex = ["섹스", "섻스", "쉑스", "섿스", "섹그", "야스", "색스", "셱스", "섁스", "세엑스", "썩스","섹수","섹파","섹하자","쉐스","쉑스","쉐엑스"]
         for i in sex:
             if i in text:
                 ce = 3
@@ -402,7 +408,7 @@ class korcen:
                 ce = 3
 
         text = re.sub("[^ㄱ-힣]", "", newtext)
-        onahole = ["오나홍", "오나홀", "ㅇㄴ홀"]
+        onahole = ["오나홍", "오나홀", "ㅇㄴ홀","텐가","바이브레이터"]
         for i in onahole:
             if i in text:
                 ce = 3
@@ -421,13 +427,13 @@ class korcen:
                 ce = 3
 
         text = re.sub("[^가-힣]", "", newtext)
-        onahole = ["모유물","로리물","근친상간","룸섹스","원조교재"]
+        onahole = ["모유물","로리물","근친상간","룸섹스","원조교재","속박플레이"]
         for i in onahole:
             if i in text:
                 ce = 3
 
         text = re.sub("[^가-힣]", "", newtext)
-        onahole = ["딸딸이","질싸","안에사정","자위남","자위녀","폰섹","포르노","폰세엑","폰쉑","폰쎅"]
+        onahole = ["딸딸이","질싸","안에사정","자위남","자위녀","폰섹","포르노","폰세엑","폰쉑","폰쎅","질내사정"]
         for i in onahole:
             if i in text:
                 ce = 3
@@ -438,7 +444,7 @@ class korcen:
                 ce = 3
 
         text = re.sub("[^가-힣]", "", newtext)
-        onahole = ["크리토리스","클리토리스","페니스"]
+        onahole = ["크리토리스","클리토리스","페니스","애널"]
         for i in onahole:
             if i in text:
                 ce = 3
@@ -460,7 +466,7 @@ class korcen:
         text = re.sub("[^가-힣]", "", text)
         belittling = ["따까리", "장애년", "찐따년", "싸가지", "창년", "썅년", "버러지", "고아년", "고아년", "개간년", "종간나", "도구년", "걸래년", "썅년", "씹년",
                     "창녀", "머저리", "씹쓰래기", "씹쓰레기", "씹장생", "씹자식", "운지", "급식충", "틀딱충", "조센징", "매국노", "똥꼬충", "진지충", "듣보잡",
-                    "한남충","정신병자","중생아","돌팔이","김치녀","폰팔이","틀딱년","같은년","개돼중","쓰글년"]
+                    "한남충","정신병자","중생아","돌팔이","김치녀","폰팔이","틀딱년","같은년","개돼중","쓰글년","썩을년","썩글년"]
         for i in belittling:
             if i in text:
                 de = 4
@@ -468,7 +474,7 @@ class korcen:
  #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
         text = re.sub("[^가-힣]", "", newtext)
-        nigger = ["깜둥이", "흑형","조센진","짱개","짱깨","짱께","짱게","쪽바리","쪽파리","빨갱이",]
+        nigger = ["깜둥이", "흑형","조센진","짱개","짱깨","짱께","짱게","쪽바리","쪽파리","빨갱이"]
         for i in nigger:
             if i in text:
                 ee = 5
@@ -481,7 +487,7 @@ class korcen:
             if i in text:
                 fe = 6
         text = re.sub("[^가-힣]", "", newtext)
-        your = ["느금마", "느그엄마", "늑엄마", "늑금마", "느그애미", "넉엄마", "느그부모", "느그애비", "느금빠", "느그메", "느그빠"]
+        your = ["느금마", "느그엄마", "늑엄마", "늑금마", "느그애미", "넉엄마", "느그부모", "느그애비", "느금빠", "느그메", "느그빠","니미씨","니미씹","느그마","니엄마"]
         for i in your:
             if i in text:
                 fe = 6
@@ -489,7 +495,7 @@ class korcen:
         text = re.sub("[^가-힣]", "", newtext)
         text = re.sub("도", "", text)
         motherfuck = ["니애미", "노애미", "노앰", "앰뒤련",
-                    "아버지도없는게", "애미도없는게", "애비도없는게", "어머니도없는게", "니애비", "노애비","애미없","애비없","애미뒤","애비뒤"]
+                    "아버지도없는게", "애미도없는게", "애비도없는게", "어머니도없는게", "니애비", "노애비","애미없","애비없","애미뒤","애비뒤","니아빠"]
         for i in motherfuck:
             if i in text:
                 fe = 6
@@ -513,11 +519,11 @@ class korcen:
             ge = 7
 
         text = re.sub('[^a-z]', '', newtext)
-        if "Dotard" in text:
+        if "dotard" in text:
             ge = 7
 
         text = re.sub('[^a-z]', '', newtext)
-        if "Dyke" in text:
+        if "dyke" in text:
             ge = 7
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -639,7 +645,7 @@ class korcen:
         text = re.sub('씨ㅣ', '씨', text)
         text = re.sub("[^ㄱ-힣]", "", text)
         fuck = ["시ㅂ", "시ㅏㄹ", "씨ㅂ", "씨ㅏㄹ", "ㅣ발", "ㅆ발", "ㅅ발", "ㅅㅂ", "ㅆㅂ", "ㅆ바", "ㅅ바",
-                "시ㅂㅏ", "ㅅㅂㅏ", "시ㅏㄹ", "씨ㅏㄹ", "ㅅ불", "ㅆ불","ㅅ쁠", "ㅆ뿔"]
+                "시ㅂㅏ", "ㅅㅂㅏ", "시ㅏㄹ", "씨ㅏㄹ", "ㅅ불", "ㅆ불","ㅅ쁠", "ㅆ뿔","ㅆㅣ발","ㅅㅟ발","ㅅㅣㅂㅏ"]
         for i in fuck:
             if i in text:
                 ae = 1
@@ -661,7 +667,7 @@ class korcen:
         fuck = ["시발", "씨발", "시봘", "씨봘", "씨바", "시바", "샤발", "씌발", "씹발", "시벌", "시팔", "싯팔",
                 "씨빨", "씨랼", "씨파", "띠발", "띡발", "띸발","싸발", "십발", "슈발","야발", "씨불", "씨랄",
                 "쉬발", "쓰발", "쓔발", "쌰발", "쉬발", "쒸발", "씨팔", "씨밝", "씨밯", "쑤발", "치발", "샤발",
-                "발씨", "리발", "씨볼","찌발", "씨비바라랄", "시바랄", "씨바라"]
+                "발씨", "리발", "씨볼","찌발", "씨비바라랄", "시바랄", "씨바라","쒸팔","쉬팔","씨밮","쒸밮","시밮"]
         for i in fuck:
             if i in text:
                 ae = 1
@@ -670,7 +676,7 @@ class korcen:
         text = re.sub('뇬', '놈', text)
         text = re.sub('놈', '놈', text)
         text = re.sub('넘', '놈', text)
-        fuck = ["10련아", "18것", "18넘", "18놈", "18럼", "18롬", "18새끼", "18세끼", "18세리", "18섹", "18쉑"]
+        fuck = ["18것", "18놈", "18럼", "18롬", "18새끼", "18세끼", "18세리", "18섹", "18쉑", "10쉑"]
         for i in fuck:
             if i in text:
                 ae = 1
@@ -687,7 +693,7 @@ class korcen:
         text = re.sub('지랄탄', '', text)
         text = re.sub('지랄버릇', '', text)
         text = re.sub('이', '', text)
-        bullshit2 = ["지랄", "찌랄", "지럴", "지롤", "랄지"]
+        bullshit2 = ["지랄", "찌랄", "지럴", "지롤", "랄지","쥐랄","쮜랄"]
         for i in bullshit2:
             if i in text:
                 ae = 1
@@ -701,14 +707,14 @@ class korcen:
         text = re.sub('뼝', '병', text)
         text = re.sub('싄', '신', text)
         text = re.sub('씬', '신', text)
-        asshole = ["ㅄ", "ㅂㅅ", "병ㅅ", "ㅂ신", "ㅕㅇ신"]
+        asshole = ["ㅄ", "ㅂㅅ", "병ㅅ", "ㅂ신", "ㅕㅇ신","ㅂㅇ신"]
         for i in asshole:
             if i in text:
                 ae = 1
         text = re.sub("[^가-힣]", "", text)
         text = re.sub('영', '', text)
         text = re.sub('엉', '', text)
-        asshole = ["병신", "병딱", "벼신"]
+        asshole = ["병신", "병딱", "벼신","붱신","뼝신","뿽신","삥신","병시니"]
         for i in asshole:
             if i in text:
                 ae = 1
@@ -717,7 +723,7 @@ class korcen:
         text = re.sub("[ㅂㅁㅋㅈㄴㅌㄷㅇㅊㄱㄹㅍㅅㅎㅃㅉㄸㄲㅆㅠㅛㅗㅜㅕㅓㅡㅑㅏㅐㅣㅔㄺㄼㄽㅃㅉㄸㄲㅆㅀㄿㄾㅘㅚㅟㅝㅞㅢㅙ]", "", text)
         text = re.sub("[\--z]", "", text)
         text = re.sub('전염병', '', text)
-        motherfucker = ["염병", "엠병", "옘병", "염병", "얨병"]
+        motherfucker = ["염병", "엠병", "옘병", "염병", "얨병","옘뼝"]
         for i in motherfucker:
             if i in text:
                 ae = 1
@@ -771,7 +777,7 @@ class korcen:
             if i in text:
                 ae = 1
         text = re.sub("[^가-힣]", "", text)
-        dick = ["좆", "촟", "조까", "좈", "쫒", "졷", "좃","좋같","좃같","좃물","좃밥"]
+        dick = ["좆", "촟", "조까", "좈", "쫒", "졷", "좃","좋같","좃같","좃물","좃밥","줫","좋밥","좋물"]
         for i in dick:
             if i in text:
                 ae = 1
@@ -788,8 +794,14 @@ class korcen:
                 ae = 1
 
         text = re.sub("[^ㄱ-힣]", "", newtext)
-        whatthefuck = ["뻑유", "뻐킹", "뻐큐"]
+        whatthefuck = ["뻑유", "뻐킹", "뻐큐","빡큐","뿩큐","뻑큐","빡유"]
         for i in whatthefuck:
+            if i in text:
+                ae = 1
+
+        text = re.sub("[^가-힣]", "", newtext)
+        shutup = ["닥쳐", "닭쳐","닥치라"]
+        for i in shutup:
             if i in text:
                 ae = 1
 
@@ -821,7 +833,7 @@ class korcen:
         text = re.sub("[^가-힣]", "", text)
         text = re.sub('이미친', '', text)
         text = re.sub('미친증', '', text)
-        damnit = ["미친", "미쳤"]
+        damnit = ["미친", "미쳤","무친놈"]
         for i in damnit:
             if i in text:
                 be = 2
@@ -838,7 +850,7 @@ class korcen:
             if i in text:
                 be = 2
         text = re.sub("[^가-힣]", "", text)
-        picking = ["존나","존내"]
+        picking = ["존나","존내","쫀나","존네"]
         for i in picking:
             if i in text:
                 be = 2
@@ -886,7 +898,7 @@ class korcen:
         text = re.sub('보지말', '', text)
         text = re.sub('안보지', '', text)
         text = re.sub('오', '', text)
-        pussy = ["보지","버지물","버짓물"]
+        pussy = ["보지","버지물","버짓물","보짓"]
         for i in pussy:
             if i in text:
                 ce = 3
@@ -915,7 +927,7 @@ class korcen:
         text = re.sub('지원자', '', text)
         text = re.sub('안자지', '', text)
         text = re.sub('아', '', text)
-        dicks = ["자지"]
+        dicks = ["자지","자짓"]
         for i in dicks:
             if i in text:
                 ce = 3
@@ -933,7 +945,7 @@ class korcen:
                 ce = 3
         text = re.sub("[^가-힣]", "", newtext)
         text = re.sub("야스오", "", text)
-        sex = ["섹스", "섻스", "쉑스", "섿스", "섹그", "야스", "색스", "셱스", "섁스", "세엑스", "썩스","섹수","섹파","섹하자"]
+        sex = ["섹스", "섻스", "쉑스", "섿스", "섹그", "야스", "색스", "셱스", "섁스", "세엑스", "썩스","섹수","섹파","섹하자","쉐스","쉑스","쉐엑스"]
         for i in sex:
             if i in text:
                 ce = 3
@@ -945,7 +957,7 @@ class korcen:
                 ce = 3
 
         text = re.sub("[^ㄱ-힣]", "", newtext)
-        onahole = ["오나홍", "오나홀", "ㅇㄴ홀"]
+        onahole = ["오나홍", "오나홀", "ㅇㄴ홀","텐가","바이브레이터"]
         for i in onahole:
             if i in text:
                 ce = 3
@@ -964,13 +976,13 @@ class korcen:
                 ce = 3
 
         text = re.sub("[^가-힣]", "", newtext)
-        onahole = ["모유물","로리물","근친상간","룸섹스","원조교재"]
+        onahole = ["모유물","로리물","근친상간","룸섹스","원조교재","속박플레이"]
         for i in onahole:
             if i in text:
                 ce = 3
 
         text = re.sub("[^가-힣]", "", newtext)
-        onahole = ["딸딸이","질싸","안에사정","자위남","자위녀","폰섹","포르노","폰세엑","폰쉑","폰쎅"]
+        onahole = ["딸딸이","질싸","안에사정","자위남","자위녀","폰섹","포르노","폰세엑","폰쉑","폰쎅","질내사정"]
         for i in onahole:
             if i in text:
                 ce = 3
@@ -981,7 +993,7 @@ class korcen:
                 ce = 3
 
         text = re.sub("[^가-힣]", "", newtext)
-        onahole = ["크리토리스","클리토리스"],"페니스"
+        onahole = ["크리토리스","클리토리스","페니스","애널"]
         for i in onahole:
             if i in text:
                 ce = 3
@@ -1014,7 +1026,7 @@ class korcen:
         text = re.sub("[^가-힣]", "", text)
         belittling = ["따까리", "장애년", "찐따년", "싸가지", "창년", "썅년", "버러지", "고아년", "고아년", "개간년", "종간나", "도구년", "걸래년", "썅년", "씹년",
                     "창녀", "머저리", "씹쓰래기", "씹쓰레기", "씹장생", "씹자식", "운지", "급식충", "틀딱충", "조센징", "매국노", "똥꼬충", "진지충", "듣보잡",
-                    "한남충","정신병자","중생아","돌팔이","김치녀","폰팔이","틀딱년","같은년","개돼중","쓰글년"]
+                    "한남충","정신병자","중생아","돌팔이","김치녀","폰팔이","틀딱년","같은년","개돼중","쓰글년","썩을년","썩글년"]
         for i in belittling:
             if i in text:
                 de = 4
@@ -1057,7 +1069,7 @@ class korcen:
             if i in text:
                 fe = 6
         text = re.sub("[^가-힣]", "", newtext)
-        your = ["느금마", "느그엄마", "늑엄마", "늑금마", "느그애미", "넉엄마", "느그부모", "느그애비", "느금빠", "느그메", "느그빠"]
+        your = ["느금마", "느그엄마", "늑엄마", "늑금마", "느그애미", "넉엄마", "느그부모", "느그애비", "느금빠", "느그메", "느그빠","니미씨","니미씹","느그마","니엄마"]
         for i in your:
             if i in text:
                 fe = 6
@@ -1065,7 +1077,7 @@ class korcen:
         text = re.sub("[^가-힣]", "", newtext)
         text = re.sub("도", "", text)
         motherfuck = ["니애미", "노애미", "노앰", "앰뒤련",
-                    "아버지도없는게", "애미도없는게", "애비도없는게", "어머니도없는게", "니애비", "노애비","애미없","애비없","애미뒤","애비뒤"]
+                    "아버지도없는게", "애미도없는게", "애비도없는게", "어머니도없는게", "니애비", "노애비","애미없","애비없","애미뒤","애비뒤","니아빠"]
         for i in motherfuck:
             if i in text:
                 fe = 6
@@ -1100,11 +1112,11 @@ class korcen:
             ge = 7
 
         text = re.sub('[^a-z]', '', newtext)
-        if "Dotard" in text:
+        if "dotard" in text:
             ge = 7
 
         text = re.sub('[^a-z]', '', newtext)
-        if "Dyke" in text:
+        if "dyke" in text:
             ge = 7
 
         if ge == 7:
@@ -1179,6 +1191,4 @@ class korcen:
 if __name__ == "__main__":
     korcen = korcen()
     while True:
-        text = input()
-        b = korcen.check(text)
-        print(b)
+        print(korcen.check(input()))
