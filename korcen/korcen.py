@@ -96,6 +96,15 @@ class korcen:
             if i in text:
                 ae = 1
 
+
+        fuck = ["tq"]
+        for i in fuck:
+            if i == text:
+                ae = 1
+        fuck = ["씨8","18아","18놈","18련"]
+        for i in fuck:
+            if i in text:
+                ae = 1
         text = re.sub(r'\^', 'ㅅ', newtext)
         text = re.sub('人', 'ㅅ', text)
         text = re.sub('丨', 'ㅣ', text)
@@ -106,6 +115,7 @@ class korcen:
         text = re.sub('bal', '발', text)
         text = re.sub('bar', '발', text)
         text = re.sub('bak', '발', text)
+        text = re.sub('pal', '발', text)
         text = re.sub('r', 'ㅏ', text)
         text = re.sub('ᐲ', 'ㅅ', text)
         text = re.sub('ᗨ', 'ㅂ', text)
@@ -118,7 +128,7 @@ class korcen:
         text = re.sub('씨ㅣ', '씨', text)
         text = re.sub("[^ㄱ-힣]", "", text)
         fuck = ["시ㅂ", "시ㅏㄹ", "씨ㅂ", "씨ㅏㄹ", "ㅣ발", "ㅆ발", "ㅅ발", "ㅅㅂ", "ㅆㅂ", "ㅆ바", "ㅅ바",
-                "시ㅂㅏ", "ㅅㅂㅏ", "시ㅏㄹ", "씨ㅏㄹ", "ㅅ불", "ㅆ불","ㅅ쁠", "ㅆ뿔","ㅆㅣ발","ㅅㅟ발","ㅅㅣㅂㅏ"]
+                "시ㅂㅏ", "ㅅㅂㅏ", "시ㅏㄹ", "씨ㅏㄹ", "ㅅ불", "ㅆ불","ㅅ쁠", "ㅆ뿔","ㅆㅣ발","ㅅㅟ발","ㅅㅣㅂㅏ","ㅣ바알","씨바알","샤빨","샤발","스벌","쓰벌","신발련","신발년","신발놈","ㅅ벌"]
         for i in fuck:
             if i in text:
                 ae = 1
@@ -140,7 +150,7 @@ class korcen:
         fuck = ["시발", "씨발", "시봘", "씨봘", "씨바", "시바", "샤발", "씌발", "씹발", "시벌", "시팔", "싯팔",
                 "씨빨", "씨랼", "씨파", "띠발", "띡발", "띸발","싸발", "십발", "슈발","야발", "씨불", "씨랄",
                 "쉬발", "쓰발", "쓔발", "쌰발", "쉬발", "쒸발", "씨팔", "씨밝", "씨밯", "쑤발", "치발", "샤발",
-                "발씨", "리발", "씨볼","찌발", "씨비바라랄", "시바랄", "씨바라","쒸팔","쉬팔","씨밮","쒸밮","시밮","씨삐라","ㅆ삐라"]
+                "발씨", "리발", "씨볼","찌발", "씨비바라랄", "시바랄", "씨바라","쒸팔","쉬팔","씨밮","쒸밮","시밮","씨삐라","ㅆ삐라","씨벌"]
         for i in fuck:
             if i in text:
                 ae = 1
@@ -154,15 +164,15 @@ class korcen:
             if i in text:
                 ae = 1
 
-        text = re.sub("g랄", "지랄", text)
-        text = re.sub("[^ㄱ-힣]", "", newtext)
+        text = re.sub("g랄", "지랄", newtext)
+        text = re.sub("[^ㄱ-힣]", "", text)
         text = re.sub("근", "ㄹ", text)
         bullshit1 = ["ㅈㄹ", "지ㄹ", "ㅈ랄", "ㅈ라"]
         for i in bullshit1:
             if i in text:
                 ae = 1
 
-        text = re.sub("[^가-힣]", "", text)
+        text = re.sub("[^가-힣]", "", newtext)
         text = re.sub('지랄탄', '', text)
         text = re.sub('지랄버릇', '', text)
         text = re.sub('이', '', text)
@@ -180,7 +190,9 @@ class korcen:
         text = re.sub('뼝', '병', text)
         text = re.sub('싄', '신', text)
         text = re.sub('씬', '신', text)
-        asshole = ["ㅄ", "ㅂㅅ", "병ㅅ", "ㅂ신", "ㅕㅇ신","ㅂㅇ신"]
+        text = re.sub('우', '', text)
+        text = re.sub('웅', '', text)
+        asshole = ["ㅄ", "ㅂㅅ", "병ㅅ", "ㅂ신", "ㅕㅇ신","ㅂㅇ신","뷰신"]
         for i in asshole:
             if i in text:
                 ae = 1
@@ -218,6 +230,11 @@ class korcen:
             if i in text:
                 ae = 1
 
+        sonofbitch = ["rotorl","rotprl"]
+        for i in sonofbitch:
+            if i in text:
+                ae = 1
+
         text = re.sub(r'\^', 'ㅅ', newtext)
         text = re.sub('H', 'ㅐ', text)
         text = re.sub('10새', '새끼', text)
@@ -244,13 +261,19 @@ class korcen:
             if i in text:
                 ae = 1
 
+
+        dick = ["w같은"]
+        for i in dick:
+            if i in newtext:
+                ae = 1
         text = re.sub("[^ㄱ-힣]", "", newtext)
+        text = re.sub('줫습니다', '', text)
         dick = ["ㅈ같", "ㅈ망", "ㅈ까", "ㅈ경"]
         for i in dick:
             if i in text:
                 ae = 1
         text = re.sub("[^가-힣]", "", text)
-        dick = ["좆", "촟", "조까", "좈", "쫒", "졷", "좃","좋같","좃같","좃물","좃밥","줫","좋밥","좋물"]
+        dick = ["좆", "촟", "조까", "좈", "쫒", "졷", "좃","좋같","좃같","좃물","좃밥","줫","좋밥","좋물","좇"]
         for i in dick:
             if i in text:
                 ae = 1
@@ -307,7 +330,7 @@ class korcen:
                 be = 2
 
         text = re.sub("[^ㄱ-힣]", "", text)
-        picking = ["ㅈㄴ","ㅈ나","존ㄴ"]
+        picking = ["ㅈㄴ","ㅈ나","존ㄴ","존맛"]
         for i in picking:
             if i in text:
                 be = 2
@@ -396,6 +419,7 @@ class korcen:
                 ce = 3
         text = re.sub("[^가-힣]", "", newtext)
         text = re.sub("야스오", "", text)
+        text = re.sub("크시야", "", text)
         sex = ["섹스", "섻스", "쉑스", "섿스", "섹그", "야스", "색스", "셱스", "섁스", "세엑스", "썩스","섹수","섹파","섹하자","쉐스","쉑스","쉐엑스"]
         for i in sex:
             if i in text:
