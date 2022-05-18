@@ -41,7 +41,7 @@ text = input()
 print(korcen.check(text))
 ```
 
->NPM 0.0.7
+>NPM 0.1.0
 ```js
 const { check } = require('korcen')
 var content = check("문자열")
@@ -70,7 +70,7 @@ discord:  kisss#4755
 #### [JS](https://github.com/Tanat05/korcen/blob/main/korcen/korcen.js)
 >이루
 ```
-코드 변환 작업
+코드 변환 작업 및 업데이트 제공
 
 github:   erukim
 discord:  이루#6410
