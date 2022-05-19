@@ -1,17 +1,16 @@
-[![image](https://img.shields.io/pypi/v/korcen.svg)](https://python.org/pypi/korcen)
-[![image](https://img.shields.io/pypi/l/korcen.svg)](https://python.org/pypi/korcen)
-[![image](https://img.shields.io/pypi/pyversions/korcen.svg)](https://python.org/pypi/korcen)
+<div align="center">
+  <h1>korcen(코르센)</h1>
+  
+  [![image](https://img.shields.io/pypi/v/korcen.svg)](https://python.org/pypi/korcen)
+  [![image](https://img.shields.io/pypi/l/korcen.svg)](https://python.org/pypi/korcen)
+  [![image](https://img.shields.io/pypi/pyversions/korcen.svg)](https://python.org/pypi/korcen)
+  [![downloads](https://img.shields.io/pypi/dm/korcen.svg)](https://pypi.org/project/korcen/)
+</div>
 
-# korcen(코르센)
 korean(한국어) censorship(검열)의 줄임말로 
 
 누구나 쉽게 텍스트에 비속어가 있는지 확인이 가능합니다.
 
-여러 종류에 따라 확인도 가능합니다.
-
-[욕설 데이터 파일](https://github.com/2runo/Curse-detection-data/blob/master/dataset.txt)을 이용해 테스트한 결과 83.3%의 정확도를 보입니다.
-
-[TNS봇](https://discord.com/api/oauth2/authorize?client_id=848795383751639080&permissions=8&scope=bot%20applications.commands)의 욕설 검열에 들어가는 코드입니다.
 ## Licenses
 
 모든 프로그램 모듈의 출처 표기
