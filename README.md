@@ -1,3 +1,7 @@
+[![image](https://img.shields.io/pypi/v/korcen.svg)](https://python.org/pypi/korcen)
+[![image](https://img.shields.io/pypi/l/korcen.svg)](https://python.org/pypi/korcen)
+[![image](https://img.shields.io/pypi/pyversions/korcen.svg)](https://python.org/pypi/korcen)
+
 # korcen(코르센)
 korean(한국어) censorship(검열)의 줄임말로 
 
