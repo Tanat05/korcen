@@ -34,7 +34,7 @@ $ npm i korcen
 
 비속어가 있다면 True 없다면 False 출력하는 예시입니다.
 
->PyPI  0.1.0
+>PyPI  0.1.2
 ```py
 from korcen import korcen
 
@@ -75,7 +75,7 @@ discord:  kisss#4755
 ```
 >이루
 ```
-코드 변환(PY→JS) 작업 및 업데이트 제공
+코드 변환(PY→JS) 작업 및 NPM버전 업데이트 제공
 
 github:   erukim
 discord:  이루#6410
