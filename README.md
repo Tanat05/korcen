@@ -11,8 +11,6 @@ korean(한국어) censorship(검열)의 줄임말로
 
 누구나 쉽게 텍스트에 비속어가 있는지 확인이 가능합니다.
 
-
->pypi와 npm에 따라 기능적차이가 있습니다
 ## Licenses
 
 모든 프로그램 모듈의 출처 표기
@@ -64,29 +62,23 @@ github:   Tanat05
 discord:  Tanat#0206
 email:    shrbwjd05@gmail.com
 ```
-#### [TS](https://github.com/Tanat05/korcen.ts)
+
 >kiss
 ```
+JS→TS 변환과 깃허브 설정
 https://github.com/Tanat05/korcen.ts
 
 github:   kiss8981
 discord:  kisss#4755
 ```
-#### [JS](https://github.com/Tanat05/korcen/blob/main/korcen/korcen.js)
 >이루
 ```
-코드 변환 작업 및 업데이트 제공
+코드 변환(PY→JS) 작업 및 업데이트 제공
 
 github:   erukim
 discord:  이루#6410
 ```
->희선
-```
-모듈화 작업,예시 제공
 
-github:   kimhs8193
-discord:  희선#7777
-```
 
 © 2022 GitHub, Inc.
 Terms
