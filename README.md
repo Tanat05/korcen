@@ -55,9 +55,11 @@ console.log(content)
 
 # Maker
 
-#### 총 개발자
+
 >Tanat
 ```
+메인 개발자
+
 github:   Tanat05
 discord:  Tanat#0206
 email:    shrbwjd05@gmail.com
