@@ -75,7 +75,8 @@ discord:  kisss#4755
 ```
 >이루
 ```
-코드 변환(PY→JS) 작업 및 NPM버전 업데이트 제공
+코드 변환(PY→JS) 작업
+NPM버전 업데이트 제공
 
 github:   erukim
 discord:  이루#6410
