@@ -64,15 +64,6 @@ github:   Tanat05
 discord:  Tanat#0206
 email:    shrbwjd05@gmail.com
 ```
-
->kiss
-```
-JS→TS 변환과 깃허브 설정
-https://github.com/Tanat05/korcen.ts
-
-github:   kiss8981
-discord:  kisss#4755
-```
 >이루
 ```
 PY→JS 작업 도움
@@ -81,6 +72,15 @@ NPM버전 업데이트 제공
 github:   erukim
 discord:  이루#6410
 ```
+>kiss
+```
+JS→TS 변환과 깃허브 설정
+https://github.com/Tanat05/korcen.ts
+
+github:   kiss8981
+discord:  kisss#4755
+```
+
 
 
 © 2022 GitHub, Inc.
