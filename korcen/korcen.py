@@ -97,11 +97,15 @@ class korcen:
                 ae = 1
 
 
-        fuck = ["tㅂ","t발","ㅅㅍ"]
+        fuck = ["tq","qt"]
         for i in fuck:
             if i == text:
                 ae = 1
-        fuck = ["씨8","18아","18놈","18련"]
+        fuck = ["씨8","18아","18놈","18련""tㅂ","t발","ㅅㅍ","ㅆㅍ",
+                "sibal","sival","sibar","sibak","sipal","siqk","tlbal","tlval","tlbar","tlbak","tlpal","tlqk"
+                "시bal","시val","시bar","시bak","시pal","시qk","시bal","시val","시bar","시bak","시pal","시qk"
+                "si바","si발","si불","si빨","si팔","tl바","tl발","tl불","tl빨""tl팔",
+                "siba","tlba","siva","tlva","tlqkf"]
         for i in fuck:
             if i in text:
                 ae = 1
@@ -112,23 +116,16 @@ class korcen:
         text = re.sub('卜', 'ㅏ', text)
         text = re.sub('1', 'ㅣ', text)
         text = re.sub('l', 'ㅣ', text)
-        text = re.sub('bal', '발', text)
-        text = re.sub('bar', '발', text)
-        text = re.sub('bak', '발', text)
-        text = re.sub('pal', '발', text)
         text = re.sub('r', 'ㅏ', text)
         text = re.sub('ᐲ', 'ㅅ', text)
         text = re.sub('ᗨ', 'ㅂ', text)
-        text = re.sub('si', 'ㅅ', text)
-        text = re.sub('tl', 'ㅅ', text)
-        text = re.sub('qkf', '발', text)
-        text = re.sub('qk', '바', text)
-        text = re.sub('tl', '시', text)
         text = re.sub('시ㅣ', '시', text)
         text = re.sub('씨ㅣ', '씨', text)
         text = re.sub("[^ㄱ-힣]", "", text)
         fuck = ["시ㅂ", "시ㅏㄹ", "씨ㅂ", "씨ㅏㄹ", "ㅣ발", "ㅆ발", "ㅅ발", "ㅅㅂ", "ㅆㅂ", "ㅆ바", "ㅅ바",
-                "시ㅂㅏ", "ㅅㅂㅏ", "시ㅏㄹ", "씨ㅏㄹ", "ㅅ불", "ㅆ불","ㅅ쁠", "ㅆ뿔","ㅆㅣ발","ㅅㅟ발","ㅅㅣㅂㅏ","ㅣ바알","씨바알","샤빨","샤발","스벌","쓰벌","신발련","신발년","신발놈","ㅅ벌"]
+                "시ㅂㅏ", "ㅅㅂㅏ", "시ㅏㄹ", "씨ㅏㄹ", "ㅅ불", "ㅆ불","ㅅ쁠", "ㅆ뿔","ㅆㅣ발","ㅅㅟ발","ㅅㅣㅂㅏ",
+                "ㅣ바알","씨바알","샤빨","샤발","스벌","쓰벌","신발련","신발년","신발놈","ㅅ벌","시불","시부렝"
+                ,"씨부렝","시부랭","씨부랭"]
         for i in fuck:
             if i in text:
                 ae = 1
@@ -174,6 +171,10 @@ class korcen:
             if i in text:
                 ae = 1
 
+        bullshit1 = ["wlfkf"]
+        for i in bullshit1:
+            if i in text:
+                ae = 1
         text = re.sub("g랄", "지랄", newtext)
         text = re.sub("[^ㄱ-힣]", "", text)
         text = re.sub("근", "ㄹ", text)
@@ -231,6 +232,7 @@ class korcen:
         text = re.sub('내꺼져', '', text)
         text = re.sub('제꺼져', '', text)
         text = re.sub('꺼져있', '', text)
+        text = re.sub('꺼져도', '', text)
         if "꺼져" in text:
             ae = 1
 
@@ -240,7 +242,7 @@ class korcen:
             if i in text:
                 ae = 1
 
-        sonofbitch = ["rotorl","rotprl"]
+        sonofbitch = ["rotorl","rotprl","sib새"]
         for i in sonofbitch:
             if i in text:
                 ae = 1
@@ -642,6 +644,60 @@ class korcen:
 
         text = text.lower()
         text = ''.join(char for char in text if char.isalnum())
+        text = re.sub('𝗌', 's', text)
+        text = re.sub('𝘴', 's', text)
+        text = re.sub('𝙨', 's', text)
+        text = re.sub('𝚜', 's', text)
+        text = re.sub('𝐬', 's', text)
+        text = re.sub('𝑠', 's', text)
+        text = re.sub('𝒔', 's', text)
+        text = re.sub('𝓈', 's', text)
+        text = re.sub('𝓼', 's', text)
+        text = re.sub('𝔰', 's', text)
+        text = re.sub('𝖘', 's', text)
+        text = re.sub('𝕤', 's', text)
+        text = re.sub('ｓ', 's', text)
+        text = re.sub('ⓢ', 's', text)
+        text = re.sub('⒮', 's', text)
+        text = re.sub('🅢', 's', text)
+        text = re.sub('🆂', 's', text)
+        text = re.sub('🅂', 's', text)
+        text = re.sub('𝖾', 'e', text)
+        text = re.sub('𝘦', 'e', text)
+        text = re.sub('𝙚', 'e', text)
+        text = re.sub('𝚎', 'e', text)
+        text = re.sub('𝐞', 'e', text)
+        text = re.sub('𝑒', 'e', text)
+        text = re.sub('𝒆', 'e', text)
+        text = re.sub('ℯ', 'e', text)
+        text = re.sub('𝓮', 'e', text)
+        text = re.sub('𝔢', 'e', text)
+        text = re.sub('𝖊', 'e', text)
+        text = re.sub('𝕖', 'e', text)
+        text = re.sub('ｅ', 'e', text)
+        text = re.sub('ⓔ', 'e', text)
+        text = re.sub('⒠', 'e', text)
+        text = re.sub('🅔', 'e', text)
+        text = re.sub('🅴', 'e', text)
+        text = re.sub('🄴', 'e', text)
+        text = re.sub('𝗑', 'x', text)
+        text = re.sub('𝘹', 'x', text)
+        text = re.sub('𝙭', 'x', text)
+        text = re.sub('𝚡', 'x', text)
+        text = re.sub('𝐱', 'x', text)
+        text = re.sub('𝑥', 'x', text)
+        text = re.sub('𝒙', 'x', text)
+        text = re.sub('𝓍', 'x', text)
+        text = re.sub('𝔁', 'x', text)
+        text = re.sub('𝔵', 'x', text)
+        text = re.sub('𝖝', 'x', text)
+        text = re.sub('𝕩', 'x', text)
+        text = re.sub('ｘ', 'x', text)
+        text = re.sub('ⓧ', 'x', text)
+        text = re.sub('⒳', 'x', text)
+        text = re.sub('🅧', 'x', text)
+        text = re.sub('🆇', 'x', text)
+        text = re.sub('🅇', 'x', text)
         newtext = re.sub(' ', '', text)
 
         text = re.sub('ㅗ먹어', 'ㅗ', newtext)
@@ -666,11 +722,15 @@ class korcen:
                 ae = 1
 
 
-        fuck = ["tㅂ","t발","ㅅㅍ"]
+        fuck = ["tq","qt"]
         for i in fuck:
             if i == text:
                 ae = 1
-        fuck = ["씨8","18아","18놈","18련"]
+        fuck = ["씨8","18아","18놈","18련""tㅂ","t발","ㅅㅍ","ㅆㅍ",
+                "sibal","sival","sibar","sibak","sipal","siqk","tlbal","tlval","tlbar","tlbak","tlpal","tlqk"
+                "시bal","시val","시bar","시bak","시pal","시qk","시bal","시val","시bar","시bak","시pal","시qk"
+                "si바","si발","si불","si빨","si팔","tl바","tl발","tl불","tl빨""tl팔",
+                "siba","tlba","siva","tlva","tlqkf"]
         for i in fuck:
             if i in text:
                 ae = 1
@@ -681,23 +741,16 @@ class korcen:
         text = re.sub('卜', 'ㅏ', text)
         text = re.sub('1', 'ㅣ', text)
         text = re.sub('l', 'ㅣ', text)
-        text = re.sub('bal', '발', text)
-        text = re.sub('bar', '발', text)
-        text = re.sub('bak', '발', text)
-        text = re.sub('pal', '발', text)
         text = re.sub('r', 'ㅏ', text)
         text = re.sub('ᐲ', 'ㅅ', text)
         text = re.sub('ᗨ', 'ㅂ', text)
-        text = re.sub('si', 'ㅅ', text)
-        text = re.sub('tl', 'ㅅ', text)
-        text = re.sub('qkf', '발', text)
-        text = re.sub('qk', '바', text)
-        text = re.sub('tl', '시', text)
         text = re.sub('시ㅣ', '시', text)
         text = re.sub('씨ㅣ', '씨', text)
         text = re.sub("[^ㄱ-힣]", "", text)
         fuck = ["시ㅂ", "시ㅏㄹ", "씨ㅂ", "씨ㅏㄹ", "ㅣ발", "ㅆ발", "ㅅ발", "ㅅㅂ", "ㅆㅂ", "ㅆ바", "ㅅ바",
-                "시ㅂㅏ", "ㅅㅂㅏ", "시ㅏㄹ", "씨ㅏㄹ", "ㅅ불", "ㅆ불","ㅅ쁠", "ㅆ뿔","ㅆㅣ발","ㅅㅟ발","ㅅㅣㅂㅏ","ㅣ바알","씨바알","샤빨","샤발","스벌","쓰벌","신발련","신발년","신발놈","ㅅ벌"]
+                "시ㅂㅏ", "ㅅㅂㅏ", "시ㅏㄹ", "씨ㅏㄹ", "ㅅ불", "ㅆ불","ㅅ쁠", "ㅆ뿔","ㅆㅣ발","ㅅㅟ발","ㅅㅣㅂㅏ",
+                "ㅣ바알","씨바알","샤빨","샤발","스벌","쓰벌","신발련","신발년","신발놈","ㅅ벌","시불","시부렝"
+                ,"씨부렝","시부랭","씨부랭"]
         for i in fuck:
             if i in text:
                 ae = 1
@@ -743,6 +796,10 @@ class korcen:
             if i in text:
                 ae = 1
 
+        bullshit1 = ["wlfkf"]
+        for i in bullshit1:
+            if i in text:
+                ae = 1
         text = re.sub("g랄", "지랄", newtext)
         text = re.sub("[^ㄱ-힣]", "", text)
         text = re.sub("근", "ㄹ", text)
@@ -809,7 +866,7 @@ class korcen:
             if i in text:
                 ae = 1
 
-        sonofbitch = ["rotorl","rotprl"]
+        sonofbitch = ["rotorl","rotprl","sib새"]
         for i in sonofbitch:
             if i in text:
                 ae = 1
