@@ -67,7 +67,7 @@ email:    shrbwjd05@gmail.com
 >이루
 ```
 PY→JS 작업 도움
-NPM버전 업데이트 제공
+NPM 0.1.0 이후 버전 업데이트 제공
 
 github:   erukim
 discord:  이루#6410
