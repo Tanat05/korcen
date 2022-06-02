@@ -13,11 +13,9 @@ korean(한국어) censorship(검열)의 줄임말로
 
 ## Licenses
 
-모든 프로그램 모듈의 출처 표기
+GNU General Public License v3.0
 
-https://github.com/TANAT96564/korcen
-
-링크 또는 "디스코드 TNS 봇" 표기 
+![image](https://user-images.githubusercontent.com/85154556/171647408-fb2d26c8-509b-4c7d-be93-9290b309e65d.png)
 
 ## Installation
 >PyPI
@@ -83,8 +81,4 @@ discord:  kisss#4755
 
 
 
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
+Copyright© All rights reserved.
