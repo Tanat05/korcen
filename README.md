@@ -1,8 +1,8 @@
 <div align="center">
   <h1>korcen(코르센)</h1>
   
-  [![PyPI version](https://img.shields.io/pypi/v/korcen.svg)](https://python.org/pypi/korcen)
-  [![downloads](https://img.shields.io/pypi/dm/korcen.svg)](https://pypi.org/project/korcen/)
+  [![PyPI version](https://img.shields.io/pypi/v/korcen.svg?style=flat-square)](https://python.org/pypi/korcen)
+  [![downloads](https://img.shields.io/pypi/dm/korcen.svg?style=flat-square)](https://pypi.org/project/korcen/)
   
   [![NPM version](http://img.shields.io/npm/v/korcen.svg?style=flat-square)](https://www.npmjs.org/package/npm-expansions)
   [![downloads](http://img.shields.io/npm/dm/korcen.svg?style=flat-square)](https://www.npmjs.org/package/npm-expansions)
