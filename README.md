@@ -5,6 +5,8 @@
   [![image](https://img.shields.io/pypi/l/korcen.svg)](https://python.org/pypi/korcen)
   [![image](https://img.shields.io/pypi/pyversions/korcen.svg)](https://python.org/pypi/korcen)
   [![downloads](https://img.shields.io/pypi/dm/korcen.svg)](https://pypi.org/project/korcen/)
+  [![NPM version](http://img.shields.io/npm/v/korcen.svg?style=flat-square)](https://www.npmjs.org/package/npm-expansions)
+  [![NPM license](http://img.shields.io/npm/l/korcen.svg?style=flat-square)](https://www.npmjs.org/package/npm-expansions)
 </div>
 
 korean(한국어) censorship(검열)의 줄임말로 
