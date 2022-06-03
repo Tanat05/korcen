@@ -52,6 +52,7 @@ class korcen:
         text = re.sub('🅔', 'e', text)
         text = re.sub('🅴', 'e', text)
         text = re.sub('🄴', 'e', text)
+        text = re.sub('є', 'e', text)
         text = re.sub('𝗑', 'x', text)
         text = re.sub('𝘹', 'x', text)
         text = re.sub('𝙭', 'x', text)
@@ -166,8 +167,7 @@ class korcen:
         text = re.sub("[^ㄱ-힣]", "", text)
         fuck = ["시ㅂ", "시ㅏㄹ", "씨ㅂ", "씨ㅏㄹ", "ㅣ발", "ㅆ발", "ㅅ발", "ㅅㅂ", "ㅆㅂ", "ㅆ바", "ㅅ바",
                 "시ㅂㅏ", "ㅅㅂㅏ", "시ㅏㄹ", "씨ㅏㄹ", "ㅅ불", "ㅆ불","ㅅ쁠", "ㅆ뿔","ㅆㅣ발","ㅅㅟ발","ㅅㅣㅂㅏ",
-                "ㅣ바알","씨바알","샤빨","샤발","스벌","쓰벌","신발련","신발년","신발놈","ㅅ벌","시불","시부렝"
-                ,"씨부렝","시부랭","씨부랭","^^ㅣ벌","시부랭"]
+                "ㅣ바알","ㅅ벌","^^ㅣ벌"]
         for i in fuck:
             if i in text:
                 ae = 1
@@ -206,10 +206,14 @@ class korcen:
         text = re.sub('크시야', '', text)
         text = re.sub('어찌', '', text)
         text = re.sub('발로란트', '', text)
+        text = re.sub('무시발언', '', text)
+        text = re.sub('의', '', text)
         fuck = ["시발", "씨발", "시봘", "씨봘", "씨바", "시바", "샤발", "씌발", "씹발", "시벌", "시팔", "싯팔",
                 "씨빨", "씨랼", "씨파", "띠발", "띡발", "띸발","싸발", "십발", "슈발","야발", "씨불", "씨랄",
                 "쉬발", "쓰발", "쓔발", "쌰발", "쉬발", "쒸발", "씨팔", "씨밝", "씨밯", "쑤발", "치발", "샤발",
-                "발씨", "리발", "씨볼","찌발", "씨비바라랄", "시바랄", "씨바라","쒸팔","쉬팔","씨밮","쒸밮","시밮","씨삐라","ㅆ삐라","씨벌","슈벌"]
+                "발씨", "리발", "씨볼","찌발", "씨비바라랄", "시바랄", "씨바라","쒸팔","쉬팔","씨밮","쒸밮","시밮",
+                "씨삐라","ㅆ삐라","씨벌","슈벌","시불","시부렝","씨부렝","시부랭","씨부랭","시부랭","발놈시","뛰발",
+                "뛰봘","뜨발","뜨벌","띄발","씨바알","샤빨","샤발","스벌","쓰벌","신발련","신발년","신발놈","띠발","띠바랄"]
         for i in fuck:
             if i in text:
                 ae = 1
@@ -243,7 +247,7 @@ class korcen:
         text = re.sub('지랄탄', '', text)
         text = re.sub('지랄버릇', '', text)
         text = re.sub('이', '', text)
-        bullshit2 = ["지랄", "찌랄", "지럴", "지롤", "랄지","쥐랄","쮜랄","지뢀"]
+        bullshit2 = ["지랄", "찌랄", "지럴", "지롤", "랄지","쥐랄","쮜랄","지뢀","띄랄"]
         for i in bullshit2:
             if i in text:
                 ae = 1
@@ -312,7 +316,7 @@ class korcen:
         text = re.sub('10새', '새끼', text)
         text = re.sub('10쉑', '새끼', text)
         text = re.sub("[^ㄱ-힣]", "", text)
-        sonofbitch = ["ㅅㄲ", "ㅅ끼", "ㅆ끼"]
+        sonofbitch = ["ㅅㄲ", "ㅅ끼", "ㅆ끼","색ㄲㅣ","ㅍ"]
         for i in sonofbitch:
             if i in text:
                 ae = 1
@@ -326,7 +330,8 @@ class korcen:
         text = re.sub('세끼먹', '', text)
         text = re.sub('고양이새끼', '', text)
         text = re.sub('키보드', '', text)
-        sonofbitch = ["새끼", "쉐리", "쌔끼", "썌끼", "쎼끼", "쌬끼", "샠끼","세끼","샊","쌖","섺","쎆","십새","새키","씹색"]
+        sonofbitch = ["새끼", "쉐리", "쌔끼", "썌끼", "쎼끼", "쌬끼", "샠끼","세끼","샊","쌖","섺","쎆","십새","새키","씹색","새까","새꺄",
+        "새뀌","새끠","새캬","색꺄","색끼"]
         for i in sonofbitch:
             if i in text:
                 ae = 1
@@ -339,7 +344,7 @@ class korcen:
         text = re.sub('줫습니다', '', text)
         text = re.sub('쫒아', '', text)
         text = re.sub('쫒다', '', text)
-        dick = ["ㅈ같", "ㅈ망", "ㅈ까", "ㅈ경"]
+        dick = ["ㅈ같", "ㅈ망", "ㅈ까", "ㅈ경","ㅈ가튼"]
         for i in dick:
             if i in text:
                 ae = 1
@@ -367,7 +372,7 @@ class korcen:
                 ae = 1
 
         text = re.sub("[^가-힣]", "", newtext)
-        shutup = ["닥쳐", "닭쳐","닥치라"]
+        shutup = ["닥쳐", "닭쳐","닥치라","아가리해"]
         for i in shutup:
             if i in text:
                 ae = 1
@@ -413,7 +418,7 @@ class korcen:
         text = re.sub('미친증', '', text)
         text = re.sub('거미', '', text)
         text = re.sub('친구', '', text)
-        damnit = ["미친", "미쳤","무친놈"]
+        damnit = ["미친", "미쳤","무친놈","뮈칀","뮈친"]
         for i in damnit:
             if i in text:
                 be = 2
@@ -445,7 +450,7 @@ class korcen:
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-        pussy = ["ⓑⓞⓩⓘ","bozi"]
+        pussy = ["ⓑⓞⓩⓘ","bozi","보ㅈㅣ"]
         for i in pussy:
             if i in newtext:
                 ce = 3
@@ -478,11 +483,12 @@ class korcen:
         text = re.sub('보지말', '', text)
         text = re.sub('안보지', '', text)
         text = re.sub('보지도마', '', text)
+        text = re.sub('보지는않', '', text)
         text = re.sub('정보', '', text)
         text = re.sub('지팡이', '', text)
         text = re.sub('행보', '', text)
         text = re.sub('오', '', text)
-        pussy = ["보지","버지물","버짓물","보짓","ⓑⓞⓩⓘ","bozi","개보즤","개보지"]
+        pussy = ["보지","버지물","버짓물","보짓","ⓑⓞⓩⓘ","bozi","개보즤","개보지","버지벌렁벌렁","보짖","뵤즤"]
         for i in pussy:
             if i in text:
                 ce = 3
@@ -518,16 +524,18 @@ class korcen:
         text = re.sub('안자지', '', text)
         text = re.sub('부자지', '', text)
         text = re.sub('자지도마', '', text)
+        text = re.sub('자지는않', '', text)
         text = re.sub('아', '', text)
         dicks = ["자지","자짓"]
         for i in dicks:
             if i in text:
                 ce = 3
 
-
-        sex = ["sex","s스", "x스", "se스", "se스", "s스","ㅅㅅ","s하고e싶다x"]
+        text = re.sub('cess', '', newtext)
+        text = re.sub('exit', '', text)
+        sex = ["sex","s스", "x스", "se스", "se스", "s스","ㅅㅅ","s하고e싶다x","ㅅㅔㅅㄱ"]
         for i in sex:
-            if i in newtext:
+            if i in text:
                 ce = 3
         text = re.sub(r'\^', 'ㅅ', newtext)
         text = re.sub('sex', '섹스', text)
@@ -542,13 +550,16 @@ class korcen:
         text = re.sub("크시야", "", text)
         text = re.sub("카구야", "", text)
         text = re.sub("스파이", "", text)
-        sex = ["섹스", "섻스", "쉑스", "섿스", "섹그", "야스", "색스", "셱스", "섁스", "세엑스", "썩스","섹수","섹파","섹하자","쉐스","쉑스","쉐엑스"]
+        text = re.sub("말이야", "", text)
+        text = re.sub("스티브", "", text)
+        sex = ["섹스", "섻", "쉑스", "섿스", "섹그", "야스", "색스", "셱스", "섁스", "세엑스", "썩스","섹수","섹파","섹하자","쉐스","쉑스","쉐엑스","색수","세엑수우","섹하고",
+        "섹하구","섹하자","섹하장","섹하쟈","섹한번"]
         for i in sex:
             if i in text:
                 ce = 3
 
         text = re.sub("[^가-힣]", "", newtext)
-        fireegg = ["불알", "부랄", "뽕알", "뿅알", "뿌랄", "뿔알","개부달","개부랄","개부러럴","개부럴","개부뢀","개부알","개불알"]
+        fireegg = ["불알", "부랄", "뽕알", "뿅알", "뿌랄", "뿔알","개부달","개부랄","개부러럴","개부럴","개부뢀","개부알","개불알","똘추","똥구멍"]
         for i in fireegg:
             if i in text:
                 ce = 3
@@ -584,7 +595,10 @@ class korcen:
                 ce = 3
 
         text = re.sub("[^가-힣]", "", newtext)
-        onahole = ["딸딸이","질싸","안에사정","자위남","자위녀","폰섹","포르노","폰세엑","폰쉑","폰쎅","질내사정","그룹섹","남창","男色","누워라이년아","누웠냐씨방새",]
+        onahole = ["딸딸이","질싸","안에사정","자위남","자위녀","폰섹","포르노","폰세엑","폰쉑","폰쎅","질내사정","그룹섹","남창","男色","누워라이년아",
+        "누웠냐씨방새","다리벌려","대주까","대줄년","뒤로너어줘","딸따뤼","딸쳐","떡쳐라","막대쑤셔줘","막대핥아줘","먹고보니내딸","먹고보니누나","먹고보니딸",
+        "먹고보니똥개","먹고보니엄마","먹고보니응아","먹고보니재수","먹고보니처제","먹고보니형수","몸뚱이줄께","몸안에사정","밖에다쌀께","박고빼고",
+        "배위에싸죠"]
         for i in onahole:
             if i in text:
                 ce = 3
@@ -637,7 +651,7 @@ class korcen:
                     "창녀", "머저리", "씹쓰래기", "씹쓰레기", "씹장생", "씹자식", "운지", "급식충", "틀딱충", "조센징", "매국노", "똥꼬충", "진지충", "듣보잡",
                     "한남충","정신병자","중생아","돌팔이","김치녀","폰팔이","틀딱년","같은년","개돼중","쓰글년","썩을년","썩글년","씹할","거지새끼","거지쉐뀌",
                     "거지쉑이","거지쎄끼","거지쒜리","걸래가튼","걸래넘","걸래년","걸래놈","걸레가튼","걸레년","그지새끼","그지새키","그지색","기집년","까진년",
-                    "깔보","난잡년"]
+                    "깔보","난잡년","빡대가리","더러운년","돌아이","또라이"]
         for i in belittling:
             if i in text:
                 de = 4
@@ -663,7 +677,7 @@ class korcen:
                 fe = 6
         text = re.sub("[^가-힣]", "", newtext)
         your = ["느금마", "느그엄마", "늑엄마", "늑금마", "느그애미", "넉엄마", "느그부모", "느그애비", "느금빠", "느그메", "느그빠","니미씨","니미씹",
-        "느그마","니엄마","엄창","엠창","니미럴","누굼마","느금","내미랄","내미럴"]
+        "느그마","니엄마","엄창","엠창","니미럴","누굼마","느금","내미랄","내미럴","엄마없","아빠없"]
         for i in your:
             if i in text:
                 fe = 6
@@ -671,7 +685,9 @@ class korcen:
         text = re.sub("[^가-힣]", "", newtext)
         text = re.sub("도", "", text)
         motherfuck = ["니애미", "노애미", "노앰", "앰뒤련",
-                    "아버지도없는게", "애미도없는게", "애비도없는게", "어머니도없는게", "니애비", "노애비","애미없","애비없","애미뒤","애비뒤","니아빠","너에미"]
+                    "아버지도없는게", "애미도없는게", "애비도없는게", "어머니도없는게", "니애비", "노애비","애미없","애비없","애미뒤","애비뒤","니아빠","너에미","눼기미","뉘귀미"
+                    ,"뉘기미","뉘김이","뉘뮈","뉘미랄","뉘미럴","뉘미롤","뉘밀얼","뉘밀할","뉘어미","뉘에미","느검마","늬긔미","늬기미","니기미","니믜창","니미랄","니미럴"
+                    ,"니미쒸블","니미씨펄넘","니미좃","니밀할","니부랑","니뽕좃"]
         for i in motherfuck:
             if i in text:
                 fe = 6
@@ -679,117 +695,113 @@ class korcen:
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
         text = re.sub('[^a-z]', '', newtext)
-        eng = ['abbo', 'abo'
-        , 'abortion', 'abuse', 'addict', 'addicts', 'adult', 'africa', 'african', 'alla', 'allah', 'alligatorbait', 'amateur', 'american'
-        , 'anal', 'analannie', 'analsex', 'angie', 'angry', 'anus', 'arab', 'arabs', 'areola', 'argie', 'aroused', 'arse', 'arsehole', 'asian'
-        , 'ass', 'assassin', 'assassinate', 'assassination', 'assault', 'assbagger', 'assblaster', 'assclown', 'asscowboy', 'asses', 'assfuck'
-        , 'assfucker', 'asshat', 'asshole', 'assholes', 'asshore', 'assjockey', 'asskiss', 'asskisser', 'assklown', 'asslick', 'asslicker', 'asslover'
-        , 'assman', 'assmonkey', 'assmunch', 'assmuncher', 'asspacker', 'asspirate', 'asspuppies', 'assranger', 'asswhore', 'asswipe', 'athletesfoot'
-        , 'attack', 'australian', 'backdoor', 'backdoorman', 'backseat', 'badfuck', 'balllicker', 'balls', 'ballsack', 'banging', 'baptist', 'barelylegal'
-        , 'barf', 'barface', 'barfface', 'bast', 'bastard', 'bazongas', 'bazooms', 'beaner', 'beast', 'beastality', 'beastial', 'beastiality', 'beatoff'
-        , 'beat-off', 'beatyourmeat', 'beaver', 'bestial', 'bestiality', 'bi', 'biatch', 'bicurious', 'bigass', 'bigbastard', 'bigbutt', 'bigger', 'bisexual'
-        , 'bi-sexual', 'bitch', 'bitcher', 'bitches', 'bitchez', 'bitchin', 'bitching', 'bitchslap', 'bitchy', 'biteme', 'black', 'blackman', 'blackout'
-        , 'blacks', 'blind', 'blow', 'blowjob', 'boang', 'bogan', 'bohunk', 'bollick', 'bollock', 'bomb', 'bombers', 'bombing', 'bombs', 'bomd', 'bondage'
-        , 'boner', 'bong', 'boob', 'boobies', 'boobs', 'booby', 'boody', 'boom', 'boong', 'boonga', 'boonie', 'booty', 'bootycall', 'bountybar', 'bra', 'brea5t'
-        , 'breast', 'breastjob', 'breastlover', 'breastman', 'brothel', 'bugger', 'buggered', 'buggery', 'bullcrap', 'bulldike', 'bulldyke', 'bullshit'
-        , 'bumblefuck', 'bumfuck', 'bunga', 'bunghole', 'buried', 'burn', 'butchbabes', 'butchdike', 'butchdyke', 'butt', 'buttbang', 'butt-bang', 'buttface'
-        , 'buttfuck', 'butt-fuck', 'buttfucker', 'butt-fucker', 'buttfuckers', 'butt-fuckers', 'butthead', 'buttman', 'buttmunch', 'buttmuncher', 'buttpirate'
-        , 'buttplug', 'buttstain', 'byatch', 'cacker', 'cameljockey', 'cameltoe', 'canadian', 'cancer', 'carpetmuncher', 'carruth', 'catholic', 'catholics'
-        , 'cemetery', 'chav', 'cherrypopper', 'chickslick', "children's", 'chin', 'chinaman', 'chinamen', 'chinese', 'chink', 'chinky', 'choad', 'chode'
-        , 'christ', 'christian', 'church', 'cigarette', 'cigs', 'clamdigger', 'clamdiver', 'clit', 'clitoris', 'clogwog', 'cocaine', 'cock', 'cockblock'
-        , 'cockblocker', 'cockcowboy', 'cockfight', 'cockhead', 'cockknob', 'cocklicker', 'cocklover', 'cocknob', 'cockqueen', 'cockrider', 'cocksman'
-        , 'cocksmith', 'cocksmoker', 'cocksucer', 'cocksuck', 'cocksucked', 'cocksucker', 'cocksucking', 'cocktail', 'cocktease', 'cocky', 'cohee'
-        , 'coitus', 'color', 'colored', 'coloured', 'commie', 'communist', 'condom', 'conservative', 'conspiracy', 'coolie', 'cooly', 'coon', 'coondog'
-        , 'copulate', 'cornhole', 'corruption', 'cra5h', 'crabs', 'crack', 'crackpipe', 'crackwhore', 'crack-whore', 'crap', 'crapola', 'crapper'
-        , 'crappy', 'crash', 'creamy', 'crime', 'crimes', 'criminal', 'criminals', 'crotch', 'crotchjockey', 'crotchmonkey', 'crotchrot', 'cum'
-        , 'cumbubble', 'cumfest', 'cumjockey', 'cumm', 'cummer', 'cumming', 'cumquat', 'cumqueen', 'cumshot', 'cunilingus', 'cunillingus', 'cunn'
-        , 'cunnilingus', 'cunntt', 'cunt', 'cunteyed', 'cuntfuck', 'cuntfucker', 'cuntlick', 'cuntlicker', 'cuntlicking', 'cuntsucker', 'cybersex'
-        , 'cyberslimer', 'dago', 'dahmer', 'dammit', 'damn', 'damnation', 'damnit', 'darkie', 'darky', 'datnigga', 'dead', 'deapthroat', 'death'
-        , 'deepthroat', 'defecate', 'dego', 'demon', 'deposit', 'desire', 'destroy', 'deth', 'devil', 'devilworshipper', 'dick', 'dickbrain'
-        , 'dickforbrains', 'dickhead', 'dickless', 'dicklick', 'dicklicker', 'dickman', 'dickwad', 'dickweed', 'diddle', 'die', 'died', 'dies', 'dike'
-        , 'dildo', 'dingleberry', 'dink', 'dipshit', 'dipstick', 'dirty', 'disease', 'diseases', 'disturbed', 'dive', 'dix', 'dixiedike'
-        , 'dixiedyke', 'doggiestyle', 'doggystyle', 'dong', 'doodoo', 'doo-doo', 'doom', 'dope', 'dragqueen', 'dragqween', 'dripdick', 'drug'
-        , 'drunk', 'drunken', 'dumb', 'dumbass', 'dumbbitch', 'dumbfuck', 'dyefly', 'dyke', 'easyslut', 'eatballs', 'eatme', 'eatpussy'
-        , 'ecstacy', 'ejaculate', 'ejaculated', 'ejaculating', 'ejaculation', 'enema', 'enemy', 'erect', 'erection', 'ero', 'escort', 'ethiopian'
-        , 'ethnic', 'european', 'evl', 'excrement', 'execute', 'executed', 'execution', 'executioner', 'explosion', 'facefucker', 'faeces'
-        , 'fag', 'fagging', 'faggot', 'fagot', 'failed', 'failure', 'fairies', 'fairy', 'faith', 'fannyfucker', 'fart', 'farted', 'farting', 'farty'
-        , 'fastfuck', 'fat', 'fatah', 'fatass', 'fatfuck', 'fatfucker', 'fatso', 'fckcum', 'fear', 'feces', 'felatio', 'felch', 'felcher', 'felching'
-        , 'fellatio', 'feltch', 'feltcher', 'feltching', 'fetish', 'fight', 'filipina', 'filipino', 'fingerfood', 'fingerfuck', 'fingerfucked'
-        , 'fingerfucker', 'fingerfuckers', 'fingerfucking', 'fire', 'firing', 'fister', 'fistfuck', 'fistfucked', 'fistfucker'
-        , 'fistfucking', 'fisting', 'flange', 'flasher', 'flatulence', 'floo', 'flydie', 'flydye', 'fok', 'fondle', 'footaction'
-        , 'footfuck', 'footfucker', 'footlicker', 'footstar', 'fore', 'foreskin', 'forni', 'fornicate', 'foursome', 'fourtwenty'
-        , 'fraud', 'freakfuck', 'freakyfucker', 'freefuck', 'fu', 'fubar', 'fuc', 'fucck', 'fuck', 'fucka', 'fuckable', 'fuckbag'
-        , 'fuckbuddy', 'fucked', 'fuckedup', 'fucker', 'fuckers', 'fuckface', 'fuckfest', 'fuckfreak', 'fuckfriend', 'fuckhead'
-        , 'fuckher', 'fuckin', 'fuckina', 'fucking', 'fuckingbitch', 'fuckinnuts', 'fuckinright', 'fuckit', 'fuckknob', 'fuckme'
-        , 'fuckmehard', 'fuckmonkey', 'fuckoff', 'fuckpig', 'fucks', 'fucktard', 'fuckwhore', 'fuckyou', 'fudgepacker', 'fugly'
-        , 'fuk', 'fuks', 'funeral', 'funfuck', 'fungus', 'fuuck', 'gangbang', 'gangbanged', 'gangbanger', 'gangsta', 'gatorbait'
-        , 'gay', 'gaymuthafuckinwhore', 'gaysex', 'geez', 'geezer', 'geni', 'genital', 'german', 'getiton', 'gin', 'ginzo', 'gipp'
-        , 'girls', 'givehead', 'glazeddonut', 'gob', 'god', 'godammit', 'goddamit', 'goddammit', 'goddamn', 'goddamned', 'goddamnes', 'goddamnit'
-        , 'goddamnmuthafucker', 'goldenshower', 'gonorrehea', 'gonzagas', 'gook', 'gotohell', 'goy', 'goyim', 'greaseball', 'gringo'
-        , 'groe', 'gross', 'grostulation', 'gubba', 'gummer', 'gun', 'gyp', 'gypo', 'gypp', 'gyppie', 'gyppo', 'gyppy', 'hamas', 'handjob', 'hapa'
-        , 'harder', 'hardon', 'harem', 'headfuck', 'headlights', 'hebe', 'heeb', 'hell', 'henhouse', 'heroin', 'herpes', 'heterosexual'
-        , 'hijack', 'hijacker', 'hijacking', 'hillbillies', 'hindoo', 'hiscock', 'hitler', 'hitlerism', 'hitlerist', 'hiv', 'ho', 'hobo'
-        , 'hodgie', 'hoes', 'hole', 'holestuffer', 'homicide', 'homo', 'homobangers', 'homosexual', 'honger', 'honk', 'honkers', 'honkey'
-        , 'honky', 'hook', 'hooker', 'hookers', 'hooters', 'hore', 'hork', 'horn', 'horney', 'horniest', 'horny', 'horseshit', 'hosejob'
-        , 'hoser', 'hostage', 'hotdamn', 'hotpussy', 'hottotrot', 'hummer', 'husky', 'hussy', 'hustler', 'hymen', 'hymie', 'iblowu', 'idiot'
-        , 'ikey', 'illegal', 'incest', 'insest', 'intercourse', 'interracial', 'intheass', 'inthebuff','israel', 'israeli', "israel's", 'italiano'
-        , 'itch', 'jackass', 'jackoff', 'jackshit', 'jacktheripper', 'jade', 'jap', 'japanese', 'japcrap', 'jebus', 'jeez', 'jerkoff', 'jesus'
-        , 'jesuschrist', 'jew', 'jewish', 'jiga', 'jigaboo', 'jigg', 'jigga', 'jiggabo', 'jigger', 'jiggy', 'jihad', 'jijjiboo', 'jimfish', 'jism'
-        , 'jiz', 'jizim', 'jizjuice', 'jizm', 'jizz', 'jizzim', 'jizzum', 'joint', 'juggalo', 'jugs', 'junglebunny', 'kaffer', 'kaffir', 'kaffre'
-        , 'kafir', 'kanake', 'kid', 'kigger', 'kike', 'kill', 'killed', 'killer', 'killing', 'kills', 'kink', 'kinky', 'kissass', 'kkk', 'knife'
-        , 'knockers', 'kock', 'kondum', 'koon', 'kotex', 'krap', 'krappy', 'kraut', 'kum', 'kumbubble', 'kumbullbe', 'kummer', 'kumming', 'kumquat'
-        , 'kums', 'kunilingus', 'kunnilingus', 'kunt', 'ky', 'kyke', 'lactate', 'laid', 'lapdance', 'latin', 'lesbain', 'lesbayn', 'lesbian', 'lesbin'
-        , 'lesbo', 'lez', 'lezbe', 'lezbefriends', 'lezbo', 'lezz', 'lezzo', 'liberal', 'libido', 'licker', 'lickme', 'lies', 'limey', 'limpdick', 'limy'
-        , 'lingerie', 'liquor', 'livesex', 'loadedgun', 'lolita', 'looser', 'loser', 'lotion', 'lovebone', 'lovegoo', 'lovegun', 'lovejuice', 'lovemuscle'
-        , 'lovepistol', 'loverocket', 'lowlife', 'lsd', 'lubejob', 'lucifer', 'luckycammeltoe', 'lugan', 'lynch', 'macaca', 'mad', 'mafia', 'magicwand', 'mams'
-        , 'manhater', 'manpaste', 'marijuana', 'mastabate', 'mastabater', 'masterbate', 'masterblaster', 'mastrabator', 'masturbate', 'masturbating'
-        , 'mattressprincess', 'meatbeatter', 'meatrack', 'meth', 'mexican', 'mgger', 'mggor', 'mickeyfinn', 'mideast', 'milf', 'minority', 'mockey'
-        , 'mockie', 'mocky', 'mofo', 'moky', 'moles', 'molest', 'molestation', 'molester', 'molestor', 'moneyshot', 'mooncricket', 'mormon', 'moron'
-        , 'moslem', 'mosshead', 'mothafuck', 'mothafucka', 'mothafuckaz', 'mothafucked', 'mothafucker', 'mothafuckin', 'mothafucking', 'mothafuckings'
-        , 'motherfuck', 'motherfucked', 'motherfucker', 'motherfuckin', 'motherfucking', 'motherfuckings', 'motherlovebone', 'muff', 'muffdive', 'muffdiver'
-        , 'muffindiver', 'mufflikcer', 'mulatto', 'muncher', 'munt', 'murder', 'murderer', 'muslim', 'naked', 'narcotic', 'nasty', 'nastybitch', 'nastyho'
-        , 'nastyslut', 'nastywhore', 'nazi', 'necro', 'negro', 'negroes', 'negroid', "negro's", 'nig', 'niger', 'nigerian', 'nigerians', 'nigg', 'nigga'
-        , 'niggah', 'niggaracci', 'niggard', 'niggarded', 'niggarding', 'niggardliness', "niggardliness's", 'niggardly', 'niggards', "niggard's", 'niggaz'
-        , 'nigger', 'niggerhead', 'niggerhole', 'niggers', "nigger's", 'niggle', 'niggled', 'niggles', 'niggling', 'nigglings', 'niggor', 'niggur', 'niglet'
-        , 'nignog', 'nigr', 'nigra', 'nigre', 'nip', 'nipple', 'nipplering', 'nittit', 'nlgger', 'nlggor', 'nofuckingway', 'nook', 'nookey', 'nookie', 'noonan'
-        , 'nooner', 'nude', 'nudger', 'nuke', 'nutfucker', 'nymph', 'ontherag', 'oral', 'orga', 'orgasim', 'orgasm', 'orgies', 'orgy', 'osama', 'paki'
-        , 'palesimian', 'palestinian', 'pansies', 'pansy', 'panti', 'panties', 'payo', 'pearlnecklace', 'peck', 'pecker', 'peckerwood', 'pee', 'peehole'
-        , 'pee-pee', 'peepshow', 'peepshpw', 'pendy', 'penetration', 'peni5', 'penile', 'penis', 'penises', 'penthouse', 'period', 'perv', 'phonesex', 'phuk'
-        , 'phuked', 'phuking', 'phukked', 'phukking', 'phungky', 'phuq', 'pi55', 'picaninny', 'piccaninny', 'pickaninny', 'piker', 'pikey', 'piky', 'pimp'
-        , 'pimped', 'pimper', 'pimpjuic', 'pimpjuice', 'pimpsimp', 'pindick', 'piss', 'pissed', 'pisser', 'pisses', 'pisshead', 'pissin', 'pissing', 'pissoff'
-        , 'pistol', 'pixie', 'pixy', 'playboy', 'playgirl', 'pocha', 'pocho', 'pocketpool', 'pohm', 'polack', 'pom', 'pommie', 'pommy', 'poo', 'poon'
-        , 'poontang', 'poop', 'pooper', 'pooperscooper', 'pooping', 'poorwhitetrash', 'popimp', 'porchmonkey', 'porn', 'pornflick', 'pornking', 'porno'
-        , 'pornography', 'pornprincess', 'pot', 'poverty', 'premature', 'pric', 'prick', 'prickhead', 'primetime', 'propaganda', 'pros', 'prostitute'
-        , 'protestant', 'pu55i', 'pu55y', 'pube', 'pubic', 'pubiclice', 'pud', 'pudboy', 'pudd', 'puddboy', 'puke', 'puntang', 'purinapricness', 'puss'
-        , 'pussie', 'pussies', 'pussy', 'pussycat', 'pussyeater', 'pussyfucker', 'pussylicker', 'pussylips', 'pussylover', 'pussypounder', 'pusy', 'quashie'
-        , 'queef', 'queer', 'quickie', 'quim', 'ra8s', 'rabbi', 'racial', 'racist', 'radical', 'radicals', 'raghead', 'randy', 'rape', 'raped', 'raper'
-        , 'rapist', 'rearend', 'rearentry', 'rectum', 'redlight', 'redneck', 'reefer', 'reestie', 'refugee', 'reject', 'remains', 'rentafuck', 'republican'
-        , 'rere', 'retard', 'retarded', 'ribbed', 'rigger', 'rimjob', 'rimming', 'roach', 'robber', 'roundeye', 'rump', 'russki', 'russkie', 'sadis', 'sadom'
-        , 'samckdaddy', 'sandm', 'sandnigger', 'satan', 'scag', 'scallywag', 'scat', 'schlong', 'screw', 'screwyou', 'scrotum', 'scum', 'semen', 'seppo'
-        , 'servant', 'sex', 'sexed', 'sexfarm', 'sexhound', 'sexhouse', 'sexing', 'sexkitten', 'sexpot', 'sexslave', 'sextogo', 'sextoy', 'sextoys', 'sexual'
-        , 'sexually', 'sexwhore', 'sexy', 'sexymoma', 'sexy-slim', 'shag', 'shaggin', 'shagging', 'shat', 'shav', 'shawtypimp', 'sheeney', 'shhit', 'shinola'
-        , 'shit', 'shitcan', 'shitdick', 'shite', 'shiteater', 'shited', 'shitface', 'shitfaced', 'shitfit', 'shitforbrains', 'shitfuck', 'shitfucker'
-        , 'shitfull', 'shithapens', 'shithappens', 'shithead', 'shithouse', 'shiting', 'shitlist', 'shitola', 'shitoutofluck', 'shits', 'shitstain', 'shitted'
-        , 'shitter', 'shitting', 'shitty', 'shortfuck', 'sissy', 'sixtyniner', 'skank', 'skankbitch', 'skankfuck', 'skankwhore', 'skanky', 'skankybitch'
-        , 'skankywhore', 'skinflute', 'skum', 'skumbag', 'slant', 'slanteye', 'slapper', 'slav', 'slave', 'slavedriver', 'sleezebag', 'sleezeball', 'slideitin'
-        , 'slime', 'slimeball', 'slimebucket', 'slopehead', 'slopey', 'slopy', 'slut', 'sluts', 'slutt', 'slutting', 'slutty', 'slutwear', 'slutwhore', 'smack'
-        , 'smackthemonkey', 'smut', 'snatch', 'snatchpatch', 'snigger', 'sniggered', 'sniggering', 'sniggers', "snigger's", 'sniper', 'snot', 'snowback'
-        , 'snownigger', 'sob', 'sodom', 'sodomise', 'sodomite', 'sodomize', 'sodomy', 'sonofabitch', 'sonofbitch', 'sooty', 'soviet', 'spaghettibender'
-        , 'spaghettinigger', 'spank', 'spankthemonkey', 'sperm', 'spermacide', 'spermbag', 'spermhearder', 'spermherder', 'spic', 'spick', 'spig', 'spigotty'
-        , 'spik', 'spit', 'spitter', 'splittail', 'spooge', 'spreadeagle', 'spunk', 'spunky', 'squaw', 'stagg', 'stiffy', 'strapon', 'stringer', 'stripclub'
-        , 'stroke', 'stroking', 'stupid', 'stupidfuck', 'stupidfucker', 'suck', 'suckdick', 'sucker', 'suckme', 'suckmyass', 'suckmydick', 'suckmytit'
-        , 'suckoff', 'suicide', 'swallow', 'swallower', 'swalow', 'swastika', 'sweetness', 'syphilis', 'taboo', 'taff', 'tampon', 'tang', 'tantra', 'tarbaby'
-        , 'tard', 'teat', 'terror', 'terrorist', 'teste', 'testicle', 'testicles', 'thicklips', 'thirdeye', 'thirdleg', 'threesome', 'threeway', 'timbernigger'
-        , 'tinkle', 'tit', 'titbitnipply', 'titfuck', 'titfucker', 'titfuckin', 'titjob', 'titlicker', 'titlover', 'tits', 'tittie', 'titties', 'titty', 'tnt'
-        , 'tongethruster', 'tongue', 'tonguethrust', 'tonguetramp', 'tortur', 'torture', 'tosser', 'towelhead', 'trailertrash', 'tramp', 'trannie', 'tranny'
-        , 'transexual', 'transsexual', 'transvestite', 'triplex', 'trisexual', 'trojan', 'trots', 'tuckahoe', 'tunneloflove', 'turd', 'turnon', 'twat'
-        , 'twink', 'twinkie', 'twobitwhore', 'uck', 'uk', 'unfuckable', 'zigabo', 'zipperhead', 'douche', 'lmfao', 'lmao'
-        , 'upskirt', 'uptheass', 'upthebutt', 'urinary', 'urinate', 'urine', 'usama', 'uterus', 'vagina', 'vaginal', 'vatican'
-        , 'vibr', 'vibrater', 'vibrator', 'vietcong', 'violence', 'virgin', 'virginbreaker', 'vomit', 'vulva', 'wab', 'wank'
-        , 'wanker', 'wanking', 'waysted', 'weapon', 'weenie', 'weewee', 'welcher', 'welfare', 'wetb', 'wetback'
-        , 'wetspot', 'whacker', 'whash', 'whigger', 'whiskey', 'whiskeydick', 'whiskydick', 'whit', 'whitenigger'
-        , 'whites', 'whitetrash', 'whitey', 'whiz', 'whop', 'whore', 'whorefucker', 'whorehouse', 'wigger', 'willie'
-        , 'williewanker', 'willy', 'wn', 'wog', 'wop', 'wtf', 'wuss', 'wuzzie', 'xtc', 'xxx', 'yankee', 'yellowman']
+        eng = ['2 girls 1 cup', '2g1c', '4r5e', '5h1t', '5hit', 'a$$hole', 'a_s_s', 'a55hole', 'acrotomophilia', 'ahole', 'alabama hot pocket'
+        ,'alaskan pipeline', 'anal', 'anal impaler', 'anal leakage', 'analprobe', 'anilingus', 'apeshit', 'ar5e', 'arrse', 'arse', 'arsehole', 'ass fuck'
+        , 'ass hole', 'assbag', 'assbandit', 'assbang', 'assbanged', 'assbanger', 'assbangs', 'assbite', 'assclown', 'asscock', 'asscracker', 'asses'
+        , 'assface', 'assfaces', 'assfuck', 'assfucker', 'ass-fucker', 'assfukka', 'assgoblin', 'assh0le', 'asshat', 'ass-hat', 'asshead', 'assho1e'
+        , 'asshole', 'assholes', 'asshopper', 'ass-jabber', 'assjacker', 'asslick', 'asslicker', 'assmaster', 'assmonkey', 'assmucus', 'assmucus'
+        , 'assmunch', 'assmuncher', 'assnigger', 'asspirate', 'ass-pirate', 'assshit', 'assshole', 'asssucker', 'asswad', 'asswhole', 'asswipe'
+        , 'asswipes', 'auto erotic', 'autoerotic', 'axwound', 'azazel', 'b!tch', 'b00bs', 'b17ch', 'b1tch', 'baby batter', 'baby juice', 'ball gag'
+        , 'ball gravy', 'ball licking', 'ball sack', 'ball sucking', 'ballbag', 'ballsack', 'bampot', "bang (one's) box", 'bangbros', 'barely legal'
+        , 'barenaked', 'barf', 'bastard', 'bastardo', 'bastards', 'bastinado', 'batty boy', 'bdsm', 'beaner', 'beaners', 'beardedclam', 'beastial'
+        , 'beastiality', 'beatch', 'beaver cleaver', 'beaver lips', 'beef curtain', 'beef curtains', 'beeyotch', 'bellend', 'beotch', 'bescumber'
+        , 'bestial', 'bestiality', 'bi+ch', 'biatch', 'big knockers', 'big tits', 'bigtits', 'bimbo', 'bimbos', 'bint', 'birdlock', 'bitch', 'bitch tit'
+        , 'bitchass', 'bitched', 'bitcher', 'bitchers', 'bitches', 'bitchin', 'bitching', 'bitchtits', 'bitchy', 'black cock', 'bloodclaat', 'blow job'
+        , 'blow me', 'blow mud', 'blow your load', 'blowjob', 'blowjobs', 'blue waffle', 'blue waffle', 'blumpkin', 'boiolas', 'bollock', 'bollocks'
+        , 'bollok', 'bollox', 'bondage', 'boned', 'boner', 'boners', 'bong', 'boob', 'boobies', 'boobs', 'booby', 'booger', 'boong', 'booobs', 'boooobs'
+        , 'booooobs', 'booooooobs', 'bootee', 'bootie', 'booty call', 'booze', 'boozer', 'boozy', 'bosom', 'bosomy', 'breasts', 'brotherfucker'
+        , 'brown showers', 'buceta', 'bugger', 'bull shit', 'bulldyke', 'bullet vibe', 'bullshit', 'bullshits', 'bullshitted', 'bullturds', 'bumblefuck'
+        , 'bumclat', 'bummer', 'bung', 'bung hole', 'bunghole', 'bunny fucker', 'bust a load', 'busty', 'butt fuck', 'butt plug', 'buttcheeks', 'buttfuck'
+        , 'buttfucka', 'buttfucker', 'buttmuch', 'buttmunch', 'butt-pirate', 'buttplug', 'c.0.c.k', 'c.o.c.k.', 'c.u.n.t', 'c0ck', 'c-0-c-k', 'c0cksucker'
+        , 'camel toe', 'cameltoe', 'camgirl', 'camslut', 'camwhore', 'carpet muncher', 'carpetmuncher', 'cawk', 'chesticle', 'chi-chi man'
+        , 'chick with a dick', 'child-fucker', 'chinc', 'chincs', 'chink', 'chinky', 'choad', 'choade', 'choade', 'choc ice', 'chocolate rosebuds'
+        , 'chode', 'chodes', 'chota bags', 'chota bags', 'cipa', 'circlejerk', 'cl1t', 'cleveland steamer', 'clit', 'clit licker', 'clitface', 'clitfuck'
+        , 'clitorus', 'clits', 'clitty', 'clitty litter', 'clover clamps', 'clunge', 'clusterfuck', 'cnut', 'c-o-c-k', 'cock pocket', 'cock snot'
+        , 'cock sucker', 'cockass', 'cockbite', 'cockblock', 'cockburger', 'cockeye', 'cockface', 'cockfucker', 'cockhead', 'cockholster', 'cockjockey'
+        , 'cockknocker', 'cockknoker', 'cocklump', 'cockmaster', 'cockmongler', 'cockmongruel', 'cockmonkey', 'cockmunch', 'cockmuncher', 'cocknose'
+        , 'cocknugget', 'cockshit', 'cocksmith', 'cocksmoke', 'cocksmoker', 'cocksniffer', 'cocksuck', 'cocksuck', 'cocksucked', 'cocksucked', 'cocksucker'
+        , 'cock-sucker', 'cocksuckers', 'cocksucking', 'cocksucks', 'cocksucks', 'cocksuka', 'cocksukka', 'cockwaffle', 'coital', 'cokmuncher', 'coksucka'
+        , 'commie', 'coochie', 'coochy', 'coon', 'coonnass', 'coons', 'cooter', 'cop some wood', 'coprolagnia', 'coprophilia', 'corksucker', 'cornhole'
+        , 'cornhole', 'corp whore', 'corp whore', 'crackwhore', 'crap', 'crappy', 'cretin', 'crikey', 'cripple', 'crotte', 'cum chugger', 'cum chugger'
+        , 'cum dumpster', 'cum dumpster', 'cum freak', 'cum freak', 'cum guzzler', 'cum guzzler', 'cumbubble', 'cumdump', 'cumdump', 'cumdumpster'
+        , 'cumguzzler', 'cumjockey', 'cummer', 'cummin', 'cumming', 'cums', 'cumshot', 'cumshots', 'cumslut', 'cumstain', 'cumtart', 'cunilingus'
+        , 'cunillingus', 'cunnie', 'cunnilingus', 'cunny', 'cunt', 'c-u-n-t', 'cunt hair', 'cunt hair', 'cuntass', 'cuntbag', 'cuntbag', 'cuntface'
+        , 'cunthole', 'cunthunter', 'cuntlick', 'cuntlick', 'cuntlicker', 'cuntlicker', 'cuntlicking', 'cuntlicking', 'cuntrag', 'cunts', 'cuntsicle'
+        , 'cuntsicle', 'cuntslut', 'cunt-struck', 'cunt-struck', 'cyalis', 'cyberfuc', 'cyberfuck', 'cyberfuck', 'cyberfucked', 'cyberfucked'
+        , 'cyberfucker', 'cyberfuckers', 'cyberfucking', 'cyberfucking', 'd0ng', 'd0uch3', 'd0uche', 'd1ck', 'd1ld0', 'd1ldo', 'dammit', 'date rape'
+        , 'daterape', 'dawgie-style', 'deep throat', 'deepthroat', 'dendrophilia', 'dick', 'dick head', 'dick hole', 'dick hole', 'dick shy', 'dick shy'
+        , 'dickbag', 'dickbeaters', 'dickdipper', 'dickface', 'dickflipper', 'dickfuck', 'dickfucker', 'dickhead', 'dickheads', 'dickhole', 'dickish'
+        , 'dick-ish', 'dickjuice', 'dickmilk', 'dickmonger', 'dickripper', 'dicks', 'dicksipper', 'dickslap', 'dick-sneeze', 'dicksucker', 'dicksucking'
+        , 'dicktickler', 'dickwad', 'dickweasel', 'dickweed', 'dickwhipper', 'dickwod', 'dickzipper', 'dildo', 'dildos', 'diligaf', 'dingleberries'
+        , 'dingleberry', 'dipship', 'dipshit', 'dirty pillows', 'dirty sanchez', 'dlck', 'dog style', 'dog-fucker', 'doggie style', 'doggiestyle'
+        , 'doggie-style', 'doggin', 'dogging', 'doggy style', 'doggystyle', 'doggy-style', 'dolcett', 'dominatrix', 'dommes', 'donkey punch', 'donkeypunch'
+        , 'donkeyribber', 'doochbag', 'doofus', 'dookie', 'doosh', 'dopey', 'double dong', 'double penetration', 'douch3', 'douche', 'douchebag'
+        , 'douchebags', 'douche-fag', 'douchewaffle', 'douchey', 'dp action', 'dry hump', 'dumass', 'dumb ass', 'dumbass', 'dumbasses', 'dumbcunt'
+        , 'dumbfuck', 'dumbshit', 'dumshit', 'eat a dick', 'eat a dick', 'eat hair pie', 'eat hair pie', 'eat my ass', 'ejaculate', 'ejaculated'
+        , 'ejaculates', 'ejaculates', 'ejaculating', 'ejaculating', 'ejaculatings', 'ejaculation', 'ejakulate', 'erect', 'erection', 'erotic', 'erotism'
+        , 'escort', 'essohbee', 'extacy', 'extasy', 'f u c k', 'f u c k e r', 'f.u.c.k', 'f_u_c_k', 'f4nny', 'fack', 'fagbag', 'fagfucker', 'fagg'
+        , 'fagged', 'fagging', 'faggit', 'faggitt', 'faggot', 'faggotcock', 'faggots', 'faggs', 'fagot', 'fagots', 'fags', 'fagtard', 'faig', 'faigt'
+        , 'fannybandit', 'fannyflaps', 'fannyfucker', 'fanyy', 'fartknocker', 'fatass', 'fcuk', 'fcuker', 'fcuking', 'fecal', 'felch', 'felcher'
+        , 'felching', 'fellate', 'fellatio', 'feltch', 'feltcher', 'female squirting', 'femdom', 'fenian', 'fingerbang', 'fingerfuck', 'fingerfuck'
+        , 'fingerfucked', 'fingerfucked', 'fingerfucker', 'fingerfucker', 'fingerfuckers', 'fingerfucking', 'fingerfucking', 'fingerfucks'
+        , 'fingerfucks', 'fist fuck', 'fist fuck', 'fisted', 'fistfuck', 'fistfucked', 'fistfucked', 'fistfucker', 'fistfucker', 'fistfuckers'
+        , 'fistfuckers', 'fistfucking', 'fistfucking', 'fistfuckings', 'fistfuckings', 'fistfucks', 'fistfucks', 'fisting', 'fisty', 'fleshflute'
+        , 'flog the log', 'floozy', 'foad', 'fondle', 'fooker', 'foot fetish', 'footjob', 'foreskin', 'frotting', 'fubar', 'fuck', 'fuck', 'f-u-c-k'
+        , 'fuck buttons', 'fuck hole', 'fuck hole', 'fuck off', 'fuck puppet', 'fuck puppet', 'fuck trophy', 'fuck trophy', 'fuck yo mama'
+        , 'fuck yo mama', 'fuck you', 'fucka', 'fuckass', 'fuck-ass', 'fuck-ass', 'fuckbag', 'fuck-bitch', 'fuck-bitch', 'fuckboy', 'fuckbrain'
+        , 'fuckbutt', 'fuckbutter', 'fucked', 'fuckedup', 'fucker', 'fuckers', 'fuckersucker', 'fuckface', 'fuckhead', 'fuckheads', 'fuckhole'
+        , 'fuckin', 'fucking', 'fuckings', 'fuckingshitmotherfucker', 'fuckme', 'fuckme', 'fuckmeat', 'fuckmeat', 'fucknugget', 'fucknut', 'fucknutt'
+        , 'fuckoff', 'fucks', 'fuckstick', 'fucktard', 'fuck-tard', 'fucktards', 'fucktart', 'fucktoy', 'fucktoy', 'fucktwat', 'fuckup', 'fuckwad'
+        , 'fuckwhit', 'fuckwit', 'fuckwitt', 'fudge packer', 'fudgepacker', 'fudge-packer', 'fuker', 'fukker', 'fukkers', 'fukkin', 'fuks', 'fukwhit'
+        , 'fukwit', 'futanari', 'fux0r', 'fvck', 'fxck', 'gang bang', 'gangbang', 'gang-bang', 'gang-bang', 'gangbanged', 'gangbangs', 'gassy ass'
+        , 'gassy ass', 'gay sex', 'gayass', 'gaybob', 'gaydo', 'gayfuck', 'gayfuckist', 'gaysex', 'gaytard', 'gaywad', 'gender bender', 'giant cock'
+        , 'gigolo', 'gippo', 'glans', 'goatcx', 'goatse', 'goddamn', 'goddamned', 'god-damned', 'goddamnit', 'godsdamn', 'gokkun', 'golden shower'
+        , 'goldenshower', 'goo girl', 'goodpoop', 'gooks', 'goregasm', 'group sex', 'gspot', 'g-spot', 'gtfo', 'h0m0', 'h0mo', 'hand job', 'handjob'
+        , 'hardcoresex', 'hentai', 'heroin', 'herpes', 'hobag', 'hoer', 'hom0', 'homodumbshit', 'homoerotic', 'homoey', 'honkey', 'honky', 'hooker'
+        , 'hore', 'horniest', 'horny', 'hot carl', 'hot chick', 'hotsex', 'how to murdep', 'how to murder', 'humped', 'humping', 'iberian slap'
+        , 'inbred', 'incest', 'intercourse', 'jack off', 'jackass', 'jackasses', 'jackhole', 'jackoff', 'jack-off', 'jail bait', 'jailbait', 'japs'
+        , 'jerk', 'jerk off', 'jerk0ff', 'jerkass', 'jerked', 'jerkoff', 'jerk-off', 'jigaboo', 'jiggaboo', 'jiggerboo', 'jism', 'jizm', 'jizm', 'jizz'
+        , 'jizzed', 'jock', 'juggs', 'jungle bunny', 'junglebunny', 'kafir', 'kike', 'kikes', 'kinbaku', 'kinkster', 'knobead', 'knobed', 'knobend'
+        , 'knobhead', 'knobjocky', 'knobjokey', 'kooch', 'kooches', 'kootch', 'kunilingus', 'kunt', 'kwif', 'kyke', 'l3i+ch', 'l3itch', 'labia', 'lameass'
+        , 'lardass', 'leather restraint', 'leather straight jacket', 'lemon party', 'leper', 'lezza', 'lezzie', 'lolita', 'lovemaking', 'lube', 'm0f0'
+        , 'm0fo', 'm45terbate', 'ma5terb8', 'ma5terbate', 'mafugly', 'mafugly', 'make me come', 'male squirting', 'masterb8', 'masterbat*', 'masterbat3'
+        , 'masterbate', 'master-bate', 'master-bate', 'masterbating', 'masterbation', 'masterbations', 'masturbate', 'masturbating', 'masturbation', 'mcfagget'
+        , 'menage a trois', 'meth', 'm-fucking', 'microphallus', 'milf', 'missionary position', 'mof0', 'mofo', 'mo-fo', 'molest', 'moolie', 'moron'
+        , 'mothafuck', 'mothafucka', 'mothafuckas', 'mothafuckaz', 'mothafucked', 'mothafucked', 'mothafucker', 'mothafuckers', 'mothafuckin', 'mothafucking'
+        , 'mothafucking', 'mothafuckings', 'mothafucks', 'mother fucker', 'mother fucker', 'motherfuck', 'motherfucka', 'motherfucked', 'motherfucker'
+        , 'motherfuckers', 'motherfuckin', 'motherfucking', 'motherfuckings', 'motherfuckka', 'motherfucks', 'mound of venus', 'muff diver', 'muff puff'
+        , 'muff puff', 'muffdiver', 'muffdiving', 'murder', 'mutha', 'muthafecker', 'muthafuckker', 'muther', 'mutherfucker', 'n1gga', 'n1gger', 'nambla'
+        , 'nawashi', 'need the dick', 'negro', 'nig nog', 'nigaboo', 'nigg3r', 'nigg4h', 'nigga', 'niggah', 'niggas', 'niggaz', 'nigger', 'niggers'
+        , 'niglet', 'nig-nog', 'nimphomania', 'nob jokey', 'nobhead', 'nobjocky', 'nobjokey', 'nonce', 'nsfw images', 'nude', 'nudity', 'numbnuts'
+        , 'nut sack', 'nutsack', 'nympho', 'nymphomania', 'octopussy', 'omorashi', 'one cup two girls', 'one guy one jar', 'opiate', 'opium', 'orgasim'
+        , 'orgasims', 'orgasm', 'orgasmic', 'orgasms', 'orgies', 'orgy', 'p.u.s.s.y.', 'p0rn', 'paedophile', 'paki', 'peckerhead', 'pedobear', 'pedophile'
+        , 'pedophilia', 'pedophiliac', 'peepee', 'pegging', 'penial', 'penile', 'penis', 'penisbanger', 'penisfucker', 'penispuffer', 'phallic'
+        , 'phone sex', 'phonesex', 'phuck', 'phuk', 'phuked', 'phuking', 'phukked', 'phukking', 'phuks', 'phuq', 'piece of shit', 'pigfucker', 'pillowbiter'
+        , 'pimp', 'pimpis', 'piss pig', 'pissflaps', 'pisspig', 'pleasure chest', 'polack', 'pole smoker', 'polesmoker', 'pollock', 'ponyplay', 'poof'
+        , 'poon', 'poonani', 'poonany', 'poontang', 'poop chute', 'poopchute', 'poopuncher', 'porch monkey', 'porchmonkey', 'porn', 'porno', 'pornography'
+        , 'pornos', 'potty', 'prick', 'pricks', 'prickteaser', 'prig', 'prince albert piercing', 'pron', 'prostitute', 'pthc', 'pube', 'pubes', 'pubic'
+        , 'pubis', 'punani', 'punanny', 'punany', 'puss', 'pusse', 'pussi', 'pussies', 'pussy', 'pussy fart', 'pussy fart', 'pussy palace', 'pussy palace'
+        , 'pussylicking', 'pussypounder', 'pussys', 'queaf', 'queaf', 'queef', 'queerbait', 'queerhole', 'queero', 'quim', 'raghead', 'raging boner', 'rape'
+        , 'raped', 'raper', 'rapey', 'raping', 'rapist', 'raunch', 'reetard', 'renob', 'retard', 'retarded', 'reverse cowgirl', 'rimjaw', 'rimjob', 'rimming'
+        , 'ritard', 'rosy palm', 'rosy palm and her 5 sisters', 'rtard', 'r-tard', 'rusty trombone', 's hit', 's.h.i.t.', 's.o.b.', 's_h_i_t', 'sadism'
+        , 'sadist', 'sand nigger', 'sandnigger', 'sausage queen', 'schizo', 'schlong', 'scissoring', 'scroat', 'scrog', 'scrot', 'scrote', 'scum', 'seks'
+        ,'semen', 'sexo', 'sh!+', 'sh!t', 'sh1t', 's-h-1-t', 'shag', 'shagger', 'shaggin', 'shagging', 'shaved beaver', 'shaved pussy', 'shemale', 'shi+'
+        , 'shibari', 'shit', 's-h-i-t', 'shit ass', 'shit fucker', 'shit fucker', 'shitass', 'shitbag', 'shitbagger', 'shitblimp', 'shitbrains', 'shitbreath'
+        , 'shitcanned', 'shitcunt', 'shitdick', 'shite', 'shiteater', 'shited', 'shitey', 'shitface', 'shitfaced', 'shitfuck', 'shitfull', 'shithead'
+        , 'shitheads', 'shithole', 'shithouse', 'shiting', 'shitings', 'shits', 'shitspitter', 'shitstain', 'shitt', 'shitted', 'shitter', 'shitters'
+        , 'shitters', 'shittier', 'shittiest', 'shitting', 'shittings', 'shitty', 'shiz', 'shiznit', 'shota', 'skullfuck', 'slanteye', 'slave', 'slut'
+        , 'slut bucket', 'slut bucket', 'slutbag', 'slutdumper', 'slutkiss', 'sluts', 'smut', 'smutty', 'snuff', 's-o-b', 'sod off', 'sodomize', 'sodomy'
+        , 'son of a bitch', 'son of a motherless goat', 'son of a whore', 'son-of-a-bitch', 'splooge', 'splooge moose', 'spooge', 'spook', 'spread legs'
+        , 'spunk', 'stfu', 'stiffy', 'stoned', 'strap on', 'strapon', 'strappado', 'strip club', 'style doggy', 'suckass', 'suicide girls', 'sultry women'
+        , 'sumofabiatch', 't1tt1e5', 't1tties', 'taff', 'taig', 'taking the piss', 'tard', 'tea bagging', 'teabagging', 'teat', 'teets', 'teez', 'teste'
+        , 'testee', 'testes', 'testical', 'testicle', 'testis', 'threesome', 'throating', 'thundercunt', 'tit wank', 'tit wank', 'titfuck', 'titi', 'tities'
+        , 'tits', 'titt', 'tittie5', 'tittiefucker', 'titties', 'titty', 'tittyfuck', 'tittyfucker', 'tittywank', 'titwank', 'tosser', 'towelhead', 'tramp'
+        , 'tranny', 'tribadism', 'tub girl', 'tubgirl', 'turd', 'tush', 'tushy', 'tw4t', 'twat', 'twathead', 'twatlips', 'twats', 'twatty', 'twatwaffle'
+        , 'two fingers', 'two fingers with tongue', 'two girls one cup', 'twunt', 'twunter', 'unclefucker', 'undies', 'undressing', 'upskirt', 'urethra play'
+        , 'urophilia', 'v14gra', 'v1gra', 'vagina', 'vajayjay', 'va-j-j', 'venus mound', 'veqtable', 'violet wand', 'vixen', 'vjayjay', 'vorarephilia'
+        , 'vulva', 'wang', 'wank', 'wanker', 'wankjob', 'wanky', 'wazoo', 'wet dream', 'wetback', 'wh0re', 'wh0reface', 'whoar', 'whore', 'whorealicious'
+        , 'whorebag', 'whored', 'whoreface', 'whorehopper', 'whorehouse', 'whores', 'whoring', 'wigger', 'window licker', 'wrinkled starfish', 'yaoi'
+        , 'yeasty', 'yellow showers', 'yiffy', 'yobbo', 'zibbi', 'zoophilia', 'zubb']
         for i in eng:
             if i in text:
                 ge = 7
@@ -881,7 +893,7 @@ class korcen:
         , '獸奸', '癟三', '癡乳', '鶏8', '鶏八', '鶏女', '鶏巴', '鶏奸', '鶏吧', '鶏院', '麗春苑', '罌粟', '騷B', '騷女', '騷女叫春', '騷水', '騷包', '騷母', '騷穴'
         , '騷卵', '騷乳', '騷妹', '騷妻', '騷姐姐', '騷屄', '騷姨媽', '騷洞', '騷浪', '騷浪美女', '騷婦掰B', '騷婦露逼', '騷貨', '騷棍', '騷棒', '騷逼', '騷逼噴水'
         , '騷鶏', '灌滿精液', '爛b', '爛比', '爛袋', '爛貨', '爛逼', '蘚鮑', '覽叫', '露B', '露穴', '露屄', '露陰照', '露逼', '鷄巴', '囅', '鹽酸氯胺酮', '鹽酸羥亞胺'
-        , '豔母淫臀', '豔乳', '豔婦淫女', '豔情小說', '豔舞淫業', '']
+        , '豔母淫臀', '豔乳', '豔婦淫女', '豔情小說', '豔舞淫業']
         for i in chi:
             if i in newtext:
                 ge = 7
@@ -895,7 +907,7 @@ class korcen:
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-        mh = ["노시개", "노알라", "뇌사모", "뇌물현"]
+        mh = ["노시개", "노알라", "뇌사모", "뇌물현","응디시티"]
         for i in mh:
             if i in newtext:
                 qe = 10
@@ -961,6 +973,9 @@ class korcen:
         else:
             return False
 
+#━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -1119,8 +1134,7 @@ class korcen:
         text = re.sub("[^ㄱ-힣]", "", text)
         fuck = ["시ㅂ", "시ㅏㄹ", "씨ㅂ", "씨ㅏㄹ", "ㅣ발", "ㅆ발", "ㅅ발", "ㅅㅂ", "ㅆㅂ", "ㅆ바", "ㅅ바",
                 "시ㅂㅏ", "ㅅㅂㅏ", "시ㅏㄹ", "씨ㅏㄹ", "ㅅ불", "ㅆ불","ㅅ쁠", "ㅆ뿔","ㅆㅣ발","ㅅㅟ발","ㅅㅣㅂㅏ",
-                "ㅣ바알","씨바알","샤빨","샤발","스벌","쓰벌","신발련","신발년","신발놈","ㅅ벌","시불","시부렝"
-                ,"씨부렝","시부랭","씨부랭","^^ㅣ벌","시부랭"]
+                "ㅣ바알","ㅅ벌","^^ㅣ벌"]
         for i in fuck:
             if i in text:
                 ae = 1
@@ -1159,10 +1173,14 @@ class korcen:
         text = re.sub('크시야', '', text)
         text = re.sub('어찌', '', text)
         text = re.sub('발로란트', '', text)
+        text = re.sub('무시발언', '', text)
+        text = re.sub('의', '', text)
         fuck = ["시발", "씨발", "시봘", "씨봘", "씨바", "시바", "샤발", "씌발", "씹발", "시벌", "시팔", "싯팔",
                 "씨빨", "씨랼", "씨파", "띠발", "띡발", "띸발","싸발", "십발", "슈발","야발", "씨불", "씨랄",
                 "쉬발", "쓰발", "쓔발", "쌰발", "쉬발", "쒸발", "씨팔", "씨밝", "씨밯", "쑤발", "치발", "샤발",
-                "발씨", "리발", "씨볼","찌발", "씨비바라랄", "시바랄", "씨바라","쒸팔","쉬팔","씨밮","쒸밮","시밮","씨삐라","ㅆ삐라","씨벌","슈벌"]
+                "발씨", "리발", "씨볼","찌발", "씨비바라랄", "시바랄", "씨바라","쒸팔","쉬팔","씨밮","쒸밮","시밮",
+                "씨삐라","ㅆ삐라","씨벌","슈벌","시불","시부렝","씨부렝","시부랭","씨부랭","시부랭","발놈시","뛰발",
+                "뛰봘","뜨발","뜨벌","띄발","씨바알","샤빨","샤발","스벌","쓰벌","신발련","신발년","신발놈","띠발","띠바랄"]
         for i in fuck:
             if i in text:
                 ae = 1
@@ -1196,7 +1214,7 @@ class korcen:
         text = re.sub('지랄탄', '', text)
         text = re.sub('지랄버릇', '', text)
         text = re.sub('이', '', text)
-        bullshit2 = ["지랄", "찌랄", "지럴", "지롤", "랄지","쥐랄","쮜랄","지뢀"]
+        bullshit2 = ["지랄", "찌랄", "지럴", "지롤", "랄지","쥐랄","쮜랄","지뢀","띄랄"]
         for i in bullshit2:
             if i in text:
                 ae = 1
@@ -1265,7 +1283,7 @@ class korcen:
         text = re.sub('10새', '새끼', text)
         text = re.sub('10쉑', '새끼', text)
         text = re.sub("[^ㄱ-힣]", "", text)
-        sonofbitch = ["ㅅㄲ", "ㅅ끼", "ㅆ끼"]
+        sonofbitch = ["ㅅㄲ", "ㅅ끼", "ㅆ끼","색ㄲㅣ","ㅍ"]
         for i in sonofbitch:
             if i in text:
                 ae = 1
@@ -1279,7 +1297,8 @@ class korcen:
         text = re.sub('세끼먹', '', text)
         text = re.sub('고양이새끼', '', text)
         text = re.sub('키보드', '', text)
-        sonofbitch = ["새끼", "쉐리", "쌔끼", "썌끼", "쎼끼", "쌬끼", "샠끼","세끼","샊","쌖","섺","쎆","십새","새키","씹색"]
+        sonofbitch = ["새끼", "쉐리", "쌔끼", "썌끼", "쎼끼", "쌬끼", "샠끼","세끼","샊","쌖","섺","쎆","십새","새키","씹색","새까","새꺄",
+        "새뀌","새끠","새캬","색꺄","색끼"]
         for i in sonofbitch:
             if i in text:
                 ae = 1
@@ -1292,7 +1311,7 @@ class korcen:
         text = re.sub('줫습니다', '', text)
         text = re.sub('쫒아', '', text)
         text = re.sub('쫒다', '', text)
-        dick = ["ㅈ같", "ㅈ망", "ㅈ까", "ㅈ경"]
+        dick = ["ㅈ같", "ㅈ망", "ㅈ까", "ㅈ경","ㅈ가튼"]
         for i in dick:
             if i in text:
                 ae = 1
@@ -1320,7 +1339,7 @@ class korcen:
                 ae = 1
 
         text = re.sub("[^가-힣]", "", newtext)
-        shutup = ["닥쳐", "닭쳐","닥치라"]
+        shutup = ["닥쳐", "닭쳐","닥치라","아가리해"]
         for i in shutup:
             if i in text:
                 ae = 1
@@ -1364,8 +1383,63 @@ class korcen:
     def minor(self, text):
         be = 0
 
-        text = text.lower()
         text = ''.join(char for char in text if char.isalnum())
+        text = re.sub('𝗌', 's', text)
+        text = re.sub('𝘴', 's', text)
+        text = re.sub('𝙨', 's', text)
+        text = re.sub('𝚜', 's', text)
+        text = re.sub('𝐬', 's', text)
+        text = re.sub('𝑠', 's', text)
+        text = re.sub('𝒔', 's', text)
+        text = re.sub('𝓈', 's', text)
+        text = re.sub('𝓼', 's', text)
+        text = re.sub('𝔰', 's', text)
+        text = re.sub('𝖘', 's', text)
+        text = re.sub('𝕤', 's', text)
+        text = re.sub('ｓ', 's', text)
+        text = re.sub('ⓢ', 's', text)
+        text = re.sub('⒮', 's', text)
+        text = re.sub('🅢', 's', text)
+        text = re.sub('🆂', 's', text)
+        text = re.sub('🅂', 's', text)
+        text = re.sub('𝖾', 'e', text)
+        text = re.sub('𝘦', 'e', text)
+        text = re.sub('𝙚', 'e', text)
+        text = re.sub('𝚎', 'e', text)
+        text = re.sub('𝐞', 'e', text)
+        text = re.sub('𝑒', 'e', text)
+        text = re.sub('𝒆', 'e', text)
+        text = re.sub('ℯ', 'e', text)
+        text = re.sub('𝓮', 'e', text)
+        text = re.sub('𝔢', 'e', text)
+        text = re.sub('𝖊', 'e', text)
+        text = re.sub('𝕖', 'e', text)
+        text = re.sub('ｅ', 'e', text)
+        text = re.sub('ⓔ', 'e', text)
+        text = re.sub('⒠', 'e', text)
+        text = re.sub('🅔', 'e', text)
+        text = re.sub('🅴', 'e', text)
+        text = re.sub('🄴', 'e', text)
+        text = re.sub('є', 'e', text)
+        text = re.sub('𝗑', 'x', text)
+        text = re.sub('𝘹', 'x', text)
+        text = re.sub('𝙭', 'x', text)
+        text = re.sub('𝚡', 'x', text)
+        text = re.sub('𝐱', 'x', text)
+        text = re.sub('𝑥', 'x', text)
+        text = re.sub('𝒙', 'x', text)
+        text = re.sub('𝓍', 'x', text)
+        text = re.sub('𝔁', 'x', text)
+        text = re.sub('𝔵', 'x', text)
+        text = re.sub('𝖝', 'x', text)
+        text = re.sub('𝕩', 'x', text)
+        text = re.sub('ｘ', 'x', text)
+        text = re.sub('ⓧ', 'x', text)
+        text = re.sub('⒳', 'x', text)
+        text = re.sub('🅧', 'x', text)
+        text = re.sub('🆇', 'x', text)
+        text = re.sub('🅇', 'x', text)
+        text = text.lower()
         newtext = re.sub(' ', '', text)
 
         text = re.sub("[^ㄱ-힣]", "", newtext)
@@ -1378,7 +1452,7 @@ class korcen:
         text = re.sub('미친증', '', text)
         text = re.sub('거미', '', text)
         text = re.sub('친구', '', text)
-        damnit = ["미친", "미쳤","무친놈"]
+        damnit = ["미친", "미쳤","무친놈","뮈칀","뮈친"]
         for i in damnit:
             if i in text:
                 be = 2
@@ -1417,7 +1491,6 @@ class korcen:
     def sexual(self, text):
         ce = 0
 
-        text = text.lower()
         text = ''.join(char for char in text if char.isalnum())
         text = re.sub('𝗌', 's', text)
         text = re.sub('𝘴', 's', text)
@@ -1455,6 +1528,7 @@ class korcen:
         text = re.sub('🅔', 'e', text)
         text = re.sub('🅴', 'e', text)
         text = re.sub('🄴', 'e', text)
+        text = re.sub('є', 'e', text)
         text = re.sub('𝗑', 'x', text)
         text = re.sub('𝘹', 'x', text)
         text = re.sub('𝙭', 'x', text)
@@ -1473,9 +1547,10 @@ class korcen:
         text = re.sub('🅧', 'x', text)
         text = re.sub('🆇', 'x', text)
         text = re.sub('🅇', 'x', text)
+        text = text.lower()
         newtext = re.sub(' ', '', text)
 
-        pussy = ["ⓑⓞⓩⓘ","bozi"]
+        pussy = ["ⓑⓞⓩⓘ","bozi","보ㅈㅣ"]
         for i in pussy:
             if i in newtext:
                 ce = 3
@@ -1508,11 +1583,12 @@ class korcen:
         text = re.sub('보지말', '', text)
         text = re.sub('안보지', '', text)
         text = re.sub('보지도마', '', text)
+        text = re.sub('보지는않', '', text)
         text = re.sub('정보', '', text)
         text = re.sub('지팡이', '', text)
         text = re.sub('행보', '', text)
         text = re.sub('오', '', text)
-        pussy = ["보지","버지물","버짓물","보짓","ⓑⓞⓩⓘ","bozi","개보즤","개보지"]
+        pussy = ["보지","버지물","버짓물","보짓","ⓑⓞⓩⓘ","bozi","개보즤","개보지","버지벌렁벌렁","보짖","뵤즤"]
         for i in pussy:
             if i in text:
                 ce = 3
@@ -1548,6 +1624,7 @@ class korcen:
         text = re.sub('안자지', '', text)
         text = re.sub('부자지', '', text)
         text = re.sub('자지도마', '', text)
+        text = re.sub('자지는않', '', text)
         text = re.sub('아', '', text)
         dicks = ["자지","자짓"]
         for i in dicks:
@@ -1555,7 +1632,7 @@ class korcen:
                 ce = 3
 
 
-        sex = ["sex","s스", "x스", "se스", "se스", "s스","ㅅㅅ","s하고e싶다x"]
+        sex = ["sex","s스", "x스", "se스", "se스", "s스","ㅅㅅ","s하고e싶다x","ㅅㅔㅅㄱ"]
         for i in sex:
             if i in newtext:
                 ce = 3
@@ -1572,13 +1649,16 @@ class korcen:
         text = re.sub("크시야", "", text)
         text = re.sub("카구야", "", text)
         text = re.sub("스파이", "", text)
-        sex = ["섹스", "섻스", "쉑스", "섿스", "섹그", "야스", "색스", "셱스", "섁스", "세엑스", "썩스","섹수","섹파","섹하자","쉐스","쉑스","쉐엑스"]
+        text = re.sub("말이야", "", text)
+        text = re.sub("스티브", "", text)
+        sex = ["섹스", "섻", "쉑스", "섿스", "섹그", "야스", "색스", "셱스", "섁스", "세엑스", "썩스","섹수","섹파","섹하자","쉐스","쉑스","쉐엑스","색수","세엑수우","섹하고",
+        "섹하구","섹하자","섹하장","섹하쟈","섹한번"]
         for i in sex:
             if i in text:
                 ce = 3
 
         text = re.sub("[^가-힣]", "", newtext)
-        fireegg = ["불알", "부랄", "뽕알", "뿅알", "뿌랄", "뿔알","개부달","개부랄","개부러럴","개부럴","개부뢀","개부알","개불알"]
+        fireegg = ["불알", "부랄", "뽕알", "뿅알", "뿌랄", "뿔알","개부달","개부랄","개부러럴","개부럴","개부뢀","개부알","개불알","똘추","똥구멍"]
         for i in fireegg:
             if i in text:
                 ce = 3
@@ -1614,7 +1694,10 @@ class korcen:
                 ce = 3
 
         text = re.sub("[^가-힣]", "", newtext)
-        onahole = ["딸딸이","질싸","안에사정","자위남","자위녀","폰섹","포르노","폰세엑","폰쉑","폰쎅","질내사정","그룹섹","남창","男色","누워라이년아","누웠냐씨방새",]
+        onahole = ["딸딸이","질싸","안에사정","자위남","자위녀","폰섹","포르노","폰세엑","폰쉑","폰쎅","질내사정","그룹섹","남창","男色","누워라이년아",
+        "누웠냐씨방새","다리벌려","대주까","대줄년","뒤로너어줘","딸따뤼","딸쳐","떡쳐라","막대쑤셔줘","막대핥아줘","먹고보니내딸","먹고보니누나","먹고보니딸",
+        "먹고보니똥개","먹고보니엄마","먹고보니응아","먹고보니재수","먹고보니처제","먹고보니형수","몸뚱이줄께","몸안에사정","밖에다쌀께","박고빼고",
+        "배위에싸죠"]
         for i in onahole:
             if i in text:
                 ce = 3
@@ -1655,8 +1738,8 @@ class korcen:
     def belittle(self, text):
         de = 0
 
-        text = text.lower()
         text = ''.join(char for char in text if char.isalnum())
+        text = text.lower()
         newtext = re.sub(' ', '', text)
 
         text = re.sub('뇬', '련', newtext)
@@ -1678,7 +1761,7 @@ class korcen:
                     "창녀", "머저리", "씹쓰래기", "씹쓰레기", "씹장생", "씹자식", "운지", "급식충", "틀딱충", "조센징", "매국노", "똥꼬충", "진지충", "듣보잡",
                     "한남충","정신병자","중생아","돌팔이","김치녀","폰팔이","틀딱년","같은년","개돼중","쓰글년","썩을년","썩글년","씹할","거지새끼","거지쉐뀌",
                     "거지쉑이","거지쎄끼","거지쒜리","걸래가튼","걸래넘","걸래년","걸래놈","걸레가튼","걸레년","그지새끼","그지새키","그지색","기집년","까진년",
-                    "깔보","난잡년"]
+                    "깔보","난잡년","빡대가리","더러운년","돌아이","또라이"]
         for i in belittling:
             if i in text:
                 de = 4
@@ -1692,8 +1775,8 @@ class korcen:
     def race(self, text):
         ee = 0
 
-        text = text.lower()
         text = ''.join(char for char in text if char.isalnum())
+        text = text.lower()
         newtext = re.sub(' ', '', text)
 
         text = re.sub("[^가-힣]", "", newtext)
@@ -1711,8 +1794,8 @@ class korcen:
     def parent(self, text):
         fe = 0
 
-        text = text.lower()
         text = ''.join(char for char in text if char.isalnum())
+        text = text.lower()
         newtext = re.sub(' ', '', text)
 
         your = ["ㄴ1ㄱ", "ㄴ1ㅁ", "느금ㅁ", "ㄴㄱ마", "ㄴㄱ빠", "ㄴ금빠","ㅇH미","ㄴ1에미"]
@@ -1726,7 +1809,7 @@ class korcen:
                 fe = 6
         text = re.sub("[^가-힣]", "", newtext)
         your = ["느금마", "느그엄마", "늑엄마", "늑금마", "느그애미", "넉엄마", "느그부모", "느그애비", "느금빠", "느그메", "느그빠","니미씨","니미씹",
-        "느그마","니엄마","엄창","엠창","니미럴","누굼마","느금","내미랄","내미럴"]
+        "느그마","니엄마","엄창","엠창","니미럴","누굼마","느금","내미랄","내미럴","엄마없","아빠없"]
         for i in your:
             if i in text:
                 fe = 6
@@ -1734,7 +1817,9 @@ class korcen:
         text = re.sub("[^가-힣]", "", newtext)
         text = re.sub("도", "", text)
         motherfuck = ["니애미", "노애미", "노앰", "앰뒤련",
-                    "아버지도없는게", "애미도없는게", "애비도없는게", "어머니도없는게", "니애비", "노애비","애미없","애비없","애미뒤","애비뒤","니아빠","너에미"]
+                    "아버지도없는게", "애미도없는게", "애비도없는게", "어머니도없는게", "니애비", "노애비","애미없","애비없","애미뒤","애비뒤","니아빠","너에미","눼기미","뉘귀미"
+                    ,"뉘기미","뉘김이","뉘뮈","뉘미랄","뉘미럴","뉘미롤","뉘밀얼","뉘밀할","뉘어미","뉘에미","느검마","늬긔미","늬기미","니기미","니믜창","니미랄","니미럴"
+                    ,"니미쒸블","니미씨펄넘","니미좃","니밀할","니부랑","니뽕좃"]
         for i in motherfuck:
             if i in text:
                 fe = 6
@@ -1748,122 +1833,173 @@ class korcen:
     def foreign(self, text):
         ge = 0
 
-        text = text.lower()
         text = ''.join(char for char in text if char.isalnum())
+        text = re.sub('𝗌', 's', text)
+        text = re.sub('𝘴', 's', text)
+        text = re.sub('𝙨', 's', text)
+        text = re.sub('𝚜', 's', text)
+        text = re.sub('𝐬', 's', text)
+        text = re.sub('𝑠', 's', text)
+        text = re.sub('𝒔', 's', text)
+        text = re.sub('𝓈', 's', text)
+        text = re.sub('𝓼', 's', text)
+        text = re.sub('𝔰', 's', text)
+        text = re.sub('𝖘', 's', text)
+        text = re.sub('𝕤', 's', text)
+        text = re.sub('ｓ', 's', text)
+        text = re.sub('ⓢ', 's', text)
+        text = re.sub('⒮', 's', text)
+        text = re.sub('🅢', 's', text)
+        text = re.sub('🆂', 's', text)
+        text = re.sub('🅂', 's', text)
+        text = re.sub('𝖾', 'e', text)
+        text = re.sub('𝘦', 'e', text)
+        text = re.sub('𝙚', 'e', text)
+        text = re.sub('𝚎', 'e', text)
+        text = re.sub('𝐞', 'e', text)
+        text = re.sub('𝑒', 'e', text)
+        text = re.sub('𝒆', 'e', text)
+        text = re.sub('ℯ', 'e', text)
+        text = re.sub('𝓮', 'e', text)
+        text = re.sub('𝔢', 'e', text)
+        text = re.sub('𝖊', 'e', text)
+        text = re.sub('𝕖', 'e', text)
+        text = re.sub('ｅ', 'e', text)
+        text = re.sub('ⓔ', 'e', text)
+        text = re.sub('⒠', 'e', text)
+        text = re.sub('🅔', 'e', text)
+        text = re.sub('🅴', 'e', text)
+        text = re.sub('🄴', 'e', text)
+        text = re.sub('є', 'e', text)
+        text = re.sub('𝗑', 'x', text)
+        text = re.sub('𝘹', 'x', text)
+        text = re.sub('𝙭', 'x', text)
+        text = re.sub('𝚡', 'x', text)
+        text = re.sub('𝐱', 'x', text)
+        text = re.sub('𝑥', 'x', text)
+        text = re.sub('𝒙', 'x', text)
+        text = re.sub('𝓍', 'x', text)
+        text = re.sub('𝔁', 'x', text)
+        text = re.sub('𝔵', 'x', text)
+        text = re.sub('𝖝', 'x', text)
+        text = re.sub('𝕩', 'x', text)
+        text = re.sub('ｘ', 'x', text)
+        text = re.sub('ⓧ', 'x', text)
+        text = re.sub('⒳', 'x', text)
+        text = re.sub('🅧', 'x', text)
+        text = re.sub('🆇', 'x', text)
+        text = re.sub('🅇', 'x', text)
+        text = text.lower()
         newtext = re.sub(' ', '', text)
 
         text = re.sub('[^a-z]', '', newtext)
-        eng = ['abbo', 'abo'
-        , 'abortion', 'abuse', 'addict', 'addicts', 'adult', 'africa', 'african', 'alla', 'allah', 'alligatorbait', 'amateur', 'american'
-        , 'anal', 'analannie', 'analsex', 'angie', 'angry', 'anus', 'arab', 'arabs', 'areola', 'argie', 'aroused', 'arse', 'arsehole', 'asian'
-        , 'ass', 'assassin', 'assassinate', 'assassination', 'assault', 'assbagger', 'assblaster', 'assclown', 'asscowboy', 'asses', 'assfuck'
-        , 'assfucker', 'asshat', 'asshole', 'assholes', 'asshore', 'assjockey', 'asskiss', 'asskisser', 'assklown', 'asslick', 'asslicker', 'asslover'
-        , 'assman', 'assmonkey', 'assmunch', 'assmuncher', 'asspacker', 'asspirate', 'asspuppies', 'assranger', 'asswhore', 'asswipe', 'athletesfoot'
-        , 'attack', 'australian', 'backdoor', 'backdoorman', 'backseat', 'badfuck', 'balllicker', 'balls', 'ballsack', 'banging', 'baptist', 'barelylegal'
-        , 'barf', 'barface', 'barfface', 'bast', 'bastard', 'bazongas', 'bazooms', 'beaner', 'beast', 'beastality', 'beastial', 'beastiality', 'beatoff'
-        , 'beat-off', 'beatyourmeat', 'beaver', 'bestial', 'bestiality', 'bi', 'biatch', 'bicurious', 'bigass', 'bigbastard', 'bigbutt', 'bigger', 'bisexual'
-        , 'bi-sexual', 'bitch', 'bitcher', 'bitches', 'bitchez', 'bitchin', 'bitching', 'bitchslap', 'bitchy', 'biteme', 'black', 'blackman', 'blackout'
-        , 'blacks', 'blind', 'blow', 'blowjob', 'boang', 'bogan', 'bohunk', 'bollick', 'bollock', 'bomb', 'bombers', 'bombing', 'bombs', 'bomd', 'bondage'
-        , 'boner', 'bong', 'boob', 'boobies', 'boobs', 'booby', 'boody', 'boom', 'boong', 'boonga', 'boonie', 'booty', 'bootycall', 'bountybar', 'bra', 'brea5t'
-        , 'breast', 'breastjob', 'breastlover', 'breastman', 'brothel', 'bugger', 'buggered', 'buggery', 'bullcrap', 'bulldike', 'bulldyke', 'bullshit'
-        , 'bumblefuck', 'bumfuck', 'bunga', 'bunghole', 'buried', 'burn', 'butchbabes', 'butchdike', 'butchdyke', 'butt', 'buttbang', 'butt-bang', 'buttface'
-        , 'buttfuck', 'butt-fuck', 'buttfucker', 'butt-fucker', 'buttfuckers', 'butt-fuckers', 'butthead', 'buttman', 'buttmunch', 'buttmuncher', 'buttpirate'
-        , 'buttplug', 'buttstain', 'byatch', 'cacker', 'cameljockey', 'cameltoe', 'canadian', 'cancer', 'carpetmuncher', 'carruth', 'catholic', 'catholics'
-        , 'cemetery', 'chav', 'cherrypopper', 'chickslick', "children's", 'chin', 'chinaman', 'chinamen', 'chinese', 'chink', 'chinky', 'choad', 'chode'
-        , 'christ', 'christian', 'church', 'cigarette', 'cigs', 'clamdigger', 'clamdiver', 'clit', 'clitoris', 'clogwog', 'cocaine', 'cock', 'cockblock'
-        , 'cockblocker', 'cockcowboy', 'cockfight', 'cockhead', 'cockknob', 'cocklicker', 'cocklover', 'cocknob', 'cockqueen', 'cockrider', 'cocksman'
-        , 'cocksmith', 'cocksmoker', 'cocksucer', 'cocksuck', 'cocksucked', 'cocksucker', 'cocksucking', 'cocktail', 'cocktease', 'cocky', 'cohee'
-        , 'coitus', 'color', 'colored', 'coloured', 'commie', 'communist', 'condom', 'conservative', 'conspiracy', 'coolie', 'cooly', 'coon', 'coondog'
-        , 'copulate', 'cornhole', 'corruption', 'cra5h', 'crabs', 'crack', 'crackpipe', 'crackwhore', 'crack-whore', 'crap', 'crapola', 'crapper'
-        , 'crappy', 'crash', 'creamy', 'crime', 'crimes', 'criminal', 'criminals', 'crotch', 'crotchjockey', 'crotchmonkey', 'crotchrot', 'cum'
-        , 'cumbubble', 'cumfest', 'cumjockey', 'cumm', 'cummer', 'cumming', 'cumquat', 'cumqueen', 'cumshot', 'cunilingus', 'cunillingus', 'cunn'
-        , 'cunnilingus', 'cunntt', 'cunt', 'cunteyed', 'cuntfuck', 'cuntfucker', 'cuntlick', 'cuntlicker', 'cuntlicking', 'cuntsucker', 'cybersex'
-        , 'cyberslimer', 'dago', 'dahmer', 'dammit', 'damn', 'damnation', 'damnit', 'darkie', 'darky', 'datnigga', 'dead', 'deapthroat', 'death'
-        , 'deepthroat', 'defecate', 'dego', 'demon', 'deposit', 'desire', 'destroy', 'deth', 'devil', 'devilworshipper', 'dick', 'dickbrain'
-        , 'dickforbrains', 'dickhead', 'dickless', 'dicklick', 'dicklicker', 'dickman', 'dickwad', 'dickweed', 'diddle', 'die', 'died', 'dies', 'dike'
-        , 'dildo', 'dingleberry', 'dink', 'dipshit', 'dipstick', 'dirty', 'disease', 'diseases', 'disturbed', 'dive', 'dix', 'dixiedike'
-        , 'dixiedyke', 'doggiestyle', 'doggystyle', 'dong', 'doodoo', 'doo-doo', 'doom', 'dope', 'dragqueen', 'dragqween', 'dripdick', 'drug'
-        , 'drunk', 'drunken', 'dumb', 'dumbass', 'dumbbitch', 'dumbfuck', 'dyefly', 'dyke', 'easyslut', 'eatballs', 'eatme', 'eatpussy'
-        , 'ecstacy', 'ejaculate', 'ejaculated', 'ejaculating', 'ejaculation', 'enema', 'enemy', 'erect', 'erection', 'ero', 'escort', 'ethiopian'
-        , 'ethnic', 'european', 'evl', 'excrement', 'execute', 'executed', 'execution', 'executioner', 'explosion', 'facefucker', 'faeces'
-        , 'fag', 'fagging', 'faggot', 'fagot', 'failed', 'failure', 'fairies', 'fairy', 'faith', 'fannyfucker', 'fart', 'farted', 'farting', 'farty'
-        , 'fastfuck', 'fat', 'fatah', 'fatass', 'fatfuck', 'fatfucker', 'fatso', 'fckcum', 'fear', 'feces', 'felatio', 'felch', 'felcher', 'felching'
-        , 'fellatio', 'feltch', 'feltcher', 'feltching', 'fetish', 'fight', 'filipina', 'filipino', 'fingerfood', 'fingerfuck', 'fingerfucked'
-        , 'fingerfucker', 'fingerfuckers', 'fingerfucking', 'fire', 'firing', 'fister', 'fistfuck', 'fistfucked', 'fistfucker'
-        , 'fistfucking', 'fisting', 'flange', 'flasher', 'flatulence', 'floo', 'flydie', 'flydye', 'fok', 'fondle', 'footaction'
-        , 'footfuck', 'footfucker', 'footlicker', 'footstar', 'fore', 'foreskin', 'forni', 'fornicate', 'foursome', 'fourtwenty'
-        , 'fraud', 'freakfuck', 'freakyfucker', 'freefuck', 'fu', 'fubar', 'fuc', 'fucck', 'fuck', 'fucka', 'fuckable', 'fuckbag'
-        , 'fuckbuddy', 'fucked', 'fuckedup', 'fucker', 'fuckers', 'fuckface', 'fuckfest', 'fuckfreak', 'fuckfriend', 'fuckhead'
-        , 'fuckher', 'fuckin', 'fuckina', 'fucking', 'fuckingbitch', 'fuckinnuts', 'fuckinright', 'fuckit', 'fuckknob', 'fuckme'
-        , 'fuckmehard', 'fuckmonkey', 'fuckoff', 'fuckpig', 'fucks', 'fucktard', 'fuckwhore', 'fuckyou', 'fudgepacker', 'fugly'
-        , 'fuk', 'fuks', 'funeral', 'funfuck', 'fungus', 'fuuck', 'gangbang', 'gangbanged', 'gangbanger', 'gangsta', 'gatorbait'
-        , 'gay', 'gaymuthafuckinwhore', 'gaysex', 'geez', 'geezer', 'geni', 'genital', 'german', 'getiton', 'gin', 'ginzo', 'gipp'
-        , 'girls', 'givehead', 'glazeddonut', 'gob', 'god', 'godammit', 'goddamit', 'goddammit', 'goddamn', 'goddamned', 'goddamnes', 'goddamnit'
-        , 'goddamnmuthafucker', 'goldenshower', 'gonorrehea', 'gonzagas', 'gook', 'gotohell', 'goy', 'goyim', 'greaseball', 'gringo'
-        , 'groe', 'gross', 'grostulation', 'gubba', 'gummer', 'gun', 'gyp', 'gypo', 'gypp', 'gyppie', 'gyppo', 'gyppy', 'hamas', 'handjob', 'hapa'
-        , 'harder', 'hardon', 'harem', 'headfuck', 'headlights', 'hebe', 'heeb', 'hell', 'henhouse', 'heroin', 'herpes', 'heterosexual'
-        , 'hijack', 'hijacker', 'hijacking', 'hillbillies', 'hindoo', 'hiscock', 'hitler', 'hitlerism', 'hitlerist', 'hiv', 'ho', 'hobo'
-        , 'hodgie', 'hoes', 'hole', 'holestuffer', 'homicide', 'homo', 'homobangers', 'homosexual', 'honger', 'honk', 'honkers', 'honkey'
-        , 'honky', 'hook', 'hooker', 'hookers', 'hooters', 'hore', 'hork', 'horn', 'horney', 'horniest', 'horny', 'horseshit', 'hosejob'
-        , 'hoser', 'hostage', 'hotdamn', 'hotpussy', 'hottotrot', 'hummer', 'husky', 'hussy', 'hustler', 'hymen', 'hymie', 'iblowu', 'idiot'
-        , 'ikey', 'illegal', 'incest', 'insest', 'intercourse', 'interracial', 'intheass', 'inthebuff','israel', 'israeli', "israel's", 'italiano'
-        , 'itch', 'jackass', 'jackoff', 'jackshit', 'jacktheripper', 'jade', 'jap', 'japanese', 'japcrap', 'jebus', 'jeez', 'jerkoff', 'jesus'
-        , 'jesuschrist', 'jew', 'jewish', 'jiga', 'jigaboo', 'jigg', 'jigga', 'jiggabo', 'jigger', 'jiggy', 'jihad', 'jijjiboo', 'jimfish', 'jism'
-        , 'jiz', 'jizim', 'jizjuice', 'jizm', 'jizz', 'jizzim', 'jizzum', 'joint', 'juggalo', 'jugs', 'junglebunny', 'kaffer', 'kaffir', 'kaffre'
-        , 'kafir', 'kanake', 'kid', 'kigger', 'kike', 'kill', 'killed', 'killer', 'killing', 'kills', 'kink', 'kinky', 'kissass', 'kkk', 'knife'
-        , 'knockers', 'kock', 'kondum', 'koon', 'kotex', 'krap', 'krappy', 'kraut', 'kum', 'kumbubble', 'kumbullbe', 'kummer', 'kumming', 'kumquat'
-        , 'kums', 'kunilingus', 'kunnilingus', 'kunt', 'ky', 'kyke', 'lactate', 'laid', 'lapdance', 'latin', 'lesbain', 'lesbayn', 'lesbian', 'lesbin'
-        , 'lesbo', 'lez', 'lezbe', 'lezbefriends', 'lezbo', 'lezz', 'lezzo', 'liberal', 'libido', 'licker', 'lickme', 'lies', 'limey', 'limpdick', 'limy'
-        , 'lingerie', 'liquor', 'livesex', 'loadedgun', 'lolita', 'looser', 'loser', 'lotion', 'lovebone', 'lovegoo', 'lovegun', 'lovejuice', 'lovemuscle'
-        , 'lovepistol', 'loverocket', 'lowlife', 'lsd', 'lubejob', 'lucifer', 'luckycammeltoe', 'lugan', 'lynch', 'macaca', 'mad', 'mafia', 'magicwand', 'mams'
-        , 'manhater', 'manpaste', 'marijuana', 'mastabate', 'mastabater', 'masterbate', 'masterblaster', 'mastrabator', 'masturbate', 'masturbating'
-        , 'mattressprincess', 'meatbeatter', 'meatrack', 'meth', 'mexican', 'mgger', 'mggor', 'mickeyfinn', 'mideast', 'milf', 'minority', 'mockey'
-        , 'mockie', 'mocky', 'mofo', 'moky', 'moles', 'molest', 'molestation', 'molester', 'molestor', 'moneyshot', 'mooncricket', 'mormon', 'moron'
-        , 'moslem', 'mosshead', 'mothafuck', 'mothafucka', 'mothafuckaz', 'mothafucked', 'mothafucker', 'mothafuckin', 'mothafucking', 'mothafuckings'
-        , 'motherfuck', 'motherfucked', 'motherfucker', 'motherfuckin', 'motherfucking', 'motherfuckings', 'motherlovebone', 'muff', 'muffdive', 'muffdiver'
-        , 'muffindiver', 'mufflikcer', 'mulatto', 'muncher', 'munt', 'murder', 'murderer', 'muslim', 'naked', 'narcotic', 'nasty', 'nastybitch', 'nastyho'
-        , 'nastyslut', 'nastywhore', 'nazi', 'necro', 'negro', 'negroes', 'negroid', "negro's", 'nig', 'niger', 'nigerian', 'nigerians', 'nigg', 'nigga'
-        , 'niggah', 'niggaracci', 'niggard', 'niggarded', 'niggarding', 'niggardliness', "niggardliness's", 'niggardly', 'niggards', "niggard's", 'niggaz'
-        , 'nigger', 'niggerhead', 'niggerhole', 'niggers', "nigger's", 'niggle', 'niggled', 'niggles', 'niggling', 'nigglings', 'niggor', 'niggur', 'niglet'
-        , 'nignog', 'nigr', 'nigra', 'nigre', 'nip', 'nipple', 'nipplering', 'nittit', 'nlgger', 'nlggor', 'nofuckingway', 'nook', 'nookey', 'nookie', 'noonan'
-        , 'nooner', 'nude', 'nudger', 'nuke', 'nutfucker', 'nymph', 'ontherag', 'oral', 'orga', 'orgasim', 'orgasm', 'orgies', 'orgy', 'osama', 'paki'
-        , 'palesimian', 'palestinian', 'pansies', 'pansy', 'panti', 'panties', 'payo', 'pearlnecklace', 'peck', 'pecker', 'peckerwood', 'pee', 'peehole'
-        , 'pee-pee', 'peepshow', 'peepshpw', 'pendy', 'penetration', 'peni5', 'penile', 'penis', 'penises', 'penthouse', 'period', 'perv', 'phonesex', 'phuk'
-        , 'phuked', 'phuking', 'phukked', 'phukking', 'phungky', 'phuq', 'pi55', 'picaninny', 'piccaninny', 'pickaninny', 'piker', 'pikey', 'piky', 'pimp'
-        , 'pimped', 'pimper', 'pimpjuic', 'pimpjuice', 'pimpsimp', 'pindick', 'piss', 'pissed', 'pisser', 'pisses', 'pisshead', 'pissin', 'pissing', 'pissoff'
-        , 'pistol', 'pixie', 'pixy', 'playboy', 'playgirl', 'pocha', 'pocho', 'pocketpool', 'pohm', 'polack', 'pom', 'pommie', 'pommy', 'poo', 'poon'
-        , 'poontang', 'poop', 'pooper', 'pooperscooper', 'pooping', 'poorwhitetrash', 'popimp', 'porchmonkey', 'porn', 'pornflick', 'pornking', 'porno'
-        , 'pornography', 'pornprincess', 'pot', 'poverty', 'premature', 'pric', 'prick', 'prickhead', 'primetime', 'propaganda', 'pros', 'prostitute'
-        , 'protestant', 'pu55i', 'pu55y', 'pube', 'pubic', 'pubiclice', 'pud', 'pudboy', 'pudd', 'puddboy', 'puke', 'puntang', 'purinapricness', 'puss'
-        , 'pussie', 'pussies', 'pussy', 'pussycat', 'pussyeater', 'pussyfucker', 'pussylicker', 'pussylips', 'pussylover', 'pussypounder', 'pusy', 'quashie'
-        , 'queef', 'queer', 'quickie', 'quim', 'ra8s', 'rabbi', 'racial', 'racist', 'radical', 'radicals', 'raghead', 'randy', 'rape', 'raped', 'raper'
-        , 'rapist', 'rearend', 'rearentry', 'rectum', 'redlight', 'redneck', 'reefer', 'reestie', 'refugee', 'reject', 'remains', 'rentafuck', 'republican'
-        , 'rere', 'retard', 'retarded', 'ribbed', 'rigger', 'rimjob', 'rimming', 'roach', 'robber', 'roundeye', 'rump', 'russki', 'russkie', 'sadis', 'sadom'
-        , 'samckdaddy', 'sandm', 'sandnigger', 'satan', 'scag', 'scallywag', 'scat', 'schlong', 'screw', 'screwyou', 'scrotum', 'scum', 'semen', 'seppo'
-        , 'servant', 'sex', 'sexed', 'sexfarm', 'sexhound', 'sexhouse', 'sexing', 'sexkitten', 'sexpot', 'sexslave', 'sextogo', 'sextoy', 'sextoys', 'sexual'
-        , 'sexually', 'sexwhore', 'sexy', 'sexymoma', 'sexy-slim', 'shag', 'shaggin', 'shagging', 'shat', 'shav', 'shawtypimp', 'sheeney', 'shhit', 'shinola'
-        , 'shit', 'shitcan', 'shitdick', 'shite', 'shiteater', 'shited', 'shitface', 'shitfaced', 'shitfit', 'shitforbrains', 'shitfuck', 'shitfucker'
-        , 'shitfull', 'shithapens', 'shithappens', 'shithead', 'shithouse', 'shiting', 'shitlist', 'shitola', 'shitoutofluck', 'shits', 'shitstain', 'shitted'
-        , 'shitter', 'shitting', 'shitty', 'shortfuck', 'sissy', 'sixtyniner', 'skank', 'skankbitch', 'skankfuck', 'skankwhore', 'skanky', 'skankybitch'
-        , 'skankywhore', 'skinflute', 'skum', 'skumbag', 'slant', 'slanteye', 'slapper', 'slav', 'slave', 'slavedriver', 'sleezebag', 'sleezeball', 'slideitin'
-        , 'slime', 'slimeball', 'slimebucket', 'slopehead', 'slopey', 'slopy', 'slut', 'sluts', 'slutt', 'slutting', 'slutty', 'slutwear', 'slutwhore', 'smack'
-        , 'smackthemonkey', 'smut', 'snatch', 'snatchpatch', 'snigger', 'sniggered', 'sniggering', 'sniggers', "snigger's", 'sniper', 'snot', 'snowback'
-        , 'snownigger', 'sob', 'sodom', 'sodomise', 'sodomite', 'sodomize', 'sodomy', 'sonofabitch', 'sonofbitch', 'sooty', 'soviet', 'spaghettibender'
-        , 'spaghettinigger', 'spank', 'spankthemonkey', 'sperm', 'spermacide', 'spermbag', 'spermhearder', 'spermherder', 'spic', 'spick', 'spig', 'spigotty'
-        , 'spik', 'spit', 'spitter', 'splittail', 'spooge', 'spreadeagle', 'spunk', 'spunky', 'squaw', 'stagg', 'stiffy', 'strapon', 'stringer', 'stripclub'
-        , 'stroke', 'stroking', 'stupid', 'stupidfuck', 'stupidfucker', 'suck', 'suckdick', 'sucker', 'suckme', 'suckmyass', 'suckmydick', 'suckmytit'
-        , 'suckoff', 'suicide', 'swallow', 'swallower', 'swalow', 'swastika', 'sweetness', 'syphilis', 'taboo', 'taff', 'tampon', 'tang', 'tantra', 'tarbaby'
-        , 'tard', 'teat', 'terror', 'terrorist', 'teste', 'testicle', 'testicles', 'thicklips', 'thirdeye', 'thirdleg', 'threesome', 'threeway', 'timbernigger'
-        , 'tinkle', 'tit', 'titbitnipply', 'titfuck', 'titfucker', 'titfuckin', 'titjob', 'titlicker', 'titlover', 'tits', 'tittie', 'titties', 'titty', 'tnt'
-        , 'tongethruster', 'tongue', 'tonguethrust', 'tonguetramp', 'tortur', 'torture', 'tosser', 'towelhead', 'trailertrash', 'tramp', 'trannie', 'tranny'
-        , 'transexual', 'transsexual', 'transvestite', 'triplex', 'trisexual', 'trojan', 'trots', 'tuckahoe', 'tunneloflove', 'turd', 'turnon', 'twat'
-        , 'twink', 'twinkie', 'twobitwhore', 'uck', 'uk', 'unfuckable', 'zigabo', 'zipperhead', 'douche', 'lmfao', 'lmao'
-        , 'upskirt', 'uptheass', 'upthebutt', 'urinary', 'urinate', 'urine', 'usama', 'uterus', 'vagina', 'vaginal', 'vatican'
-        , 'vibr', 'vibrater', 'vibrator', 'vietcong', 'violence', 'virgin', 'virginbreaker', 'vomit', 'vulva', 'wab', 'wank'
-        , 'wanker', 'wanking', 'waysted', 'weapon', 'weenie', 'weewee', 'welcher', 'welfare', 'wetb', 'wetback'
-        , 'wetspot', 'whacker', 'whash', 'whigger', 'whiskey', 'whiskeydick', 'whiskydick', 'whit', 'whitenigger'
-        , 'whites', 'whitetrash', 'whitey', 'whiz', 'whop', 'whore', 'whorefucker', 'whorehouse', 'wigger', 'willie'
-        , 'williewanker', 'willy', 'wn', 'wog', 'wop', 'wtf', 'wuss', 'wuzzie', 'xtc', 'xxx', 'yankee', 'yellowman']
+        eng = ['2 girls 1 cup', '2g1c', '4r5e', '5h1t', '5hit', 'a$$hole', 'a_s_s', 'a55hole', 'acrotomophilia', 'ahole', 'alabama hot pocket'
+        ,'alaskan pipeline', 'anal', 'anal impaler', 'anal leakage', 'analprobe', 'anilingus', 'apeshit', 'ar5e', 'arrse', 'arse', 'arsehole', 'ass fuck'
+        , 'ass hole', 'assbag', 'assbandit', 'assbang', 'assbanged', 'assbanger', 'assbangs', 'assbite', 'assclown', 'asscock', 'asscracker', 'asses'
+        , 'assface', 'assfaces', 'assfuck', 'assfucker', 'ass-fucker', 'assfukka', 'assgoblin', 'assh0le', 'asshat', 'ass-hat', 'asshead', 'assho1e'
+        , 'asshole', 'assholes', 'asshopper', 'ass-jabber', 'assjacker', 'asslick', 'asslicker', 'assmaster', 'assmonkey', 'assmucus', 'assmucus'
+        , 'assmunch', 'assmuncher', 'assnigger', 'asspirate', 'ass-pirate', 'assshit', 'assshole', 'asssucker', 'asswad', 'asswhole', 'asswipe'
+        , 'asswipes', 'auto erotic', 'autoerotic', 'axwound', 'azazel', 'b!tch', 'b00bs', 'b17ch', 'b1tch', 'baby batter', 'baby juice', 'ball gag'
+        , 'ball gravy', 'ball licking', 'ball sack', 'ball sucking', 'ballbag', 'ballsack', 'bampot', "bang (one's) box", 'bangbros', 'barely legal'
+        , 'barenaked', 'barf', 'bastard', 'bastardo', 'bastards', 'bastinado', 'batty boy', 'bdsm', 'beaner', 'beaners', 'beardedclam', 'beastial'
+        , 'beastiality', 'beatch', 'beaver cleaver', 'beaver lips', 'beef curtain', 'beef curtains', 'beeyotch', 'bellend', 'beotch', 'bescumber'
+        , 'bestial', 'bestiality', 'bi+ch', 'biatch', 'big knockers', 'big tits', 'bigtits', 'bimbo', 'bimbos', 'bint', 'birdlock', 'bitch', 'bitch tit'
+        , 'bitchass', 'bitched', 'bitcher', 'bitchers', 'bitches', 'bitchin', 'bitching', 'bitchtits', 'bitchy', 'black cock', 'bloodclaat', 'blow job'
+        , 'blow me', 'blow mud', 'blow your load', 'blowjob', 'blowjobs', 'blue waffle', 'blue waffle', 'blumpkin', 'boiolas', 'bollock', 'bollocks'
+        , 'bollok', 'bollox', 'bondage', 'boned', 'boner', 'boners', 'bong', 'boob', 'boobies', 'boobs', 'booby', 'booger', 'boong', 'booobs', 'boooobs'
+        , 'booooobs', 'booooooobs', 'bootee', 'bootie', 'booty call', 'booze', 'boozer', 'boozy', 'bosom', 'bosomy', 'breasts', 'brotherfucker'
+        , 'brown showers', 'buceta', 'bugger', 'bull shit', 'bulldyke', 'bullet vibe', 'bullshit', 'bullshits', 'bullshitted', 'bullturds', 'bumblefuck'
+        , 'bumclat', 'bummer', 'bung', 'bung hole', 'bunghole', 'bunny fucker', 'bust a load', 'busty', 'butt fuck', 'butt plug', 'buttcheeks', 'buttfuck'
+        , 'buttfucka', 'buttfucker', 'buttmuch', 'buttmunch', 'butt-pirate', 'buttplug', 'c.0.c.k', 'c.o.c.k.', 'c.u.n.t', 'c0ck', 'c-0-c-k', 'c0cksucker'
+        , 'camel toe', 'cameltoe', 'camgirl', 'camslut', 'camwhore', 'carpet muncher', 'carpetmuncher', 'cawk', 'chesticle', 'chi-chi man'
+        , 'chick with a dick', 'child-fucker', 'chinc', 'chincs', 'chink', 'chinky', 'choad', 'choade', 'choade', 'choc ice', 'chocolate rosebuds'
+        , 'chode', 'chodes', 'chota bags', 'chota bags', 'cipa', 'circlejerk', 'cl1t', 'cleveland steamer', 'clit', 'clit licker', 'clitface', 'clitfuck'
+        , 'clitorus', 'clits', 'clitty', 'clitty litter', 'clover clamps', 'clunge', 'clusterfuck', 'cnut', 'c-o-c-k', 'cock pocket', 'cock snot'
+        , 'cock sucker', 'cockass', 'cockbite', 'cockblock', 'cockburger', 'cockeye', 'cockface', 'cockfucker', 'cockhead', 'cockholster', 'cockjockey'
+        , 'cockknocker', 'cockknoker', 'cocklump', 'cockmaster', 'cockmongler', 'cockmongruel', 'cockmonkey', 'cockmunch', 'cockmuncher', 'cocknose'
+        , 'cocknugget', 'cockshit', 'cocksmith', 'cocksmoke', 'cocksmoker', 'cocksniffer', 'cocksuck', 'cocksuck', 'cocksucked', 'cocksucked', 'cocksucker'
+        , 'cock-sucker', 'cocksuckers', 'cocksucking', 'cocksucks', 'cocksucks', 'cocksuka', 'cocksukka', 'cockwaffle', 'coital', 'cokmuncher', 'coksucka'
+        , 'commie', 'coochie', 'coochy', 'coon', 'coonnass', 'coons', 'cooter', 'cop some wood', 'coprolagnia', 'coprophilia', 'corksucker', 'cornhole'
+        , 'cornhole', 'corp whore', 'corp whore', 'crackwhore', 'crap', 'crappy', 'cretin', 'crikey', 'cripple', 'crotte', 'cum chugger', 'cum chugger'
+        , 'cum dumpster', 'cum dumpster', 'cum freak', 'cum freak', 'cum guzzler', 'cum guzzler', 'cumbubble', 'cumdump', 'cumdump', 'cumdumpster'
+        , 'cumguzzler', 'cumjockey', 'cummer', 'cummin', 'cumming', 'cums', 'cumshot', 'cumshots', 'cumslut', 'cumstain', 'cumtart', 'cunilingus'
+        , 'cunillingus', 'cunnie', 'cunnilingus', 'cunny', 'cunt', 'c-u-n-t', 'cunt hair', 'cunt hair', 'cuntass', 'cuntbag', 'cuntbag', 'cuntface'
+        , 'cunthole', 'cunthunter', 'cuntlick', 'cuntlick', 'cuntlicker', 'cuntlicker', 'cuntlicking', 'cuntlicking', 'cuntrag', 'cunts', 'cuntsicle'
+        , 'cuntsicle', 'cuntslut', 'cunt-struck', 'cunt-struck', 'cyalis', 'cyberfuc', 'cyberfuck', 'cyberfuck', 'cyberfucked', 'cyberfucked'
+        , 'cyberfucker', 'cyberfuckers', 'cyberfucking', 'cyberfucking', 'd0ng', 'd0uch3', 'd0uche', 'd1ck', 'd1ld0', 'd1ldo', 'dammit', 'date rape'
+        , 'daterape', 'dawgie-style', 'deep throat', 'deepthroat', 'dendrophilia', 'dick', 'dick head', 'dick hole', 'dick hole', 'dick shy', 'dick shy'
+        , 'dickbag', 'dickbeaters', 'dickdipper', 'dickface', 'dickflipper', 'dickfuck', 'dickfucker', 'dickhead', 'dickheads', 'dickhole', 'dickish'
+        , 'dick-ish', 'dickjuice', 'dickmilk', 'dickmonger', 'dickripper', 'dicks', 'dicksipper', 'dickslap', 'dick-sneeze', 'dicksucker', 'dicksucking'
+        , 'dicktickler', 'dickwad', 'dickweasel', 'dickweed', 'dickwhipper', 'dickwod', 'dickzipper', 'dildo', 'dildos', 'diligaf', 'dingleberries'
+        , 'dingleberry', 'dipship', 'dipshit', 'dirty pillows', 'dirty sanchez', 'dlck', 'dog style', 'dog-fucker', 'doggie style', 'doggiestyle'
+        , 'doggie-style', 'doggin', 'dogging', 'doggy style', 'doggystyle', 'doggy-style', 'dolcett', 'dominatrix', 'dommes', 'donkey punch', 'donkeypunch'
+        , 'donkeyribber', 'doochbag', 'doofus', 'dookie', 'doosh', 'dopey', 'double dong', 'double penetration', 'douch3', 'douche', 'douchebag'
+        , 'douchebags', 'douche-fag', 'douchewaffle', 'douchey', 'dp action', 'dry hump', 'dumass', 'dumb ass', 'dumbass', 'dumbasses', 'dumbcunt'
+        , 'dumbfuck', 'dumbshit', 'dumshit', 'eat a dick', 'eat a dick', 'eat hair pie', 'eat hair pie', 'eat my ass', 'ejaculate', 'ejaculated'
+        , 'ejaculates', 'ejaculates', 'ejaculating', 'ejaculating', 'ejaculatings', 'ejaculation', 'ejakulate', 'erect', 'erection', 'erotic', 'erotism'
+        , 'escort', 'essohbee', 'extacy', 'extasy', 'f u c k', 'f u c k e r', 'f.u.c.k', 'f_u_c_k', 'f4nny', 'fack', 'fagbag', 'fagfucker', 'fagg'
+        , 'fagged', 'fagging', 'faggit', 'faggitt', 'faggot', 'faggotcock', 'faggots', 'faggs', 'fagot', 'fagots', 'fags', 'fagtard', 'faig', 'faigt'
+        , 'fannybandit', 'fannyflaps', 'fannyfucker', 'fanyy', 'fartknocker', 'fatass', 'fcuk', 'fcuker', 'fcuking', 'fecal', 'felch', 'felcher'
+        , 'felching', 'fellate', 'fellatio', 'feltch', 'feltcher', 'female squirting', 'femdom', 'fenian', 'fingerbang', 'fingerfuck', 'fingerfuck'
+        , 'fingerfucked', 'fingerfucked', 'fingerfucker', 'fingerfucker', 'fingerfuckers', 'fingerfucking', 'fingerfucking', 'fingerfucks'
+        , 'fingerfucks', 'fist fuck', 'fist fuck', 'fisted', 'fistfuck', 'fistfucked', 'fistfucked', 'fistfucker', 'fistfucker', 'fistfuckers'
+        , 'fistfuckers', 'fistfucking', 'fistfucking', 'fistfuckings', 'fistfuckings', 'fistfucks', 'fistfucks', 'fisting', 'fisty', 'fleshflute'
+        , 'flog the log', 'floozy', 'foad', 'fondle', 'fooker', 'foot fetish', 'footjob', 'foreskin', 'frotting', 'fubar', 'fuck', 'fuck', 'f-u-c-k'
+        , 'fuck buttons', 'fuck hole', 'fuck hole', 'fuck off', 'fuck puppet', 'fuck puppet', 'fuck trophy', 'fuck trophy', 'fuck yo mama'
+        , 'fuck yo mama', 'fuck you', 'fucka', 'fuckass', 'fuck-ass', 'fuck-ass', 'fuckbag', 'fuck-bitch', 'fuck-bitch', 'fuckboy', 'fuckbrain'
+        , 'fuckbutt', 'fuckbutter', 'fucked', 'fuckedup', 'fucker', 'fuckers', 'fuckersucker', 'fuckface', 'fuckhead', 'fuckheads', 'fuckhole'
+        , 'fuckin', 'fucking', 'fuckings', 'fuckingshitmotherfucker', 'fuckme', 'fuckme', 'fuckmeat', 'fuckmeat', 'fucknugget', 'fucknut', 'fucknutt'
+        , 'fuckoff', 'fucks', 'fuckstick', 'fucktard', 'fuck-tard', 'fucktards', 'fucktart', 'fucktoy', 'fucktoy', 'fucktwat', 'fuckup', 'fuckwad'
+        , 'fuckwhit', 'fuckwit', 'fuckwitt', 'fudge packer', 'fudgepacker', 'fudge-packer', 'fuker', 'fukker', 'fukkers', 'fukkin', 'fuks', 'fukwhit'
+        , 'fukwit', 'futanari', 'fux0r', 'fvck', 'fxck', 'gang bang', 'gangbang', 'gang-bang', 'gang-bang', 'gangbanged', 'gangbangs', 'gassy ass'
+        , 'gassy ass', 'gay sex', 'gayass', 'gaybob', 'gaydo', 'gayfuck', 'gayfuckist', 'gaysex', 'gaytard', 'gaywad', 'gender bender', 'giant cock'
+        , 'gigolo', 'gippo', 'glans', 'goatcx', 'goatse', 'goddamn', 'goddamned', 'god-damned', 'goddamnit', 'godsdamn', 'gokkun', 'golden shower'
+        , 'goldenshower', 'goo girl', 'goodpoop', 'gooks', 'goregasm', 'group sex', 'gspot', 'g-spot', 'gtfo', 'h0m0', 'h0mo', 'hand job', 'handjob'
+        , 'hardcoresex', 'hentai', 'heroin', 'herpes', 'hobag', 'hoer', 'hom0', 'homodumbshit', 'homoerotic', 'homoey', 'honkey', 'honky', 'hooker'
+        , 'hore', 'horniest', 'horny', 'hot carl', 'hot chick', 'hotsex', 'how to murdep', 'how to murder', 'humped', 'humping', 'iberian slap'
+        , 'inbred', 'incest', 'intercourse', 'jack off', 'jackass', 'jackasses', 'jackhole', 'jackoff', 'jack-off', 'jail bait', 'jailbait', 'japs'
+        , 'jerk', 'jerk off', 'jerk0ff', 'jerkass', 'jerked', 'jerkoff', 'jerk-off', 'jigaboo', 'jiggaboo', 'jiggerboo', 'jism', 'jizm', 'jizm', 'jizz'
+        , 'jizzed', 'jock', 'juggs', 'jungle bunny', 'junglebunny', 'kafir', 'kike', 'kikes', 'kinbaku', 'kinkster', 'knobead', 'knobed', 'knobend'
+        , 'knobhead', 'knobjocky', 'knobjokey', 'kooch', 'kooches', 'kootch', 'kunilingus', 'kunt', 'kwif', 'kyke', 'l3i+ch', 'l3itch', 'labia', 'lameass'
+        , 'lardass', 'leather restraint', 'leather straight jacket', 'lemon party', 'leper', 'lezza', 'lezzie', 'lolita', 'lovemaking', 'lube', 'm0f0'
+        , 'm0fo', 'm45terbate', 'ma5terb8', 'ma5terbate', 'mafugly', 'mafugly', 'make me come', 'male squirting', 'masterb8', 'masterbat*', 'masterbat3'
+        , 'masterbate', 'master-bate', 'master-bate', 'masterbating', 'masterbation', 'masterbations', 'masturbate', 'masturbating', 'masturbation', 'mcfagget'
+        , 'menage a trois', 'meth', 'm-fucking', 'microphallus', 'milf', 'missionary position', 'mof0', 'mofo', 'mo-fo', 'molest', 'moolie', 'moron'
+        , 'mothafuck', 'mothafucka', 'mothafuckas', 'mothafuckaz', 'mothafucked', 'mothafucked', 'mothafucker', 'mothafuckers', 'mothafuckin', 'mothafucking'
+        , 'mothafucking', 'mothafuckings', 'mothafucks', 'mother fucker', 'mother fucker', 'motherfuck', 'motherfucka', 'motherfucked', 'motherfucker'
+        , 'motherfuckers', 'motherfuckin', 'motherfucking', 'motherfuckings', 'motherfuckka', 'motherfucks', 'mound of venus', 'muff diver', 'muff puff'
+        , 'muff puff', 'muffdiver', 'muffdiving', 'murder', 'mutha', 'muthafecker', 'muthafuckker', 'muther', 'mutherfucker', 'n1gga', 'n1gger', 'nambla'
+        , 'nawashi', 'need the dick', 'negro', 'nig nog', 'nigaboo', 'nigg3r', 'nigg4h', 'nigga', 'niggah', 'niggas', 'niggaz', 'nigger', 'niggers'
+        , 'niglet', 'nig-nog', 'nimphomania', 'nob jokey', 'nobhead', 'nobjocky', 'nobjokey', 'nonce', 'nsfw images', 'nude', 'nudity', 'numbnuts'
+        , 'nut sack', 'nutsack', 'nympho', 'nymphomania', 'octopussy', 'omorashi', 'one cup two girls', 'one guy one jar', 'opiate', 'opium', 'orgasim'
+        , 'orgasims', 'orgasm', 'orgasmic', 'orgasms', 'orgies', 'orgy', 'p.u.s.s.y.', 'p0rn', 'paedophile', 'paki', 'peckerhead', 'pedobear', 'pedophile'
+        , 'pedophilia', 'pedophiliac', 'peepee', 'pegging', 'penial', 'penile', 'penis', 'penisbanger', 'penisfucker', 'penispuffer', 'phallic'
+        , 'phone sex', 'phonesex', 'phuck', 'phuk', 'phuked', 'phuking', 'phukked', 'phukking', 'phuks', 'phuq', 'piece of shit', 'pigfucker', 'pillowbiter'
+        , 'pimp', 'pimpis', 'piss pig', 'pissflaps', 'pisspig', 'pleasure chest', 'polack', 'pole smoker', 'polesmoker', 'pollock', 'ponyplay', 'poof'
+        , 'poon', 'poonani', 'poonany', 'poontang', 'poop chute', 'poopchute', 'poopuncher', 'porch monkey', 'porchmonkey', 'porn', 'porno', 'pornography'
+        , 'pornos', 'potty', 'prick', 'pricks', 'prickteaser', 'prig', 'prince albert piercing', 'pron', 'prostitute', 'pthc', 'pube', 'pubes', 'pubic'
+        , 'pubis', 'punani', 'punanny', 'punany', 'puss', 'pusse', 'pussi', 'pussies', 'pussy', 'pussy fart', 'pussy fart', 'pussy palace', 'pussy palace'
+        , 'pussylicking', 'pussypounder', 'pussys', 'queaf', 'queaf', 'queef', 'queerbait', 'queerhole', 'queero', 'quim', 'raghead', 'raging boner', 'rape'
+        , 'raped', 'raper', 'rapey', 'raping', 'rapist', 'raunch', 'reetard', 'renob', 'retard', 'retarded', 'reverse cowgirl', 'rimjaw', 'rimjob', 'rimming'
+        , 'ritard', 'rosy palm', 'rosy palm and her 5 sisters', 'rtard', 'r-tard', 'rusty trombone', 's hit', 's.h.i.t.', 's.o.b.', 's_h_i_t', 'sadism'
+        , 'sadist', 'sand nigger', 'sandnigger', 'sausage queen', 'schizo', 'schlong', 'scissoring', 'scroat', 'scrog', 'scrot', 'scrote', 'scum', 'seks'
+        ,'semen', 'sexo', 'sh!+', 'sh!t', 'sh1t', 's-h-1-t', 'shag', 'shagger', 'shaggin', 'shagging', 'shaved beaver', 'shaved pussy', 'shemale', 'shi+'
+        , 'shibari', 'shit', 's-h-i-t', 'shit ass', 'shit fucker', 'shit fucker', 'shitass', 'shitbag', 'shitbagger', 'shitblimp', 'shitbrains', 'shitbreath'
+        , 'shitcanned', 'shitcunt', 'shitdick', 'shite', 'shiteater', 'shited', 'shitey', 'shitface', 'shitfaced', 'shitfuck', 'shitfull', 'shithead'
+        , 'shitheads', 'shithole', 'shithouse', 'shiting', 'shitings', 'shits', 'shitspitter', 'shitstain', 'shitt', 'shitted', 'shitter', 'shitters'
+        , 'shitters', 'shittier', 'shittiest', 'shitting', 'shittings', 'shitty', 'shiz', 'shiznit', 'shota', 'skullfuck', 'slanteye', 'slave', 'slut'
+        , 'slut bucket', 'slut bucket', 'slutbag', 'slutdumper', 'slutkiss', 'sluts', 'smut', 'smutty', 'snuff', 's-o-b', 'sod off', 'sodomize', 'sodomy'
+        , 'son of a bitch', 'son of a motherless goat', 'son of a whore', 'son-of-a-bitch', 'splooge', 'splooge moose', 'spooge', 'spook', 'spread legs'
+        , 'spunk', 'stfu', 'stiffy', 'stoned', 'strap on', 'strapon', 'strappado', 'strip club', 'style doggy', 'suckass', 'suicide girls', 'sultry women'
+        , 'sumofabiatch', 't1tt1e5', 't1tties', 'taff', 'taig', 'taking the piss', 'tard', 'tea bagging', 'teabagging', 'teat', 'teets', 'teez', 'teste'
+        , 'testee', 'testes', 'testical', 'testicle', 'testis', 'threesome', 'throating', 'thundercunt', 'tit wank', 'tit wank', 'titfuck', 'titi', 'tities'
+        , 'tits', 'titt', 'tittie5', 'tittiefucker', 'titties', 'titty', 'tittyfuck', 'tittyfucker', 'tittywank', 'titwank', 'tosser', 'towelhead', 'tramp'
+        , 'tranny', 'tribadism', 'tub girl', 'tubgirl', 'turd', 'tush', 'tushy', 'tw4t', 'twat', 'twathead', 'twatlips', 'twats', 'twatty', 'twatwaffle'
+        , 'two fingers', 'two fingers with tongue', 'two girls one cup', 'twunt', 'twunter', 'unclefucker', 'undies', 'undressing', 'upskirt', 'urethra play'
+        , 'urophilia', 'v14gra', 'v1gra', 'vagina', 'vajayjay', 'va-j-j', 'venus mound', 'veqtable', 'violet wand', 'vixen', 'vjayjay', 'vorarephilia'
+        , 'vulva', 'wang', 'wank', 'wanker', 'wankjob', 'wanky', 'wazoo', 'wet dream', 'wetback', 'wh0re', 'wh0reface', 'whoar', 'whore', 'whorealicious'
+        , 'whorebag', 'whored', 'whoreface', 'whorehopper', 'whorehouse', 'whores', 'whoring', 'wigger', 'window licker', 'wrinkled starfish', 'yaoi'
+        , 'yeasty', 'yellow showers', 'yiffy', 'yobbo', 'zibbi', 'zoophilia', 'zubb']
         for i in eng:
             if i in text:
                 ge = 7
@@ -1955,7 +2091,7 @@ class korcen:
         , '獸奸', '癟三', '癡乳', '鶏8', '鶏八', '鶏女', '鶏巴', '鶏奸', '鶏吧', '鶏院', '麗春苑', '罌粟', '騷B', '騷女', '騷女叫春', '騷水', '騷包', '騷母', '騷穴'
         , '騷卵', '騷乳', '騷妹', '騷妻', '騷姐姐', '騷屄', '騷姨媽', '騷洞', '騷浪', '騷浪美女', '騷婦掰B', '騷婦露逼', '騷貨', '騷棍', '騷棒', '騷逼', '騷逼噴水'
         , '騷鶏', '灌滿精液', '爛b', '爛比', '爛袋', '爛貨', '爛逼', '蘚鮑', '覽叫', '露B', '露穴', '露屄', '露陰照', '露逼', '鷄巴', '囅', '鹽酸氯胺酮', '鹽酸羥亞胺'
-        , '豔母淫臀', '豔乳', '豔婦淫女', '豔情小說', '豔舞淫業', '']
+        , '豔母淫臀', '豔乳', '豔婦淫女', '豔情小說', '豔舞淫業']
         for i in chi:
             if i in newtext:
                 ge = 7
@@ -1991,7 +2127,7 @@ class korcen:
         text = ''.join(char for char in text if char.isalnum())
         newtext = re.sub(' ', '', text)
 
-        mh = ["노시개", "노알라", "뇌사모", "뇌물현"]
+        mh = ["노시개", "노알라", "뇌사모", "뇌물현","응디시티"]
         for i in mh:
             if i in newtext:
                 qe = 10
@@ -2041,7 +2177,11 @@ class korcen:
 
 
 #Copyright© All rights reserved.
-#© korcen, made Tanat
+# _____                 _    
+#|_   _|_ _ _ __   __ _| |_ 
+#  | |/ _` | '_ \ / _` | __|
+#  | | (_| | | | | (_| | |_ 
+#  |_|\__,_|_| |_|\__,_|\__|
 
 
 if __name__ == "__main__":
