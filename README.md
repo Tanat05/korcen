@@ -35,7 +35,7 @@ $ npm i korcen
 
 비속어가 있다면 True 없다면 False 출력하는 예시입니다.
 
->PyPI  0.1.6
+>PyPI
 ```py
 from korcen import korcen
 
@@ -45,7 +45,7 @@ text = input()
 print(korcen.check(text))
 ```
 
->NPM 0.1.5
+>NPM
 ```js
 const { check } = require('korcen')
 var content = check("문자열")
