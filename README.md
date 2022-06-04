@@ -43,7 +43,7 @@ text = input()
 print(korcen.check(text))
 ```
 
->NPM 0.1.4
+>NPM 0.1.5
 ```js
 const { check } = require('korcen')
 var content = check("문자열")
