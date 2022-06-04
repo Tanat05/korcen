@@ -12,6 +12,8 @@ korean(한국어) censorship(검열)의 줄임말로
 
 누구나 쉽게 텍스트에 비속어가 있는지 확인이 가능합니다.
 
+[서포트 디스코드](https://discord.gg/wyTU3ZQBPE)
+
 ## Licenses
 
 GNU General Public License v3.0
