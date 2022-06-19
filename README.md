@@ -53,7 +53,7 @@ console.log(content)
 
 We are looking for censorship modules in different languages
 
-Developers of the censorship module should contact us
+The developer of the censorship module, please contact us
 
 >PyPI
 
