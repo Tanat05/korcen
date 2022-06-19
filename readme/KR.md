@@ -9,7 +9,7 @@
 
 ![131_20220604170616](https://user-images.githubusercontent.com/85154556/171998341-9a7439c8-122f-4a9f-beb6-0e0b3aad05ed.png)
 
-[KR](
+[KR](https://github.com/Tanat05/korcen/blob/main/readme/KR.md)
 
 Korcen은 korean(한국어) censorship(검열)의 줄임말입니다
 
