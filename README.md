@@ -9,22 +9,20 @@
 
 ![131_20220604170616](https://user-images.githubusercontent.com/85154556/171998341-9a7439c8-122f-4a9f-beb6-0e0b3aad05ed.png)
 
-korean(한국어) censorship(검열)의 줄임말로 
+korcen is korean + censorship 
 
-누구나 쉽게 텍스트에 비속어가 있는지 확인이 가능합니다.
+Anyone can easily check if there are Korean slang words
 
-[서포트 디스코드](https://discord.gg/wyTU3ZQBPE)
+Although Korean slang is the main module, you can collect modules of other users to censor slang in other languages
+
+[support discord](https://discord.gg/wyTU3ZQBPE)
 
 ## Licenses
 
 GNU General Public License v3.0
 
-![image](https://user-images.githubusercontent.com/85154556/171647408-fb2d26c8-509b-4c7d-be93-9290b309e65d.png)
-
 ## Installation
 >PyPI
-
-영어 검열의 경우 [모듈](https://github.com/snguyenthanh/better_profanity)을 사용합니다
 ```sh
 $ pip install korcen
 ```
@@ -34,9 +32,7 @@ $ pip install korcen
 $ npm i korcen
 ```
 # Example
-모든 예시는 가장 최신버전의 모듈을 사용합니다.
-
-비속어가 있다면 True 없다면 False 출력하는 예시입니다.
+All examples use the latest version
 
 >Python
 ```py
@@ -55,31 +51,32 @@ var content = check("문자열")
 console.log(content)
 ```
 
-#### 자세한 예시들은 [example](https://github.com/Tanat05/korcen/tree/main/example) 파일 참고하세요.
+####  See the sample file for a detailed [example](https://github.com/Tanat05/korcen/tree/main/example)
 
 # Maker
 
 
 >Tanat
 ```
-메인 개발자
+PyPI 0.0.1 ~
+NPM 0.0.1~
 
 github:   Tanat05
 discord:  Tanat#0206
 email:    shrbwjd05@gmail.com
 ```
+
+
 >이루
 ```
-PY→JS 작업 도움
-NPM 0.1.0 이후 버전 업데이트 제공
+NPM 0.1.0~ 
 
 github:   erukim
 discord:  이루#6410
 ```
 >kiss
 ```
-JS→TS 변환과 깃허브 설정
-https://github.com/Tanat05/korcen.ts
+JS→TS
 
 github:   kiss8981
 discord:  kisss#4755
