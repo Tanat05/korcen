@@ -66,23 +66,23 @@ console.log(content)
 
 >PyPI
 
-한국어 : 직접 제작
+KR : 직접 제작
 
-영어   : [better_profanity](https://github.com/snguyenthanh/better_profanity)
+EN : [better_profanity](https://github.com/snguyenthanh/better_profanity)
 
-일본어 : 찾는 중
+JP : 찾는 중
 
-중국어 : 찾는 중
+CH : 찾는 중
 
 >NPM
 
-한국어 : 직접 제작
+KR : 직접 제작
 
-영어   : 찾는 중
+EN : 찾는 중
 
-일본어 : 찾는 중
+JP : 찾는 중
 
-중국어 : 찾는 중
+CH : 찾는 중
 
 # Maker
 
