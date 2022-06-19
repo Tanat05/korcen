@@ -17,10 +17,6 @@ Although Korean slang is the main module, you can collect modules of other users
 
 [support discord](https://discord.gg/wyTU3ZQBPE)
 
-## Licenses
-
-GNU General Public License v3.0
-
 ## Installation
 >PyPI
 ```sh
@@ -52,6 +48,32 @@ console.log(content)
 ```
 
 ####  See the sample file for a detailed [example](https://github.com/Tanat05/korcen/tree/main/example)
+
+# Modules
+
+We are looking for censorship modules in different languages
+
+Developers of the censorship module should contact us
+
+>PyPI
+
+KR : Self-produced
+
+EN : [better_profanity](https://github.com/snguyenthanh/better_profanity)
+
+JP : Looking for
+
+CH : Looking for
+
+>NPM
+
+KR : Self-produced
+
+EN : Looking for
+
+JP : Looking for
+
+CH : Looking for
 
 # Maker
 
