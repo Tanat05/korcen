@@ -9,6 +9,8 @@
 
 ![131_20220604170616](https://user-images.githubusercontent.com/85154556/171998341-9a7439c8-122f-4a9f-beb6-0e0b3aad05ed.png)
 
+[KR](https://github.com/Tanat05/korcen/blob/main/readme/KR.md),[JP](https://github.com/Tanat05/korcen/blob/main/readme),[CH](https://github.com/Tanat05/korcen/blob/main/readme)
+
 korcen is korean + censorship 
 
 Anyone can easily check if there are Korean slang words
