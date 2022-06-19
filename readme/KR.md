@@ -11,6 +11,7 @@
 
 <div align="center">
   <h2>
+    <a href="https://github.com/Tanat05/korcen">EN</a>
     <a href="https://github.com/Tanat05/korcen/blob/main/readme/KR.md">KR</a>
     <a href="https://github.com/Tanat05/korcen/blob/main/readme/JP.md">JP</a>
     <a href="https://github.com/Tanat05/korcen/blob/main/readme/CH.md">CH</a>
