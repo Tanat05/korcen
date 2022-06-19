@@ -49,7 +49,7 @@ var content = check("문자열")
 console.log(content)
 ```
 
-####  See the sample file for a detailed [example](https://github.com/Tanat05/korcen/tree/main/example)
+####  자세한 예시를 보려면 [example](https://github.com/Tanat05/korcen/tree/main/example)파일을 참고 하세요
 
 # Modules
 
