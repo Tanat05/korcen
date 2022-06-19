@@ -52,7 +52,7 @@ print(korcen.check(text))
 >Javascript
 ```js
 const { check } = require('korcen')
-var content = check("문자열")
+var content = check("content")
 console.log(content)
 ```
 
