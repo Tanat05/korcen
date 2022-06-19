@@ -27,7 +27,6 @@ GNU General Public License v3.0
 영어 검열의 경우 [모듈](https://github.com/snguyenthanh/better_profanity)을 사용합니다
 ```sh
 $ pip install korcen
-$ pip install better_profanity
 ```
 
 >NPM
