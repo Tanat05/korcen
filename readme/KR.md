@@ -24,7 +24,7 @@ Korcen은 korean(한국어) censorship(검열)의 줄임말입니다
 
 한국 비속어가 주이지만 다양한 언어를 지원합니다
 
-[support discord](https://discord.gg/wyTU3ZQBPE)
+[서포트 디스코드](https://discord.gg/wyTU3ZQBPE)
 
 ## Installation
 >PyPI
