@@ -20,7 +20,7 @@
 
 korcen is korean + censorship 
 
-Anyone can easily check if there are Korean slang words
+Anyone can easily check
 
 Although Korean slang is the main module, you can collect modules of other users to censor slang in other languages
 
