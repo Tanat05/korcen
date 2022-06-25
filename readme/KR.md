@@ -70,19 +70,19 @@ KR : 직접 제작
 
 EN : [better_profanity](https://github.com/snguyenthanh/better_profanity)
 
-JP : 찾는 중
+JP : 직접 제작(찾는 중)
 
-CH : 찾는 중
+CH : 직접 제작(찾는 중)
 
 >NPM
 
 KR : 직접 제작
 
-EN : 찾는 중
+EN : 직접 제작(찾는 중)
 
-JP : 찾는 중
+JP : 직접 제작(찾는 중)
 
-CH : 찾는 중
+CH : 직접 제작(찾는 중)
 
 # Maker
 
