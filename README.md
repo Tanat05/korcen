@@ -70,19 +70,19 @@ KR : Self-produced
 
 EN : [better_profanity](https://github.com/snguyenthanh/better_profanity)
 
-JP : Looking for
+JP : Self-produced(Looking for)
 
-CH : Looking for
+CH : Self-produced(Looking for)
 
 >NPM
 
 KR : Self-produced
 
-EN : Looking for
+EN : Self-produced(Looking for)
 
-JP : Looking for
+JP : Self-produced(Looking for)
 
-CH : Looking for
+CH : Self-produced(Looking for)
 
 # Maker
 
