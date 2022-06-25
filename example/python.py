@@ -32,9 +32,17 @@ a = korcen.parent(text)
 print(a)
 #패드립
 
-a = korcen.foreign(text)
+a = korcen.english(text)
 print(a)
-#외국 욕설
+#어 욕설
+
+a = korcen.japanese(text)
+print(a)
+#일본어 욕설
+
+a = korcen.chinese(text)
+print(a)
+#중국어 욕설
 
 a = korcen.special(text)
 print(a)
