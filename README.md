@@ -28,7 +28,7 @@ Although Korean slang is the main module, you can collect modules of other users
 
 
 ## Project using Korcen
->TNS 봇
+>[TNS 봇](https://discord.com/api/oauth2/authorize?client_id=848795383751639080&permissions=8&scope=bot%20applications.commands)
 
 ```
 Discord Bot
