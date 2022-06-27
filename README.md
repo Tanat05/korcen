@@ -26,6 +26,15 @@ Although Korean slang is the main module, you can collect modules of other users
 
 [support discord](https://discord.gg/wyTU3ZQBPE)
 
+
+## Project using Korcen
+>TNS 봇
+
+```
+Discord Bot
+2000+ servers
+```
+
 ## Installation
 >PyPI
 ```sh
