@@ -215,6 +215,7 @@ class korcen:
         text = re.sub('크시야', '', text)
         text = re.sub('크시', '', text)
         text = re.sub('어찌', '', text)
+        text = re.sub('발로란트방', '', text)
         text = re.sub('발로란트', '', text)
         text = re.sub('씨발라', '', text)
         text = re.sub('무시발언', '', text)
@@ -240,6 +241,7 @@ class korcen:
         text = re.sub('벌금', '', text)
         text = re.sub('할시', '', text)
         text = re.sub('발릴', '', text)
+        text = re.sub('발표', '', text)
         fuck = ["시발", "씨발", "시봘", "씨봘", "씨바", "시바", "샤발", "씌발", "씹발", "시벌", "시팔", "싯팔",
                 "씨빨", "씨랼", "씨파", "띠발", "띡발", "띸발", "싸발", "십발", "슈발", "야발", "씨불", "씨랄",
                 "쉬발", "쓰발", "쓔발", "쌰발", "쉬발", "쒸발", "씨팔", "씨밝", "씨밯", "쑤발", "치발", "샤발",
@@ -345,6 +347,8 @@ class korcen:
         text = re.sub('제꺼져', '', text)
         text = re.sub('꺼져있', '', text)
         text = re.sub('꺼져도', '', text)
+        text = re.sub('계속꺼져', '', text)
+        text = re.sub('꺼져가', '', text)
         if "꺼져" in text:
             return True
 
@@ -533,6 +537,7 @@ class korcen:
 
         text = re.sub("[^가-힣]", "", text)
         text = re.sub("뒤져봐야", "", text)
+        text = re.sub("뒤질뻔", "", text)
         picking = ["뒤져", "뒈져", "뒈진", "뒈질", "디져라", "디진다", "디질래", "뒤질"]
         for i in picking:
 
@@ -571,6 +576,7 @@ class korcen:
         text = re.sub('보지지', '', text)
         text = re.sub('못보지', '', text)
         text = re.sub('보지않', '', text)
+        text = re.sub('해보지', '', text)
         text = re.sub('보지마', '', text)
         text = re.sub('보지말', '', text)
         text = re.sub('안보지', '', text)
@@ -783,7 +789,7 @@ class korcen:
                       "창녀", "머저리", "씹쓰래기", "씹쓰레기", "씹장생", "씹자식", "운지", "급식충", "틀딱충", "조센징", "매국노", "똥꼬충", "진지충", "듣보잡",
                       "한남충", "정신병자", "중생아", "돌팔이", "김치녀", "폰팔이", "틀딱년", "같은년", "개돼중", "쓰글년", "썩을년", "썩글년", "씹할", "거지새끼", "거지쉐뀌",
                       "거지쉑이", "거지쎄끼", "거지쒜리", "걸래가튼", "걸래넘", "걸래년", "걸래놈", "걸레가튼", "걸레년", "그지새끼", "그지새키", "그지색", "기집년", "까진년",
-                      "깔보", "난잡년", "빡대가리", "더러운년", "돌아이", "또라이"]
+                      "깔보", "난잡년", "빡대가리", "더러운년", "돌아이", "또라이", "장애려"]
         for i in belittling:
             if i in text:
                 return True
@@ -827,6 +833,8 @@ class korcen:
 
         text = re.sub("```css", "", newtext)
         text = re.sub("ex\)", "", text)
+        text = re.sub("*", "", text)
+        text = re.sub("[^a-Z]", "", text)
         censored_text = profanity.censor(text, '▩')
         if '▩' in censored_text:
             return True
@@ -892,6 +900,11 @@ class korcen:
         text = re.sub('너가', '', text)
         text = re.sub('우리가', '', text)
         text = re.sub('너희가', '', text)
+        text = re.sub('카카오', '', text)
+        text = re.sub('너희가', '', text)
+        text = re.sub('카세트', '', text)
+        text = re.sub('카플레이어', '', text)
+        text = re.sub('카드', '', text)
         mb = ["가카", "이명박근혜", "다스는누구겁니까"]
         for i in mb:
             if i in text:
@@ -1114,6 +1127,7 @@ class korcen:
         text = re.sub('크시야', '', text)
         text = re.sub('크시', '', text)
         text = re.sub('어찌', '', text)
+        text = re.sub('발로란트방', '', text)
         text = re.sub('발로란트', '', text)
         text = re.sub('씨발라', '', text)
         text = re.sub('무시발언', '', text)
@@ -1139,6 +1153,7 @@ class korcen:
         text = re.sub('벌금', '', text)
         text = re.sub('할시', '', text)
         text = re.sub('발릴', '', text)
+        text = re.sub('발표', '', text)
         fuck = ["시발", "씨발", "시봘", "씨봘", "씨바", "시바", "샤발", "씌발", "씹발", "시벌", "시팔", "싯팔",
                 "씨빨", "씨랼", "씨파", "띠발", "띡발", "띸발", "싸발", "십발", "슈발", "야발", "씨불", "씨랄",
                 "쉬발", "쓰발", "쓔발", "쌰발", "쉬발", "쒸발", "씨팔", "씨밝", "씨밯", "쑤발", "치발", "샤발",
@@ -1244,6 +1259,8 @@ class korcen:
         text = re.sub('제꺼져', '', text)
         text = re.sub('꺼져있', '', text)
         text = re.sub('꺼져도', '', text)
+        text = re.sub('계속꺼져', '', text)
+        text = re.sub('꺼져가', '', text)
         if "꺼져" in text:
             return True
 
@@ -1495,8 +1512,10 @@ class korcen:
 
         text = re.sub("[^가-힣]", "", text)
         text = re.sub("뒤져봐야", "", text)
+        text = re.sub("뒤질뻔", "", text)
         picking = ["뒤져", "뒈져", "뒈진", "뒈질", "디져라", "디진다", "디질래", "뒤질"]
         for i in picking:
+
             if i in text:
                 return True
 
@@ -1595,6 +1614,7 @@ class korcen:
         text = re.sub('보지지', '', text)
         text = re.sub('못보지', '', text)
         text = re.sub('보지않', '', text)
+        text = re.sub('해보지', '', text)
         text = re.sub('보지마', '', text)
         text = re.sub('보지말', '', text)
         text = re.sub('안보지', '', text)
@@ -1814,7 +1834,7 @@ class korcen:
                       "창녀", "머저리", "씹쓰래기", "씹쓰레기", "씹장생", "씹자식", "운지", "급식충", "틀딱충", "조센징", "매국노", "똥꼬충", "진지충", "듣보잡",
                       "한남충", "정신병자", "중생아", "돌팔이", "김치녀", "폰팔이", "틀딱년", "같은년", "개돼중", "쓰글년", "썩을년", "썩글년", "씹할", "거지새끼", "거지쉐뀌",
                       "거지쉑이", "거지쎄끼", "거지쒜리", "걸래가튼", "걸래넘", "걸래년", "걸래놈", "걸레가튼", "걸레년", "그지새끼", "그지새키", "그지색", "기집년", "까진년",
-                      "깔보", "난잡년", "빡대가리", "더러운년", "돌아이", "또라이"]
+                      "깔보", "난잡년", "빡대가리", "더러운년", "돌아이", "또라이", "장애려"]
         for i in belittling:
             if i in text:
                 return True
@@ -1934,6 +1954,8 @@ class korcen:
 
         text = re.sub("```css", "", newtext)
         text = re.sub("ex\)", "", text)
+        text = re.sub("*", "", text)
+        text = re.sub("[^a-Z]", "", text)
         censored_text = profanity.censor(text, '▩')
         if '▩' in censored_text:
             return True
@@ -2144,6 +2166,11 @@ class korcen:
         text = re.sub('너가', '', text)
         text = re.sub('우리가', '', text)
         text = re.sub('너희가', '', text)
+        text = re.sub('카카오', '', text)
+        text = re.sub('너희가', '', text)
+        text = re.sub('카세트', '', text)
+        text = re.sub('카플레이어', '', text)
+        text = re.sub('카드', '', text)
         mb = ["가카", "이명박근혜", "다스는누구겁니까"]
         for i in mb:
             if i in text:
