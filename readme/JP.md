@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>korcen(코르센)</h1>
+  <h1>korcen</h1>
   
   [![PyPI version](https://img.shields.io/pypi/v/korcen.svg?style=flat-square)](https://python.org/pypi/korcen)
   [![downloads](https://img.shields.io/pypi/dm/korcen.svg?style=flat-square)](https://pypi.org/project/korcen/)
@@ -65,7 +65,7 @@ var content = check("content")
 console.log(content)
 ```
 
-####  See the sample file for a detailed [example](https://github.com/Tanat05/korcen/tree/main/example)
+####  詳しい例は例ファイルを参照してください。 [example](https://github.com/Tanat05/korcen/tree/main/example)
 
 # Modules
 
