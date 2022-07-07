@@ -27,7 +27,7 @@ korcenはkoreanとcensershipを合わせた意味である。
 [support discord](https://discord.gg/wyTU3ZQBPE)
 
 
-##このモジュールを使用するプロジェクト
+## このモジュールを使用するプロジェクト
 >[TNS 봇](https://discord.com/api/oauth2/authorize?client_id=848795383751639080&permissions=8&scope=bot%20applications.commands)
 
 ```
@@ -45,7 +45,7 @@ $ pip install korcen
 ```sh
 $ npm i korcen
 ```
-#例
+# 例
 全ての例は最新バージョンを使用する
 
 >Python
@@ -65,7 +65,7 @@ var content = check("content")
 console.log(content)
 ```
 
-####  詳しい例は例ファイルを参照してください。 [example](https://github.com/Tanat05/korcen/tree/main/example)
+#### 詳しい例は例ファイルを参照してください。 [example](https://github.com/Tanat05/korcen/tree/main/example)
 
 # Modules
 
