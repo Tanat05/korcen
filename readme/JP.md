@@ -75,23 +75,23 @@ The developer of the censorship module, please contact us
 
 >PyPI
 
-KR : Self-produced
+KR : 自主制作
 
 EN : [better_profanity](https://github.com/snguyenthanh/better_profanity)
 
-JP : Self-produced(Looking for)
+JP : 自主制作(探しているところ)
 
-CH : Self-produced(Looking for)
+CH : 自主制作(探しているところ)
 
 >NPM
 
-KR : Self-produced
+KR : 自主制作
 
-EN : Self-produced(Looking for)
+EN : 自主制作(探しているところ)
 
-JP : Self-produced(Looking for)
+JP : 自主制作(探しているところ)
 
-CH : Self-produced(Looking for)
+CH : 自主制作d(探しているところ)
 
 # Maker
 
