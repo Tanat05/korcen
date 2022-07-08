@@ -3,8 +3,6 @@
   
   [![PyPI version](https://img.shields.io/pypi/v/korcen.svg?style=flat-square)](https://python.org/pypi/korcen)
   [![downloads](https://img.shields.io/pypi/dm/korcen.svg?style=flat-square)](https://pypi.org/project/korcen/)
-  [![NPM version](http://img.shields.io/npm/v/korcen.svg?style=flat-square)](https://www.npmjs.org/package/korcen)
-  [![downloads](http://img.shields.io/npm/dm/korcen.svg?style=flat-square)](https://www.npmjs.org/package/korcen)
 </div>
 
 ![131_20220604170616](https://user-images.githubusercontent.com/85154556/171998341-9a7439c8-122f-4a9f-beb6-0e0b3aad05ed.png)
@@ -41,13 +39,6 @@ Discord Bot
 $ pip install korcen
 ```
 
->NPM
-```sh
-$ npm i korcen
-```
-# Example
-All examples use the latest version
-
 >Python
 ```py
 from korcen import korcen
@@ -56,13 +47,6 @@ korcen = korcen.korcen()
 
 text = input()
 print(korcen.check(text))
-```
-
->Javascript
-```js
-const { check } = require('korcen')
-var content = check("content")
-console.log(content)
 ```
 
 ####  See the sample file for a detailed [example](https://github.com/Tanat05/korcen/tree/main/example)
@@ -83,45 +67,17 @@ JP : Self-produced(Looking for)
 
 CH : Self-produced(Looking for)
 
->NPM
-
-KR : Self-produced
-
-EN : Self-produced(Looking for)
-
-JP : Self-produced(Looking for)
-
-CH : Self-produced(Looking for)
-
 # Maker
 
 
 >Tanat
 ```
 PyPI 0.0.1 ~
-NPM 0.0.1~
 
 github:   Tanat05
 discord:  Tanat#1533
 email:    shrbwjd05@gmail.com
 ```
-
-
->이루
-```
-NPM 0.1.0~ 
-
-github:   erukim
-discord:  이루#6410
-```
->kiss
-```
-JS→TS
-
-github:   kiss8981
-discord:  kisss#4755
-```
-
 
 
 Copyright© All rights reserved.
