@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>korcen(코르센)</h1>
+  <h1>korcen</h1>
   
   [![PyPI version](https://img.shields.io/pypi/v/korcen.svg?style=flat-square)](https://python.org/pypi/korcen)
   [![downloads](https://img.shields.io/pypi/dm/korcen.svg?style=flat-square)](https://pypi.org/project/korcen/)
@@ -15,9 +15,6 @@
     <a href="https://github.com/Tanat05/korcen/blob/main/readme/CH.md">CH</a>
   </h2>
 </div>
-
-korcen is korean + censorship 
-
 Anyone can easily check
 
 Although Korean slang is the main module, you can collect modules of other users to censor slang in other languages
