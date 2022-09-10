@@ -63,10 +63,6 @@ KR : Self-produced
 
 EN : [better_profanity](https://github.com/snguyenthanh/better_profanity)
 
-JP : Self-produced(Looking for)
-
-CH : Self-produced(Looking for)
-
 # Maker
 
 
