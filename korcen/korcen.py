@@ -906,7 +906,6 @@ class korcen:
         text = re.sub("```css", "", newtext)
         text = re.sub("ex\)", "", text)
         text = re.sub("\*", "", text)
-        text = re.sub("[^a-z]", "", text)
         censored_text = profanity.censor(text, '▩')
         if '▩' in censored_text:
             return True
@@ -2104,7 +2103,6 @@ class korcen:
         text = re.sub("```css", "", newtext)
         text = re.sub("ex\)", "", text)
         text = re.sub("\*", "", text)
-        text = re.sub("[^a-z]", "", text)
         censored_text = profanity.censor(text, '▩')
         if '▩' in censored_text:
             return True
