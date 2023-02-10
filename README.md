@@ -44,15 +44,13 @@ print(korcen.check(text))
 
 # Modules
 
-We are looking for censorship modules in different languages
-
-The developer of the censorship module, please contact us
-
->PyPI
-
 KR : Self-produced
 
 EN : [better_profanity](https://github.com/snguyenthanh/better_profanity)
+
+JA : Self-produced
+
+CH : Self-produced
 
 # Maker
 
