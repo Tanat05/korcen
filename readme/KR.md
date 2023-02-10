@@ -51,6 +51,9 @@ KR : 직접 제작
 
 EN : [better_profanity](https://github.com/snguyenthanh/better_profanity)
 
+JP : 직접 제작
+
+CH : 직접 
 
 # Maker
 
