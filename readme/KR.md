@@ -47,29 +47,10 @@ print(korcen.check(text))
 
 # Modules
 
-다양한 언어의 검열 모듈을 찾고 있습니다 
-
-검열 모듈 개발자들은 연락주세요
-
->PyPI
-
 KR : 직접 제작
 
 EN : [better_profanity](https://github.com/snguyenthanh/better_profanity)
 
-JP : 직접 제작(찾는 중)
-
-CH : 직접 제작(찾는 중)
-
->NPM
-
-KR : 직접 제작
-
-EN : 직접 제작(찾는 중)
-
-JP : 직접 제작(찾는 중)
-
-CH : 직접 제작(찾는 중)
 
 # Maker
 
