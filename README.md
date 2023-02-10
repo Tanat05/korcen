@@ -40,8 +40,6 @@ $ pip install korcen
 ```py
 from korcen import korcen
 
-korcen = korcen.korcen()
-
 text = input()
 print(korcen.check(text))
 ```
