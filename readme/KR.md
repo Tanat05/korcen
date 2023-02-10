@@ -45,8 +45,6 @@ text = input()
 print(korcen.check(text))
 ```
 
-####  자세한 예시를 보려면 [example](https://github.com/Tanat05/korcen/tree/main/example)파일을 참고 하세요
-
 # Modules
 
 다양한 언어의 검열 모듈을 찾고 있습니다 
