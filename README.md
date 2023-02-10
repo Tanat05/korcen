@@ -11,8 +11,6 @@
   <h2>
     <a href="https://github.com/Tanat05/korcen">EN</a>
     <a href="https://github.com/Tanat05/korcen/blob/main/readme/KR.md">KR</a>
-    <a href="https://github.com/Tanat05/korcen/blob/main/readme/JP.md">JP</a>
-    <a href="https://github.com/Tanat05/korcen/blob/main/readme/CH.md">CH</a>
   </h2>
 </div>
 Anyone can easily check
@@ -43,8 +41,6 @@ from korcen import korcen
 text = input()
 print(korcen.check(text))
 ```
-
-####  See the sample file for a detailed [example](https://github.com/Tanat05/korcen/tree/main/example)
 
 # Modules
 
