@@ -1,2 +1,2 @@
-profanity
+better_profanity
 OrderedDict
