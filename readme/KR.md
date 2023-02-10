@@ -22,6 +22,8 @@ Korcen은 korean(한국어) censorship(검열)의 줄임말입니다
 
 한국 비속어가 주이지만 다양한 언어를 지원합니다
 
+[TS 버전 바로가기](https://github.com/KR-korcen/korcen.ts)
+
 [서포트 디스코드](https://discord.gg/wyTU3ZQBPE)
 
 ## Installation
