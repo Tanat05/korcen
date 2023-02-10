@@ -48,7 +48,7 @@ KR : Self-produced
 
 EN : [better_profanity](https://github.com/snguyenthanh/better_profanity)
 
-JA : Self-produced
+J : Self-produced
 
 CH : Self-produced
 
