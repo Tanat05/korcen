@@ -13,8 +13,6 @@
   <h2>
     <a href="https://github.com/Tanat05/korcen">EN</a>
     <a href="https://github.com/Tanat05/korcen/blob/main/readme/KR.md">KR</a>
-    <a href="https://github.com/Tanat05/korcen/blob/main/readme/JP.md">JP</a>
-    <a href="https://github.com/Tanat05/korcen/blob/main/readme/CH.md">CH</a>
   </h2>
 </div>
 
@@ -43,17 +41,8 @@ $ npm i korcen
 ```py
 from korcen import korcen
 
-korcen = korcen.korcen()
-
 text = input()
 print(korcen.check(text))
-```
-
->Javascript
-```js
-const { check } = require('korcen')
-var content = check("문자열")
-console.log(content)
 ```
 
 ####  자세한 예시를 보려면 [example](https://github.com/Tanat05/korcen/tree/main/example)파일을 참고 하세요
