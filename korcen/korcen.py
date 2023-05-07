@@ -810,7 +810,6 @@ def check(text:str, id: int=None):
         if i in text:
             return True
     text = re.sub(r'\^', 'ㅅ', newtext)
-    text = re.sub('sex', '섹스', text)
     text = re.sub('엑', '', text)
     text = re.sub('0ㅑ', '야', text)
     text = re.sub("[^ㄱ-힣]", "", text)
@@ -1954,7 +1953,6 @@ def sexual(text:str, id: int=None):
         if i in text:
             return True
     text = re.sub(r'\^', 'ㅅ', newtext)
-    text = re.sub('sex', '섹스', text)
     text = re.sub('엑', '', text)
     text = re.sub('0ㅑ', '야', text)
     text = re.sub("[^ㄱ-힣]", "", text)
