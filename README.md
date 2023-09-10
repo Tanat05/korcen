@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>korcen</h1>
+  <h1>Korcen.py</h1>
   
   [![PyPI version](https://img.shields.io/pypi/v/korcen.svg?style=flat-square)](https://python.org/pypi/korcen)
   [![downloads](https://img.shields.io/pypi/dm/korcen.svg?style=flat-square)](https://pypi.org/project/korcen/)
