@@ -165,6 +165,7 @@ def check(text:str, id: int=None):
     text = re.sub('dㅗ', '', text)
     text = re.sub('ㅗg', '', text)
     text = re.sub('gㅗ', '', text)
+    text = re.sub('dㅗ', '', text)
     text = re.sub(' ', '', text)
     fuckyou = ["ㅗ", "┻", "┴", "┹", "_ㅣ_",
                 "_/_", "⊥", "_ |\_", "_|\_", "_ㅣ\_", "_I_", "丄"]
@@ -326,7 +327,8 @@ def check(text:str, id: int=None):
             "씨삐라", "씨벌", "슈벌", "시불", "시부렝", "씨부렝", "시부랭", "씨부랭", "시부랭", "발놈시", "뛰발",
             "뛰봘", "뜨발", "뜨벌", "띄발", "씨바알", "샤빨", "샤발", "스벌", "쓰벌", "신발련", "신발년", "신발놈", "띠발",
             "띠바랄", "시방", "씨방", "씨부련", "시부련", "씨잇발", "씨잇파알", "씨잇바알", "시잇발", "시잇바알", "쒸이발",
-            "쉬이빨", "씹팔", "쉬바", "시병발신", "씱빩", "쉬바난", "쉬바놈", "쉬바녀", "쉬바년", "쉬바노마,쉬바새", "쉬불", "쉬이바", "시벨놈", "시뱅놈", "시봉새"]
+            "쉬이빨", "씹팔", "쉬바", "시병발신", "씱빩", "쉬바난", "쉬바놈", "쉬바녀", "쉬바년", "쉬바노마", "쉬바새", "쉬불", "쉬이바",
+            "시벨놈", "시뱅놈", "시봉새", "씻뻘"]
     for i in fuck:
         if i in text:
             return True
@@ -344,11 +346,12 @@ def check(text:str, id: int=None):
     text = re.sub(' ', '', newtext)
     text = re.sub("opgg", "", text)
     text = re.sub("op.gg", "", text)
-    bullshit1 = ["wlfkf", "g랄", "g럴", "g롤", "g뢀", "giral"]
+    bullshit1 = ["wlfkf", "g랄", "g럴", "g롤", "g뢀", "giral", "zi랄", "ji랄"]
     for i in bullshit1:
         if i in text:
             return True
     text = re.sub("g랄", "지랄", newtext)
+    text = re.sub('ji랄', '지랄', text)
     text = re.sub('己', 'ㄹ', text)
     text = re.sub("[^ㄱ-힣]", "", text)
     text = re.sub("있지", "", text)
@@ -488,6 +491,7 @@ def check(text:str, id: int=None):
     text = re.sub('삵새끼', '', text)
     text = re.sub('키보드', '', text)
     text = re.sub('새끼손', '', text)
+    text = re.sub('셰리프', '', text)
     sonofbitch = ["새끼", "쉐리", "쌔끼", "썌끼", "쎼끼", "쌬끼", "샠끼", "세끼", "샊", "쌖", "섺", "쎆", "십새", "새키", "씹색", "새까", "새꺄",
                     "새뀌", "새끠", "새캬", "색꺄", "색끼", "섹히", "셁기", "셁끼", "셐기", "셰끼", "셰리", "쉐꺄", "십색꺄", "십떼끼", "십데꺄", "십때끼", "십새꺄", "십새캬", "쉑히"]
     for i in sonofbitch:
@@ -529,6 +533,9 @@ def check(text:str, id: int=None):
             return True
     text = re.sub("[^가-힣]", "", text)
     text = re.sub('해줫더니', '', text)
+    text = re.sub('줫다', '', text)
+    text = re.sub('내쫒은', '', text)
+    text = re.sub('내쫒다', '', text)
     dick = ["좆", "촟", "조까", "좈", "쫒", "졷", "좃", "줮",
             "좋같", "좃같", "좃물", "좃밥", "줫", "좋밥", "좋물", "좇"]
     for i in dick:
@@ -664,6 +671,9 @@ def check(text:str, id: int=None):
     text = re.sub("뒤져봐야", "", text)
     text = re.sub("뒤질뻔", "", text)
     text = re.sub("뒤져보다", "", text)
+    text = re.sub("뒤져보는", "", text)
+    text = re.sub("뒤져본", "", text)
+    text = re.sub("뒤져볼", "", text)
     picking = ["뒤져", "뒈져", "뒈진", "뒈질", "디져라", "디진다", "디질래", "뒤질"]
     for i in picking:
 
@@ -702,6 +712,8 @@ def check(text:str, id: int=None):
     text = re.sub('빨리 보지', '', text)
     text = re.sub('보지도 마', '', text)
     text = re.sub('보지는 않', '', text)
+    text = re.sub('보지안으', '', text)
+    text = re.sub('보지안아', '', text)
     text = re.sub('게 보지', '', text)
     text = re.sub("[^ㄱ-힣]", "", text)
     text = re.sub('보g', '보지', text)
@@ -729,6 +741,7 @@ def check(text:str, id: int=None):
     text = re.sub('바보지', '', text)
     text = re.sub('바보짓', '', text)
     text = re.sub('물어보지', '', text)
+    text = re.sub('하시나보지', '', text)
     text = re.sub('오', '', text)
     pussy = ["보지", "버지물", "버짓물", "보짓", "ⓑⓞⓩⓘ",
                 "bozi", "개보즤", "개보지", "버지벌렁벌렁", "보짖", "뵤즤", "봊이"]
@@ -904,6 +917,9 @@ def check(text:str, id: int=None):
     text = re.sub("소유자", "", text)
     text = re.sub("작업자", "", text)
     text = re.sub("자기위로", "자위", text)
+    text = re.sub("위대하지", "", text)
+    text = re.sub("암살자", "", text)
+    text = re.sub("학자", "", text)
     onahole = ["딸딸이", "질싸", "안에사정", "자위남", "자위녀", "폰섹", "포르노", "폰세엑", "폰쉑", "폰쎅", "질내사정", "그룹섹", "남창", "男色", "누워라이년아",
                 "누웠냐씨방새", "다리벌려", "대줄년", "뒤로너어줘", "딸따뤼", "딸쳐", "떡쳐라", "막대쑤셔줘", "막대핥아줘", "먹고보니내딸", "먹고보니누나", "먹고보니딸",
                 "먹고보니똥개", "먹고보니엄마", "먹고보니응아", "먹고보니재수", "먹고보니처제", "먹고보니형수", "몸뚱이줄께", "몸안에사정", "밖에다쌀께", "박고빼고",
@@ -970,6 +986,7 @@ def check(text:str, id: int=None):
     text = re.sub('라운지', '', text)
     text = re.sub('운지법', '', text)
     text = re.sub('싸운지', '', text)
+    text = re.sub('운 지린다', '', text)
     text = re.sub('깔보다', '', text)
     text = re.sub('깔보시', '', text)
     text = re.sub('1년', '', text)
@@ -1158,11 +1175,57 @@ def general(text:str, id: int=None):
     text = re.sub('𝖘', 's', text)
     text = re.sub('𝕤', 's', text)
     text = re.sub('ｓ', 's', text)
+    text = re.sub('ş', 's', text)
     text = re.sub('ⓢ', 's', text)
     text = re.sub('⒮', 's', text)
     text = re.sub('🅢', 's', text)
     text = re.sub('🆂', 's', text)
     text = re.sub('🅂', 's', text)
+    text = re.sub('𝖾', 'e', text)
+    text = re.sub('𝘦', 'e', text)
+    text = re.sub('𝙚', 'e', text)
+    text = re.sub('𝚎', 'e', text)
+    text = re.sub('𝐞', 'e', text)
+    text = re.sub('𝑒', 'e', text)
+    text = re.sub('𝒆', 'e', text)
+    text = re.sub('ℯ', 'e', text)
+    text = re.sub('𝓮', 'e', text)
+    text = re.sub('𝔢', 'e', text)
+    text = re.sub('𝖊', 'e', text)
+    text = re.sub('𝕖', 'e', text)
+    text = re.sub('ｅ', 'e', text)
+    text = re.sub('ė', 'e', text)
+    text = re.sub('ⓔ', 'e', text)
+    text = re.sub('⒠', 'e', text)
+    text = re.sub('🅔', 'e', text)
+    text = re.sub('🅴', 'e', text)
+    text = re.sub('🄴', 'e', text)
+    text = re.sub('є', 'e', text)
+    text = re.sub('𝗑', 'x', text)
+    text = re.sub('𝘹', 'x', text)
+    text = re.sub('𝙭', 'x', text)
+    text = re.sub('𝚡', 'x', text)
+    text = re.sub('𝐱', 'x', text)
+    text = re.sub('𝑥', 'x', text)
+    text = re.sub('𝒙', 'x', text)
+    text = re.sub('𝓍', 'x', text)
+    text = re.sub('𝔁', 'x', text)
+    text = re.sub('𝔵', 'x', text)
+    text = re.sub('𝖝', 'x', text)
+    text = re.sub('𝕩', 'x', text)
+    text = re.sub('ｘ', 'x', text)
+    text = re.sub('ⓧ', 'x', text)
+    text = re.sub('⒳', 'x', text)
+    text = re.sub('🅧', 'x', text)
+    text = re.sub('🆇', 'x', text)
+    text = re.sub('🅇', 'x', text)
+    text = re.sub('₨', 'rs', text)
+    text = re.sub('ų', 'u', text)
+    text = re.sub('ç', 'c', text)
+    text = re.sub('Ｆ', 'F', text)
+    text = re.sub('Ｋ', 'K', text)
+    text = re.sub('Ｃ', 'C', text)
+    text = re.sub('Ｕ', 'U', text)
     newtext = text.lower()
 
     text = re.sub('ㅗ먹어', 'ㅗ', newtext)
@@ -1228,6 +1291,7 @@ def general(text:str, id: int=None):
     text = re.sub('dㅗ', '', text)
     text = re.sub('ㅗg', '', text)
     text = re.sub('gㅗ', '', text)
+    text = re.sub('dㅗ', '', text)
     text = re.sub(' ', '', text)
     fuckyou = ["ㅗ", "┻", "┴", "┹", "_ㅣ_",
                 "_/_", "⊥", "_ |\_", "_|\_", "_ㅣ\_", "_I_", "丄"]
@@ -1286,6 +1350,8 @@ def general(text:str, id: int=None):
     text = re.sub('ㅍㅅㅍ', '', text)
     text = re.sub('발 닦', '', text)
     text = re.sub('동시 8', '', text)
+    text = re.sub('8시발', '시발', text)
+    text = re.sub('8시 ', '', text)
     text = re.sub("[^ㄱ-힣]", "", text)
     fuck = ["시ㅂ", "시ㅏㄹ", "씨ㅂ", "씨ㅏㄹ", "ㅣ발", "ㅆ발", "ㅅ발", "ㅅㅂ", "ㅆㅂ", "ㅆ바", "ㅅ바",
             "시ㅂㅏ", "ㅅㅂㅏ", "시ㅏㄹ", "씨ㅏㄹ", "ㅅ불", "ㅆ불", "ㅅ쁠", "ㅆ뿔", "ㅆㅣ발", "ㅅㅟ발", "ㅅㅣㅂㅏ",
@@ -1364,6 +1430,7 @@ def general(text:str, id: int=None):
     text = re.sub('역시', '', text)
     text = re.sub('바보', '', text)
     text = re.sub('쿨리발리', '', text)
+    text = re.sub('슈발리에', '', text)
     text = re.sub('방탄', '', text)
     text = re.sub('방어', '', text)
     text = re.sub('발표', '', text)
@@ -1386,7 +1453,8 @@ def general(text:str, id: int=None):
             "씨삐라", "씨벌", "슈벌", "시불", "시부렝", "씨부렝", "시부랭", "씨부랭", "시부랭", "발놈시", "뛰발",
             "뛰봘", "뜨발", "뜨벌", "띄발", "씨바알", "샤빨", "샤발", "스벌", "쓰벌", "신발련", "신발년", "신발놈", "띠발",
             "띠바랄", "시방", "씨방", "씨부련", "시부련", "씨잇발", "씨잇파알", "씨잇바알", "시잇발", "시잇바알", "쒸이발",
-            "쉬이빨", "씹팔", "쉬바", "시병발신", "씱빩", "쉬바난", "쉬바놈", "쉬바녀", "쉬바년", "쉬바노마,쉬바새", "쉬불", "쉬이바", "시벨놈", "시뱅놈", "시봉새"]
+            "쉬이빨", "씹팔", "쉬바", "시병발신", "씱빩", "쉬바난", "쉬바놈", "쉬바녀", "쉬바년", "쉬바노마", "쉬바새", "쉬불", "쉬이바",
+            "시벨놈", "시뱅놈", "시봉새", "씻뻘"]
     for i in fuck:
         if i in text:
             return True
@@ -1404,11 +1472,12 @@ def general(text:str, id: int=None):
     text = re.sub(' ', '', newtext)
     text = re.sub("opgg", "", text)
     text = re.sub("op.gg", "", text)
-    bullshit1 = ["wlfkf", "g랄", "g럴", "g롤", "g뢀", "giral"]
+    bullshit1 = ["wlfkf", "g랄", "g럴", "g롤", "g뢀", "giral", "zi랄", "ji랄"]
     for i in bullshit1:
         if i in text:
             return True
     text = re.sub("g랄", "지랄", newtext)
+    text = re.sub('ji랄', '지랄', text)
     text = re.sub('己', 'ㄹ', text)
     text = re.sub("[^ㄱ-힣]", "", text)
     text = re.sub("있지", "", text)
@@ -1455,6 +1524,7 @@ def general(text:str, id: int=None):
     text = re.sub('7등신', '', text)
     text = re.sub('8등신', '', text)
     text = re.sub('9등신', '', text)
+    text = re.sub('붕우유신', '', text)
     text = re.sub("[^ㄱ-힣]", "", text)
     text = re.sub('빙', '병', text)
     text = re.sub('븅', '병', text)
@@ -1466,6 +1536,8 @@ def general(text:str, id: int=None):
     text = re.sub('씬', '신', text)
     text = re.sub('우', '', text)
     text = re.sub('웅', '', text)
+    text = re.sub('융', '', text)
+    text = re.sub('유', '', text)
     asshole = ["ㅄ", "ㅂㅅ", "병ㅅ", "ㅂ신", "ㅕㅇ신", "ㅂㅇ신", "뷰신"]
     for i in asshole:
         if i in text:
@@ -1545,6 +1617,7 @@ def general(text:str, id: int=None):
     text = re.sub('삵새끼', '', text)
     text = re.sub('키보드', '', text)
     text = re.sub('새끼손', '', text)
+    text = re.sub('셰리프', '', text)
     sonofbitch = ["새끼", "쉐리", "쌔끼", "썌끼", "쎼끼", "쌬끼", "샠끼", "세끼", "샊", "쌖", "섺", "쎆", "십새", "새키", "씹색", "새까", "새꺄",
                     "새뀌", "새끠", "새캬", "색꺄", "색끼", "섹히", "셁기", "셁끼", "셐기", "셰끼", "셰리", "쉐꺄", "십색꺄", "십떼끼", "십데꺄", "십때끼", "십새꺄", "십새캬", "쉑히"]
     for i in sonofbitch:
@@ -1586,6 +1659,9 @@ def general(text:str, id: int=None):
             return True
     text = re.sub("[^가-힣]", "", text)
     text = re.sub('해줫더니', '', text)
+    text = re.sub('줫다', '', text)
+    text = re.sub('내쫒은', '', text)
+    text = re.sub('내쫒다', '', text)
     dick = ["좆", "촟", "조까", "좈", "쫒", "졷", "좃", "줮",
             "좋같", "좃같", "좃물", "좃밥", "줫", "좋밥", "좋물", "좇"]
     for i in dick:
@@ -1732,6 +1808,9 @@ def minor(text:str, id: int=None):
     text = re.sub("뒤져봐야", "", text)
     text = re.sub("뒤질뻔", "", text)
     text = re.sub("뒤져보다", "", text)
+    text = re.sub("뒤져보는", "", text)
+    text = re.sub("뒤져본", "", text)
+    text = re.sub("뒤져볼", "", text)
     picking = ["뒤져", "뒈져", "뒈진", "뒈질", "디져라", "디진다", "디질래", "뒤질"]
     for i in picking:
 
@@ -1845,6 +1924,8 @@ def sexual(text:str, id: int=None):
     text = re.sub('빨리 보지', '', text)
     text = re.sub('보지도 마', '', text)
     text = re.sub('보지는 않', '', text)
+    text = re.sub('보지안으', '', text)
+    text = re.sub('보지안아', '', text)
     text = re.sub('게 보지', '', text)
     text = re.sub("[^ㄱ-힣]", "", text)
     text = re.sub('보g', '보지', text)
@@ -1872,6 +1953,7 @@ def sexual(text:str, id: int=None):
     text = re.sub('바보지', '', text)
     text = re.sub('바보짓', '', text)
     text = re.sub('물어보지', '', text)
+    text = re.sub('하시나보지', '', text)
     text = re.sub('오', '', text)
     pussy = ["보지", "버지물", "버짓물", "보짓", "ⓑⓞⓩⓘ",
                 "bozi", "개보즤", "개보지", "버지벌렁벌렁", "보짖", "뵤즤", "봊이"]
@@ -2047,6 +2129,9 @@ def sexual(text:str, id: int=None):
     text = re.sub("소유자", "", text)
     text = re.sub("작업자", "", text)
     text = re.sub("자기위로", "자위", text)
+    text = re.sub("위대하지", "", text)
+    text = re.sub("암살자", "", text)
+    text = re.sub("학자", "", text)
     onahole = ["딸딸이", "질싸", "안에사정", "자위남", "자위녀", "폰섹", "포르노", "폰세엑", "폰쉑", "폰쎅", "질내사정", "그룹섹", "남창", "男色", "누워라이년아",
                 "누웠냐씨방새", "다리벌려", "대줄년", "뒤로너어줘", "딸따뤼", "딸쳐", "떡쳐라", "막대쑤셔줘", "막대핥아줘", "먹고보니내딸", "먹고보니누나", "먹고보니딸",
                 "먹고보니똥개", "먹고보니엄마", "먹고보니응아", "먹고보니재수", "먹고보니처제", "먹고보니형수", "몸뚱이줄께", "몸안에사정", "밖에다쌀께", "박고빼고",
@@ -2125,6 +2210,7 @@ def belittle(text:str, id: int=None):
     text = re.sub('라운지', '', text)
     text = re.sub('운지법', '', text)
     text = re.sub('싸운지', '', text)
+    text = re.sub('운 지린다', '', text)
     text = re.sub('깔보다', '', text)
     text = re.sub('깔보시', '', text)
     text = re.sub('1년', '', text)
