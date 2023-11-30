@@ -62,7 +62,7 @@ CH : Self-produced
 PyPI 0.0.1 ~
 
 github:   Tanat05
-discord:  Tanat#1533
+discord:  tanat05
 email:    shrbwjd05@gmail.com
 ```
 
