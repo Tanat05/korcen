@@ -27,7 +27,7 @@ Although Korean slang is the main module, you can collect modules of other users
 
 ```
 Discord Bot
-2000+ servers
+3000+ servers
 ```
 
 ## Installation
