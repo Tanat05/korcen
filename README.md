@@ -17,6 +17,8 @@ Anyone can easily check
 
 Although Korean slang is the main module, you can collect modules of other users to censor slang in other languages
 
+[Example](https://github.com/KR-korcen/Example)
+
 [ts version](https://github.com/KR-korcen/korcen.ts), [machine learning version](https://github.com/KR-korcen/korcen-ml)
 
 [support discord](https://discord.gg/wyTU3ZQBPE)
