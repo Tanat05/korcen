@@ -227,6 +227,14 @@ def general(text:str, id: int=None):
     text = re.sub('8시 ', '', text)
     text = re.sub('!wt ㅂㅇ', '', text)
     text = re.sub('!ㅈㅅ ㅂㅇ', '', text)
+    text = re.sub('다시 방', '', text)
+    text = re.sub('시 불이익', '', text)
+    text = re.sub('다시 바꿀', '', text)
+    text = re.sub('다시 바꿔', '', text)
+    text = re.sub('다시 불러', '', text)
+    text = re.sub('다시 불안', '', text)
+    text = re.sub('하시바라 이노스케', '', text)
+    text = re.sub('할 시', '', text)
     text = re.sub("[^ㄱ-힣]", "", text)
     fuck = ["시ㅂ", "시ㅏㄹ", "씨ㅂ", "씨ㅏㄹ", "ㅣ발", "ㅆ발", "ㅅ발", "ㅅㅂ", "ㅆㅂ", "ㅆ바", "ㅅ바",
             "시ㅂㅏ", "ㅅㅂㅏ", "시ㅏㄹ", "씨ㅏㄹ", "ㅅ불", "ㅆ불", "ㅅ쁠", "ㅆ뿔", "ㅆㅣ발", "ㅅㅟ발", "ㅅㅣㅂㅏ",
@@ -235,8 +243,6 @@ def general(text:str, id: int=None):
         if i in text:
             return True
 
-    text = re.sub('다시 방', '', text)
-    text = re.sub('다시 불러', '', text)
     text = re.sub('불러드', '', text)
     text = re.sub('시발음', '', text)
     text = re.sub('시발택시', '', text)
@@ -300,7 +306,6 @@ def general(text:str, id: int=None):
     text = re.sub('벌금', '', text)
     text = re.sub('시방향', '', text)
     text = re.sub('불법', '', text)
-    text = re.sub('할시', '', text)
     text = re.sub('발릴', '', text)
     text = re.sub('발표', '', text)
     text = re.sub('방송', '', text)
@@ -317,7 +322,6 @@ def general(text:str, id: int=None):
     text = re.sub('이', '', text)
     text = re.sub('일', '', text)
     text = re.sub('의', '', text)
-    text = re.sub('하시바라 이노스케', '', text)
     text = re.sub("[^가-힣]", "", text)
     text = re.sub('즉시발급', '', text)
     text = re.sub('련', '놈', text)
@@ -332,7 +336,7 @@ def general(text:str, id: int=None):
             "뛰봘", "뜨발", "뜨벌", "띄발", "씨바알", "샤빨", "샤발", "스벌", "쓰벌", "신발련", "신발년", "신발놈", "띠발",
             "띠바랄", "시방", "씨방", "씨부련", "시부련", "씨잇발", "씨잇파알", "씨잇바알", "시잇발", "시잇바알", "쒸이발",
             "쉬이빨", "씹팔", "쉬바", "시병발신", "씱빩", "쉬바난", "쉬바놈", "쉬바녀", "쉬바년", "쉬바노마", "쉬바새", "쉬불", "쉬이바",
-            "시벨놈", "시뱅놈", "시봉새", "씻뻘"]
+            "시벨놈", "시뱅놈", "시봉새", "씻뻘", "씌벌"]
     for i in fuck:
         if i in text:
             return True
@@ -423,13 +427,14 @@ def general(text:str, id: int=None):
     text = re.sub("[^가-힣]", "", text)
     text = re.sub('영', '', text)
     text = re.sub('엉', '', text)
-    asshole = ["병신", "병딱", "벼신", "붱신", "뼝신", "뿽신", "삥신", "병시니", "병형신", "뵹신", "병긴"]
+    asshole = ["병신", "병딱", "벼신", "붱신", "뼝신", "뿽신", "삥신", "병시니", "병형신", "뵹신", "병긴", "비응신"]
     for i in asshole:
         if i in text:
             return True
 
     text = re.sub('전염병', '', newtext)
     text = re.sub('감염병', '', text)
+    text = re.sub('화염병', '', text)
     text = re.sub("[^가-힣]", "", text)
     motherfucker = ["염병", "엠병", "옘병", "염병", "얨병", "옘뼝"]
     for i in motherfucker:
@@ -490,6 +495,7 @@ def general(text:str, id: int=None):
     text = re.sub('세끼먹', '', text)
     text = re.sub('고양이새끼', '', text)
     text = re.sub('호랑이새끼', '', text)
+    text = re.sub('용새끼', '', text)
     text = re.sub('말새끼', '', text)
     text = re.sub('사자새끼', '', text)
     text = re.sub('범새끼', '', text)
@@ -498,8 +504,9 @@ def general(text:str, id: int=None):
     text = re.sub('새끼손', '', text)
     text = re.sub('셰리프', '', text)
     text = re.sub('로쉐리', '', text)
-    sonofbitch = ["새끼", "쉐리", "쌔끼", "썌끼", "쎼끼", "쌬끼", "샠끼", "세끼", "샊", "쌖", "섺", "쎆", "십새", "새키", "씹색", "새까", "새꺄",
-                    "새뀌", "새끠", "새캬", "색꺄", "색끼", "섹히", "셁기", "셁끼", "셐기", "셰끼", "셰리", "쉐꺄", "십색꺄", "십떼끼", "십데꺄", "십때끼", "십새꺄", "십새캬", "쉑히", "씹새기", "고아새기"]
+    sonofbitch = ["새끼", "쉐리", "쌔끼", "썌끼", "쎼끼", "쌬끼", "샠끼", "세끼", "샊", "쌖", "섺", "쎆", "십새", "새키", "씹색", "새까", "새꺄", "샛끼",
+                    "새뀌", "새끠", "새캬", "색꺄", "색끼", "섹히", "셁기", "셁끼", "셐기", "셰끼", "셰리", "쉐꺄", "십색꺄", "십떼끼", "십데꺄", "십때끼",
+                    "십새꺄", "십새캬", "쉑히", "씹새기", "고아새기", "샠기", "애새기", "이새기", "느그새기", "장애새기"]
     for i in sonofbitch:
         if i in text:
             return True
@@ -510,10 +517,12 @@ def general(text:str, id: int=None):
             return True
     text = re.sub('丕', '조', newtext)
     text = re.sub('刀卜', '까', text)
+    text = re.sub(r'조 \d+까지', '', text)
     text = re.sub("[^ㄱ-힣]", "", text)
     text = re.sub('줫습니다', '', text)
     text = re.sub('줫음', '', text)
     text = re.sub('줫잖아', '', text)
+    text = re.sub('줫겠지', '', text)
     text = re.sub('쫒아', '', text)
     text = re.sub('쫒는', '', text)
     text = re.sub('쫒기다', '', text)
@@ -615,6 +624,7 @@ def general(text:str, id: int=None):
     text = re.sub('넘는', '', text)
     text = re.sub('소개', '', text)
     text = re.sub('생긴게', '', text)
+    text = re.sub('날개같다', '', text)
     sonofagun = ["개같", "개가튼", "개쉑", "개스키", "개세끼", "개색히", "개가뇬", "개새기", "개쌔기", "개쌔끼", "쌖", "쎆", "새긔", "개소리", "개년", "개소리",
                     "개드립", "개돼지", "개씹창", "개간나", "개스끼", "개섹기", "개자식", "개때꺄", "개때끼", "개발남아", "개샛끼", "개가든", "개가뜬", "개가턴", "개가툰", "개가튼",
                     "개갇은", "개갈보", "개걸레", "개너마", "개너므", "개넌", "개넘", "개녀나", "개년", "개노마", "개노무새끼", "개논", "개놈", "개뇨나", "개뇬", "개뇸", "개뇽", "개눔",
@@ -628,7 +638,7 @@ def general(text:str, id: int=None):
                     "개졎", "개조또", "개조옷", "개족", "개좃", "개좆", "개좇", "개지랄", "개지럴", "개창년", "개허러", "개허벌년", "개호러", "개호로", "개후랄", "개후레", "개후로",
                     "개후장", "걔섀끼", "걔잡넘", "걔잡년", "걔잡뇬", "게가튼", "게같은", "게너마", "게년", "게노마", "게놈", "게뇨나", "게뇬", "게뇸", "게뇽", "게눔", "게늠",
                     "게띠발넘", "게부랄", "게부알", "게새끼", "게새리", "게새키", "게색", "게색기", "게색끼", "게샛키", "게세꺄", "게자지", "게잡넘", "게잡년", "게잡뇬", "게젓",
-                    "게좆", "계같은뇬", "계뇬", "계뇽", "쉬댕", "쉬뎅"]
+                    "게좆", "계같은뇬", "계뇬", "계뇽", "쉬댕", "쉬뎅", "개생끼"]
     for i in sonofagun:
         if i in text:
             return True
@@ -664,7 +674,7 @@ def minor(text:str, id: int=None):
     text = re.sub('미틴', '미친', text)
     text = re.sub('년', '놈', text)
     text = re.sub('련', '놈', text)
-    damnit = ["미친놈", "무친놈"]
+    damnit = ["미친놈", "미친새끼"]
     for i in damnit:
         if i in text:
             return True
@@ -803,6 +813,7 @@ def sexual(text:str, id: int=None):
     text = re.sub('보지안으', '', text)
     text = re.sub('보지안아', '', text)
     text = re.sub('게 보지', '', text)
+    text = re.sub('어케 보지', '', text)
     text = re.sub("[^ㄱ-힣]", "", text)
     text = re.sub('보g', '보지', text)
     text = re.sub('하나보지', '', text)
@@ -822,8 +833,8 @@ def sexual(text:str, id: int=None):
     text = re.sub('보지않', '', text)
     text = re.sub('해보지', '', text)
     text = re.sub('보지마', '', text)
-    text = re.sub('어케 보지', '', text)
     text = re.sub('보지말', '', text)
+    text = re.sub('안보지만', '', text)
     text = re.sub('정보', '', text)
     text = re.sub('지팡이', '', text)
     text = re.sub('행보', '', text)
@@ -1115,8 +1126,8 @@ def belittle(text:str, id: int=None):
     text = re.sub("[^가-힣]", "", text)
     text = re.sub('더운지역', '', text)
     text = re.sub('나따까리', '', text)
-    belittling = ["따까리", "장애년", "찐따년", "싸가지", "창년", "썅년", "버러지", "고아년", "고아년", "개간년", "종간나", "도구년", "걸래년", "썅년", "씹년",
-                    "창녀", "머저리", "씹쓰래기", "씹쓰레기", "씹장생", "씹자식", "운지", "급식충", "틀딱충", "조센징", "매국노", "똥꼬충", "진지충", "듣보잡",
+    belittling = ["따까리", "장애년", "찐따년", "싸가지", "창년", "썅년", "버러지", "고아년", "고아년", "개간년", "종간나", "도구년", "걸래년", "썅년", "씹년", "개걸레",
+                    "창녀", "머저리", "씹쓰래기", "씹쓰레기", "씹장생", "씹자식", "운지", "급식충", "틀딱충", "조센징", "매국노", "똥꼬충", "진지충", "듣보잡", "개찐따",
                     "한남충", "정신병자", "중생아", "돌팔이", "김치녀", "폰팔이", "틀딱년", "같은년", "개돼중", "쓰글년", "썩을년", "썩글년", "씹할", "거지새끼", "거지쉐뀌",
                     "거지쉑이", "거지쎄끼", "거지쒜리", "걸래가튼", "걸래넘", "걸래년", "걸래놈", "걸레가튼", "걸레년", "그지새끼", "그지새키", "그지색", "기집년", "까진년",
                     "깔보", "난잡년", "빡대가리", "더러운년", "돌아이", "또라이", "장애려", "샹놈", "김치남", "김치녀", "혜지련", "한유남충", "페미나치", "페미년", "꼴페미"]
@@ -1160,7 +1171,7 @@ def parent(text:str, id: int=None):
     text = text.lower()
     newtext = re.sub(' ', '', text)
 
-    your = ["ㄴ1ㄱ", "ㄴ1ㅁ", "느금ㅁ", "ㄴㄱ마", "ㄴㄱ빠", "ㄴ금빠", "ㅇH미", "ㄴ1에미", "늬애미"]
+    your = ["ㄴ1ㄱ", "ㄴ1ㅁ", "느금ㅁ", "ㄴㄱ마", "ㄴㄱ빠", "ㄴ금빠", "ㅇH미", "ㄴ1에미", "늬애미", "@ㅐ미", "@ㅐ비"]
     for i in your:
         if i in newtext:
             return True
@@ -1187,7 +1198,10 @@ def parent(text:str, id: int=None):
     text = re.sub("[^가-힣]", "", newtext)
     text = re.sub("도", "", text)
     motherfuck = ["니애미", "노애미", "노앰", "앰뒤련", "애믿쥐",
-                    "아버지도없는게", "애미도없는게", "애비도없는게", "어머니도없는게", "엄마없네", "니애비", "노애비", "애미없", "애비없", "애미뒤", "애비뒤", "니아빠", "너에미", "눼기미", "뉘귀미", "뉘기미", "뉘김이", "뉘뮈", "뉘미랄", "뉘미럴", "뉘미롤", "뉘밀얼", "뉘밀할", "뉘어미", "뉘에미", "느검마", "늬긔미", "늬기미", "니기미", "니믜창", "니미랄", "니미럴", "니미쒸블", "니미씨펄넘", "니미좃", "니밀할", "니부랑", "니뽕좃", "애미죽"]
+                    "아버지없는게", "애미없는게", "애비없는게", "어머니없는게", "엄마없네", "니애비", "노애비", "애미없", "애비없", "애미뒤", "애비뒤", 
+                    "니아빠", "너에미", "눼기미", "뉘귀미", "뉘기미", "뉘김이", "뉘뮈", "뉘미랄", "뉘미럴", "뉘미롤", "뉘밀얼", "뉘밀할", "뉘어미", "뉘에미", 
+                    "느검마", "늬긔미", "늬기미", "니기미", "니믜창", "니미랄", "니미럴", "니미쒸블", "니미씨펄넘", "니미좃", "니밀할", "니부랑", "니뽕좃", 
+                    "애미죽", "애미디진"]
     for i in motherfuck:
         if i in text:
             return True
