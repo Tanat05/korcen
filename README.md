@@ -11,30 +11,13 @@
   [![downloads](https://img.shields.io/pypi/dm/korcen.svg?style=flat-square)](https://pypi.org/project/korcen/)
 </div>
 
-<div align="center">
-  <h2>
-    <a href="https://github.com/Tanat05/korcen">EN</a>
-    <a href="https://github.com/Tanat05/korcen/blob/main/readme/KR.md">KR</a>
-  </h2>
-</div>
-Anyone can easily check
+"Easy and Powerful Korean Profanity Filtering, Now Accessible to Everyone!"
 
-Although Korean slang is the main module, you can collect modules of other users to censor slang in other languages
+This project is an intuitive keyword-based profanity filtering system. Developed in Python and optimized for the Korean language, its goal is to enable anyone to easily implement a clean and safe communication environment across various platforms such as websites and applications through simple integration.
 
-[Example](https://github.com/KR-korcen/Example)
+[Korcen.ts](https://github.com/KR-korcen/korcen.ts): Same essence, different expression.
 
-[ts version](https://github.com/KR-korcen/korcen.ts), [machine learning version](https://github.com/KR-korcen/korcen-ml)
-
-[support discord](https://discord.gg/wyTU3ZQBPE)
-
-
-## Project using Korcen
->[TNS 봇](https://discord.com/api/oauth2/authorize?client_id=848795383751639080&permissions=8&scope=bot%20applications.commands)
-
-```
-Discord Bot
-3000+ servers
-```
+[Korcen-kogpt2](https://github.com/Tanat05/korcen-kogpt2): This failure is the seed of innovation.
 
 ## Installation
 >PyPI
@@ -140,28 +123,6 @@ print(f"'야스각인데?' (check): {check('야스각인데?')}")
 if BETTER_PROFANITY_LOADED:
     print(f"'This is absolute bullshit' (check): {check('This is absolute bullshit')}")
 print(f"'꺼져, 이 糞野郎아' (check): {check('꺼져, 이 糞野郎아')}")
-```
-
-# Modules
-
-KR : Self-produced
-
-EN : [better_profanity](https://github.com/snguyenthanh/better_profanity)
-
-JA : Self-produced
-
-CH : Self-produced
-
-# Maker
-
-
->Tanat
-```
-PyPI 0.0.1 ~
-
-github:   Tanat05
-discord:  Tanat#1533
-email:    shrbwjd05@gmail.com
 ```
 
 
