@@ -9,6 +9,7 @@
   
   [![PyPI version](https://img.shields.io/pypi/v/korcen.svg?style=flat-square)](https://python.org/pypi/korcen)
   [![downloads](https://img.shields.io/pypi/dm/korcen.svg?style=flat-square)](https://pypi.org/project/korcen/)
+  [![downloads](https://img.shields.io/pepy/dt/korcen.svg?style=flat-square)](https://pypi.org/project/korcen/)
 </div>
 
 "Easy and Powerful Korean Profanity Filtering, Now Accessible to Everyone!"
