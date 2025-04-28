@@ -18,6 +18,8 @@ This project is an intuitive keyword-based profanity filtering system. Developed
 
 [Korcen.ts](https://github.com/KR-korcen/korcen.ts): Same essence, different expression.
 
+[Korcen-go](https://github.com/fluffy-melli/korcen-go): Same essence, different expression.
+
 [Korcen-kogpt2](https://github.com/Tanat05/korcen-kogpt2): This failure is the seed of innovation.
 
 ## Installation
