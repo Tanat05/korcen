@@ -38,7 +38,7 @@ Here's a basic example of how to use Korcen:
 ```python
 from korcen import check, highlight_profanity
 
-text_with_profanity = "이런 바보 같은 경우를 봤나."
+text_with_profanity = "이런 ㅈ같은 경우를 봤나."
 text_without_profanity = "정말 좋은 날씨입니다."
 
 # Check for profanity (returns True if profanity is found)
