@@ -36,23 +36,23 @@ pip install korcen
 Here's a basic example of how to use Korcen:
 
 ```python
-from korcen import check, highlight_profanity
+from korcen import korcen
 
 text_with_profanity = "이런 ㅈ같은 경우를 봤나."
 text_without_profanity = "정말 좋은 날씨입니다."
 
 # Check for profanity (returns True if profanity is found)
-print(f"'{text_with_profanity}': {check(text_with_profanity)}")
-print(f"'{text_without_profanity}': {check(text_without_profanity)}")
+print(f"'{text_with_profanity}': {korcen.check(text_with_profanity)}")
+print(f"'{text_without_profanity}': {korcen.check(text_without_profanity)}")
 
 # Highlight profanity (replaces profanity with asterisks)
-highlighted_text = highlight_profanity(text_with_profanity)
+highlighted_text = korcen.highlight_profanity(text_with_profanity)
 print(f"Highlighted: {highlighted_text}")
 
 # Example with a placeholder for a stronger profanity
 text_with_strong_profanity = "이런 씨X, 정말 최악이야."
-print(f"'{text_with_strong_profanity}': {check(text_with_strong_profanity)}")
-highlighted_strong_text = highlight_profanity(text_with_strong_profanity)
+print(f"'{text_with_strong_profanity}': {korcen.check(text_with_strong_profanity)}")
+highlighted_strong_text = korcen.highlight_profanity(text_with_strong_profanity)
 print(f"Highlighted (strong): {highlighted_strong_text}")
 
 ```
