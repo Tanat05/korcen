@@ -1,2 +1,2 @@
 better_profanity
-OrderedDict
+colorama
