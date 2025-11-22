@@ -3,37 +3,67 @@
 </div>
 
 <div align="center">
-  
+
   [![PyPI version](https://img.shields.io/pypi/v/korcen.svg?style=flat-square)](https://pypi.org/project/korcen)
   [![downloads](https://img.shields.io/pepy/dt/korcen.svg?style=flat-square)](https://pypi.org/project/korcen/)
 </div>
 
-"Easy and Powerful Korean Profanity Filtering, Now Accessible to Everyone!"
+"손쉽고 강력한 한국어 욕설 필터링, 이제 누구나 이용할 수 있습니다!"
 
-Korcen is a Python library for keyword-based profanity filtering, specifically optimized for the Korean language. It provides a straightforward way to integrate profanity detection into various applications, helping to maintain a cleaner and safer communication environment.
+Korcen은 한국어에 특화된 키워드 기반 욕설 필터링 파이썬 라이브러리입니다. 다양한 애플리케이션에 욕설 감지 기능을 간단하게 통합하여 더 깨끗하고 안전한 소통 환경을 유지하는 데 도움을 줍니다.
 
-Other versions of Korcen include:
-*   [Korcen.ts](https://github.com/KR-korcen/korcen.ts): A TypeScript version of Korcen.
-*   [Korcen-go](https://github.com/fluffy-melli/korcen-go): A Go version of Korcen, developed by fluffy-melli.
-*   [Korcen-kogpt2](https://github.com/Tanat05/korcen-kogpt2): An experimental version of Korcen exploring KoGPT2 integration.
+다른 버전의 Korcen은 다음과 같습니다:
+*   [Korcen.ts](https://github.com/KR-korcen/korcen.ts): Korcen의 타입스크립트 버전입니다.
+*   [Korcen-go](https://github.com/fluffy-melli/korcen-go): fluffy-melli가 개발한 Korcen의 Go 버전입니다.
+*   [Korcen-kogpt2](https://github.com/Tanat05/korcen-kogpt2): KoGPT2 통합을 탐색하는 Korcen의 실험적인 버전입니다.
 
-## Features
-- Optimized for Korean profanity detection.
-- Simple integration and usage.
-- Keyword-based filtering.
-- Customizable include/exclude lists for profanity terms.
-- Ability to highlight and mask profane words.
-- Supports categorization of profanity (e.g., general, sexual, belittling, etc.).
-- Provides boolean checks for profanity presence.
+## 목차
 
-## Installation
-To install Korcen, run the following command:
+- [기능](#기능)
+- [설치](#설치)
+- [사용법](#사용법)
+  - [기본 사용법](#기본-사용법)
+  - [욕설 수준별 확인](#욕설-수준별-확인)
+  - [욕설 강조](#욕설-강조)
+  - [사용자 정의 필터](#사용자-정의-필터)
+- [API 참조](#api-참조)
+  - [주요 함수](#주요-함수)
+  - [욕설 수준별 함수](#욕설-수준별-함수)
+- [기여](#기여)
+- [라이선스](#라이선스)
+
+## 기능
+
+- **한국어 욕설 감지에 최적화:** 한국어의 맥락과 뉘앙스를 이해하도록 설계되었습니다.
+- **간단한 통합 및 사용법:** 몇 줄의 코드로 프로젝트에 쉽게 통합할 수 있습니다.
+- **키워드 기반 필터링:** 효과적인 감지를 위해 광범위한 욕설 키워드 데이터베이스를 사용합니다.
+- **사용자 정의 가능한 포함/제외 목록:** 특정 요구에 맞게 필터를 미세 조정할 수 있습니다.
+- **욕설 강조 및 마스킹:** 욕설을 시각적으로 식별하거나 가릴 수 있습니다.
+- **욕설 분류:** 욕설을 `일반`, `성적`, `경멸적` 등 여러 범주로 분류하여 세분화된 필터링을 지원합니다.
+- **불리언 확인:** 텍스트에 욕설이 포함되어 있는지 여부를 간단하게 확인할 수 있습니다.
+- **외국어 지원:** 영어, 일본어, 중국어 욕설 필터링을 지원합니다.
+
+## 설치
+
+Korcen을 설치하려면 다음 명령어를 실행하세요:
+
 ```sh
 pip install korcen
 ```
 
-## Usage
-Here's a basic example of how to use Korcen:
+### 선택적 종속성
+
+영어 욕설 필터링을 활성화하려면 `better_profanity` 라이브러리를 설치해야 합니다:
+
+```sh
+pip install better_profanity
+```
+
+## 사용법
+
+### 기본 사용법
+
+Korcen을 사용하는 기본적인 예제입니다:
 
 ```python
 from korcen import korcen
@@ -41,28 +71,148 @@ from korcen import korcen
 text_with_profanity = "이런 ㅈ같은 경우를 봤나."
 text_without_profanity = "정말 좋은 날씨입니다."
 
-# Check for profanity (returns True if profanity is found)
+# 욕설 확인 (욕설이 발견되면 True를 반환)
 print(f"'{text_with_profanity}': {korcen.check(text_with_profanity)}")
 print(f"'{text_without_profanity}': {korcen.check(text_without_profanity)}")
 
-# Highlight profanity (replaces profanity with asterisks)
-highlighted_text = korcen.highlight_profanity(text_with_profanity)
-print(f"Highlighted: {highlighted_text}")
-
-# Example with a placeholder for a stronger profanity
-text_with_strong_profanity = "이런 씨X, 정말 최악이야."
-print(f"'{text_with_strong_profanity}': {korcen.check(text_with_strong_profanity)}")
-highlighted_strong_text = korcen.highlight_profanity(text_with_strong_profanity)
-print(f"Highlighted (strong): {highlighted_strong_text}")
-
+# 출력:
+# '이런 ㅈ같은 경우를 봤나.': True
+# '정말 좋은 날씨입니다.': False
 ```
 
-For more detailed examples, including custom filter configurations and checks for various profanity types, please see `EXAMPLES.md` (Note: This file will need to be created in a subsequent step).
+### 욕설 수준별 확인
 
-## Contributing
-Contributions are welcome! If you'd like to help improve Korcen, please feel free to fork the repository, make your changes, and submit a pull request.
+다양한 수준의 욕설을 확인할 수 있습니다:
 
-If you plan to add new features or make significant changes, please open an issue first to discuss your ideas.
+```python
+from korcen import korcen
 
-## License
-Distributed under the MIT License. See `LICENSE` for more information.
+text = "이런 씨X, 정말 최악이야."
+
+print(f"'text' (general): {korcen.general(text)}")
+print(f"'text' (sexual): {korcen.sexual(text)}")
+print(f"'text' (belittle): {korcen.belittle(text)}")
+```
+
+### 욕설 강조
+
+욕설을 강조 표시할 수 있습니다:
+
+```python
+from korcen import korcen
+
+text = "이런 씨X, 정말 최악이야."
+
+# 기본 강조 문자 '!'로 욕설 강조
+highlighted_text = korcen.highlight_profanity(text)
+print(f"Highlighted: {highlighted_text}")
+
+# 사용자 정의 강조 문자 '*'로 욕설 강조
+highlighted_text_custom = korcen.highlight_profanity(text, highlight_char='*')
+print(f"Highlighted (custom): {highlighted_text_custom}")
+
+# level='all'을 사용하여 모든 종류의 욕설 강조
+text_multiple_profanities = "이런 씨발, 저기 깜둥이가 지나가네. 완전 야스각인데?"
+highlighted_all = korcen.highlight_profanity(text_multiple_profanities, level='all')
+print(f"Highlighted (all): {highlighted_all}")
+
+# 출력:
+# Highlighted: 이런 !씨X!, 정말 최악이야.
+# Highlighted (custom): 이런 *씨X*, 정말 최악이야.
+# Highlighted (all): 이런 !씨발!, 저기 !깜둥이!가 지나가네. 완전 !야스!각인데?
+```
+
+### 사용자 정의 필터
+
+사용자 정의 포함 및 제외 필터를 만들 수 있습니다. `custom_profanity_include.txt` 및 `custom_profanity_exclude.txt`라는 두 개의 파일을 만듭니다.
+
+**custom_profanity_include.txt:**
+```
+나만의 비속어
+절대 금지 구문
+```
+
+**custom_profanity_exclude.txt:**
+```
+지랄
+```
+
+그런 다음 다음과 같이 사용할 수 있습니다:
+
+```python
+from korcen import korcen
+
+# 사용자 정의 필터 경로 설정
+korcen.set_custom_filter_paths(
+    include_path='custom_profanity_include.txt',
+    exclude_path='custom_profanity_exclude.txt'
+)
+
+# 사용자 정의 포함 필터 테스트
+text_custom_include = "이 문장은 나만의 비속어를 포함합니다."
+print(f"'{text_custom_include}': {korcen.check(text_custom_include)}")
+
+# 사용자 정의 제외 필터 테스트
+text_custom_exclude = "무슨 이런 지랄이야!"
+print(f"'{text_custom_exclude}': {korcen.check(text_custom_exclude)}")
+
+# 출력:
+# '이 문장은 나만의 비속어를 포함합니다.': True
+# '무슨 이런 지랄이야!': False
+```
+
+## API 참조
+
+### 주요 함수
+
+#### `korcen.check(text: str, id: int = None, foreign: bool = False) -> bool`
+
+텍스트에 모든 수준의 욕설이 포함되어 있는지 확인합니다.
+
+- `text` (`str`): 확인할 텍스트입니다.
+- `id` (`int`, 선택 사항): 캐싱을 위한 식별자입니다. (현재는 기능이 완전히 구현되지 않았습니다.)
+- `foreign` (`bool`): 영어, 일본어, 중국어 욕설을 확인할지 여부입니다. 기본값은 `False`입니다.
+
+#### `korcen.highlight_profanity(text: str, id: int = None, level: str = 'general', highlight_char: str = '!') -> str`
+
+텍스트의 욕설을 강조 표시합니다.
+
+- `text` (`str`): 확인할 텍스트입니다.
+- `id` (`int`, 선택 사항): 캐싱을 위한 식별자입니다. (현재는 기능이 완전히 구현되지 않았습니다.)
+- `level` (`str`): 확인할 욕설 수준입니다. 기본값은 `'general'`입니다. 모든 수준을 확인하려면 `'all'`을 사용하세요.
+- `highlight_char` (`str`): 욕설을 감싸는 데 사용할 문자입니다. 기본값은 `'!'`입니다.
+
+#### `korcen.set_custom_filter_paths(include_path: str, exclude_path: str)`
+
+사용자 정의 포함 및 제외 필터 파일의 경로를 설정합니다.
+
+- `include_path` (`str`): 포함할 단어 목록 파일의 경로입니다.
+- `exclude_path` (`str`): 제외할 단어 목록 파일의 경로입니다.
+
+### 욕설 수준별 함수
+
+각 함수는 `text: str`와 `id: int = None` 두 개의 매개변수를 받으며, 해당 수준의 욕설이 발견되면 `True`를 반환합니다.
+
+| 함수 | 설명 |
+| --- | --- |
+| `korcen.general(text, id)` | 일반적인 욕설 및 비속어를 확인합니다. (예: `시발`, `병신`) |
+| `korcen.minor(text, id)` | 경미한 욕설이나 불쾌감을 줄 수 있는 표현을 확인합니다. (예: `미친`, `뒤져`) |
+| `korcen.sexual(text, id)` | 성적인 욕설 및 음란한 표현을 확인합니다. (예: `보지`, `섹스`) |
+| `korcen.belittle(text, id)` | 타인을 비하하거나 경멸하는 표현을 확인합니다. (예: `찐따`, `틀딱`) |
+| `korcen.race(text, id)` | 인종 차별적인 표현을 확인합니다. (예: `깜둥이`, `쪽바리`) |
+| `korcen.parent(text, id)` | 부모님과 관련된 욕설을 확인합니다. (예: `느금마`, `애미`) |
+| `korcen.english(text, id)` | 영어 욕설을 확인합니다. (`better_profanity` 필요) |
+| `korcen.japanese(text, id)` | 일본어 욕설을 확인합니다. |
+| `korcen.chinese(text, id)` | 중국어 욕설을 확인합니다. |
+| `korcen.special(text, id)` | 특수 문자나 이모티콘으로 표현된 욕설을 확인합니다. (예: `🖕`) |
+| `korcen.politics(text, id)` | 정치적인 비하 표현을 확인합니다. |
+
+## 기여
+
+기여를 환영합니다! Korcen을 개선하는 데 도움을 주시고 싶다면, 리포지토리를 포크하고 변경 사항을 적용한 후 풀 리퀘스트를 제출해 주세요.
+
+새로운 기능을 추가하거나 중요한 변경을 계획 중이라면, 먼저 이슈를 열어 아이디어를 논의해 주시기 바랍니다.
+
+## 라이선스
+
+MIT 라이선스에 따라 배포됩니다. 자세한 내용은 `LICENSE` 파일을 참조하세요.
