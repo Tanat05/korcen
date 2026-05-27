@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "korcen"
+version = "1.0.2"
+description = "Korean keyword-based profanity filtering library"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+  "better_profanity",
+  "colorama",
+]
+
+[project.urls]
+Homepage = "https://github.com/Tanat05/korcen"
+Repository = "https://github.com/Tanat05/korcen"
+Issues = "https://github.com/Tanat05/korcen/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["korcen*"]
