@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "korcen"
-version = "1.0.2"
+version = "1.0.3"
 description = "Korean keyword-based profanity filtering library"
 readme = "README.md"
 requires-python = ">=3.7"

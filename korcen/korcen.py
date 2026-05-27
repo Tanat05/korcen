@@ -1,5 +1,6 @@
 import re
 from collections import OrderedDict
+from functools import lru_cache
 import os
 import colorama
 
@@ -316,6 +317,55 @@ P_REGEX_CHINESE = re.compile('|'.join(map(re.escape, CHINESE_PROFANITY_PATTERNS)
 P_REGEX_SPECIAL = re.compile('|'.join(map(re.escape, SPECIAL_PROFANITY_PATTERNS)))
 P_REGEX_POLITICS = re.compile('|'.join(map(re.escape, POLITICS_PROFANITY_PATTERNS)))
 
+_FALSE_POSITIVE_REGEX_BY_LEVEL = {
+    'general': FP_REGEX_GENERAL,
+    'minor': FP_REGEX_MINOR,
+    'sexual': FP_REGEX_SEXUAL,
+    'belittle': FP_REGEX_BELITTLE,
+    'race': FP_REGEX_RACE,
+    'parent': FP_REGEX_PARENT,
+    'politics': FP_REGEX_POLITICS,
+    'english': FP_REGEX_ENGLISH,
+}
+
+_PROFANITY_REGEX_BY_LEVEL = {
+    'general': P_REGEX_GENERAL,
+    'minor': P_REGEX_MINOR,
+    'sexual': P_REGEX_SEXUAL,
+    'belittle': P_REGEX_BELITTLE,
+    'race': P_REGEX_RACE,
+    'parent': P_REGEX_PARENT,
+    'japanese': P_REGEX_JAPANESE,
+    'chinese': P_REGEX_CHINESE,
+    'special': P_REGEX_SPECIAL,
+    'politics': P_REGEX_POLITICS,
+}
+
+_FINAL_FILTER_REGEX_BY_LEVEL = {
+    'general': r'[^a-z0-9ㄱ-ㅎㅏ-ㅣ가-힣ㅗ@=\-_]+',
+    'sexual': r'[^a-z0-9ㄱ-ㅎㅏ-ㅣ가-힣ㅗ@=\-_]+',
+    'parent': r'[^a-z0-9ㄱ-ㅎㅏ-ㅣ가-힣ㅗ@=\-_]+',
+    'english': r'[^a-z0-9ㄱ-ㅎㅏ-ㅣ가-힣ㅗ@=\-_]+',
+    'chinese': r'[^a-z0-9ㄱ-ㅎㅏ-ㅣ가-힣ㅗ@=\-_]+',
+    'special': r'[^a-z0-9ㄱ-ㅎㅏ-ㅣ가-힣ㅗ@=\-_]+',
+    'politics': r'[^a-z0-9ㄱ-ㅎㅏ-ㅣ가-힣ㅗ@=\-_]+',
+    'minor': r'[^ㄱ-ㅎㅏ-ㅣ가-힣]+',
+    'belittle': r'[^ㄱ-ㅎㅏ-ㅣ가-힣]+',
+    'race': r'[^ㄱ-ㅎㅏ-ㅣ가-힣]+',
+    'japanese': r'[^ㄱ-ㅎㅏ-ㅣ가-힣]+',
+}
+
+
+def _build_reverse_map(normalization_map: dict) -> dict:
+    reverse_map = {}
+    for source, target in normalization_map.items():
+        reverse_map.setdefault(target.lower(), set()).add(source)
+    return reverse_map
+
+
+_REVERSE_SINGLE_CHAR_MAP = _build_reverse_map(SINGLE_CHAR_NORMALIZATION_MAP)
+_REVERSE_MULTI_CHAR_MAP = _build_reverse_map(MULTI_CHAR_REPLACEMENTS)
+
 
 EXACT_MATCH_PROFANITY = {'tq', 'qt'}
 
@@ -350,56 +400,32 @@ def preprocess_text(text: str, level: str):
 
     return processed_text
 
+@lru_cache(maxsize=2048)
 def build_flexible_regex(pattern_in_processed_text: str):
     flexible_parts = []
-    reverse_single_map = {}
-    for k, v in SINGLE_CHAR_NORMALIZATION_MAP.items():
-        reverse_single_map.setdefault(v.lower(), set()).add(k)
-
-    reverse_multi_map = {}
-    for k, v in MULTI_CHAR_REPLACEMENTS.items():
-        reverse_multi_map.setdefault(v.lower(), set()).add(k)
 
     for char in pattern_in_processed_text:
         char_lower = char.lower()
         original_forms = set()
         original_forms.add(re.escape(char))
-        original_forms.update(re.escape(k) for k in reverse_single_map.get(char_lower, set()))
-        original_forms.update(re.escape(k) for k in reverse_multi_map.get(char_lower, set()))
+        original_forms.update(re.escape(k) for k in _REVERSE_SINGLE_CHAR_MAP.get(char_lower, set()))
+        original_forms.update(re.escape(k) for k in _REVERSE_MULTI_CHAR_MAP.get(char_lower, set()))
         original_forms = {f for f in original_forms if f}
 
         if not original_forms:
             flexible_parts.append(re.escape(char))
         elif len(original_forms) == 1:
-            flexible_parts.append(list(original_forms)[0])
+            flexible_parts.append(next(iter(original_forms)))
         else:
-            flexible_parts.append(f"({'|'.join(original_forms)})")
+            flexible_parts.append(f"({'|'.join(sorted(original_forms))})")
     return r'\s*'.join(flexible_parts)
 
 
 def get_false_positive_regex(level: str):
-    if level == 'general': return FP_REGEX_GENERAL
-    if level == 'minor': return FP_REGEX_MINOR
-    if level == 'sexual': return FP_REGEX_SEXUAL
-    if level == 'belittle': return FP_REGEX_BELITTLE
-    if level == 'race': return FP_REGEX_RACE
-    if level == 'parent': return FP_REGEX_PARENT
-    if level == 'politics': return FP_REGEX_POLITICS
-    if level == 'english': return FP_REGEX_ENGLISH
-    return None
+    return _FALSE_POSITIVE_REGEX_BY_LEVEL.get(level)
 
 def get_profanity_regex(level: str):
-    if level == 'general': return P_REGEX_GENERAL
-    if level == 'minor': return P_REGEX_MINOR
-    if level == 'sexual': return P_REGEX_SEXUAL
-    if level == 'belittle': return P_REGEX_BELITTLE
-    if level == 'race': return P_REGEX_RACE
-    if level == 'parent': return P_REGEX_PARENT
-    if level == 'japanese': return P_REGEX_JAPANESE
-    if level == 'chinese': return P_REGEX_CHINESE
-    if level == 'special': return P_REGEX_SPECIAL
-    if level == 'politics': return P_REGEX_POLITICS
-    return None
+    return _PROFANITY_REGEX_BY_LEVEL.get(level)
 
 def normalize_for_custom_comparison(text: str) -> str:
     """Applies basic normalization (lowercase, single/multi char, space removal) for custom pattern matching."""
@@ -437,11 +463,7 @@ def load_and_compile_custom_patterns(filepath: str) -> list:
     return compiled_regexes
 
 def get_final_filter_regex_str(level: str) -> str:
-    if level in ['general', 'sexual', 'parent', 'english', 'chinese', 'special', 'politics']:
-        return r'[^a-z0-9ㄱ-ㅎㅏ-ㅣ가-힣ㅗ@=\-_]+'
-    elif level in ['minor', 'belittle', 'race', 'japanese']:
-        return r'[^ㄱ-ㅎㅏ-ㅣ가-힣]+'
-    return r'[^a-zA-Z0-9ㄱ-ㅎㅏ-ㅣ가-힣\s]+'
+    return _FINAL_FILTER_REGEX_BY_LEVEL.get(level, r'[^a-zA-Z0-9ㄱ-ㅎㅏ-ㅣ가-힣\s]+')
 
 
 def check_and_report_profanity_pattern(text: str, level: str = 'general'):
